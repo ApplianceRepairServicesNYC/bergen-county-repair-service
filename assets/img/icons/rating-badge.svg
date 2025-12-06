@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <circle cx="40" cy="40" r="38" fill="#f1c40f" stroke="#e67e22" stroke-width="2"/>
+  <polygon points="40,15 47,32 65,32 51,44 56,62 40,52 24,62 29,44 15,32 33,32" fill="#ffffff"/>
+  <text x="40" y="75" font-family="Arial" font-size="10" fill="#2c3e50" text-anchor="middle">TOP RATED</text>
+</svg>

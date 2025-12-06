@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="80" viewBox="0 0 150 80">
+  <rect width="150" height="80" fill="#ffffff" rx="5"/>
+  <rect x="10" y="10" width="130" height="60" fill="#9b59b6" rx="5" opacity="0.15"/>
+  <text x="75" y="48" font-family="Arial" font-size="14" fill="#9b59b6" text-anchor="middle" font-weight="bold">BRAND FOUR</text>
+</svg>
