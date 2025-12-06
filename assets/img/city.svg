@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#87ceeb"/>
+  <rect y="200" width="400" height="100" fill="#2c3e50"/>
+  <rect x="20" y="120" width="40" height="80" fill="#34495e"/>
+  <rect x="70" y="100" width="50" height="100" fill="#7f8c8d"/>
+  <rect x="130" y="80" width="60" height="120" fill="#34495e"/>
+  <rect x="200" y="60" width="45" height="140" fill="#95a5a6"/>
+  <rect x="255" y="90" width="55" height="110" fill="#7f8c8d"/>
+  <rect x="320" y="110" width="60" height="90" fill="#34495e"/>
+  <circle cx="350" cy="50" r="25" fill="#f1c40f"/>
+  <text x="200" y="270" font-family="Arial" font-size="20" fill="#ecf0f1" text-anchor="middle">Your City</text>
+</svg>
