@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1a5276">
     <title>Bergen County Appliance Repair Service - Commercial & Home Appliance Repair NJ</title>
     <meta name="description" content="Professional home and commercial appliance repair services in Bergen County, NJ. We offer refrigerator repair, washing machine repair, dryer repair, oven repair and more. Call (201) 298-3499 today!">
     <meta name="keywords" content="appliance repair Bergen County, NJ, home appliance repair, commercial appliance repair, refrigerator repair, washing machine repair">
@@ -11,8 +12,16 @@
     <link rel="canonical" href="https://bergencountyappliancesrepair.com/">
     <link rel="icon" href="https://bergencountyappliancesrepair.com/favicon.ico" type="image/x-icon">
     
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://api.emailjs.com">
+    <link rel="preconnect" href="https://static.elfsight.com">
+    <link rel="preconnect" href="https://maps.google.com">
+    <link rel="dns-prefetch" href="https://api.emailjs.com">
+    <link rel="dns-prefetch" href="https://static.elfsight.com">
+    <link rel="dns-prefetch" href="https://maps.google.com">
+    
     <!-- Preload Hero Image for LCP -->
-    <link rel="preload" as="image" href="https://bergencountyappliancesrepair.com/images/hero-bergen.png">
+    <link rel="preload" as="image" href="https://bergencountyappliancesrepair.com/images/hero-bergen.png" fetchpriority="high">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bergencountyappliancesrepair.com/">
@@ -734,6 +743,8 @@
             padding: 70px 0;
             text-align: center;
             background: #f8f9fa;
+            content-visibility: auto;
+            contain-intrinsic-size: 0 400px;
         }
         
         .btn-cta {
@@ -814,6 +825,8 @@
             background: linear-gradient(180deg, #1a252f 0%, #0d1318 100%);
             color: #fff;
             padding: 60px 0 0;
+            content-visibility: auto;
+            contain-intrinsic-size: 0 500px;
         }
         
         .footer_box {
@@ -1311,6 +1324,7 @@
             overflow: hidden;
             background: #1a5276;
             box-sizing: border-box;
+            contain: layout style;
         }
         
         .hero img {
@@ -1320,6 +1334,7 @@
             max-width: 100%;
             object-fit: contain;
             object-position: center;
+            aspect-ratio: 1920 / 600;
         }
         
         @media (max-width: 768px) {
@@ -1902,7 +1917,7 @@
                         </div>
                         
                         <div class="services_support locationmap mb_30">
-                            <iframe allowfullscreen="" loading="lazy" title="Bergen County Map" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Bergen%20County%20New%20Jersey&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"></iframe>
+                            <iframe width="600" height="400" allowfullscreen="" loading="lazy" title="Bergen County Map" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Bergen%20County%20New%20Jersey&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"></iframe>
                         </div>
                         
                         <div class="text-country">
@@ -1926,7 +1941,7 @@
       <!-- Hidden container: must NOT load until button click -->
       <div id="reviews-widget" style="display:none; margin-top:20px; padding:20px; background:#fff; border-radius:8px; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
         <!-- DO NOT move or modify this script tag -->
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <script src="https://static.elfsight.com/platform/platform.js" defer></script>
         <div class="elfsight-app-2942fb52-4463-41bc-bc83-d831b9da6f0e" data-elfsight-app-lazy></div>
       </div>
     </section>
