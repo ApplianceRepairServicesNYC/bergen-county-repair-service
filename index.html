@@ -26,6 +26,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden;
         }
         
         a {
@@ -169,7 +170,12 @@
             font-size: 14px;
         }
         
-        /* Read More Button & Content */
+        /* Read More Section */
+        .read-more-section {
+            background: #1a5276;
+            padding: 30px 0;
+        }
+        
         .btn-read-more {
             display: inline-block;
             padding: 12px 30px;
@@ -180,7 +186,6 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 16px;
-            margin-top: 20px;
             transition: all 0.3s ease;
         }
         
@@ -348,33 +353,29 @@
         
         /* Hero Banner */
         .banner {
-            background-color: #1a5276;
-            background-image: linear-gradient(rgba(26, 82, 118, 0.7), rgba(26, 82, 118, 0.7)),
-                        url('/images/hero-bergen.png');
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            padding: 100px 0;
-            color: #fff;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .banner > .container {
             width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            background-color: #1a5276;
         }
         
-        .banner h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
+        .banner img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
         }
         
-        .banner-text p {
-            font-size: 18px;
-            opacity: 0.9;
-            max-width: 600px;
+        @media (max-width: 768px) {
+            .banner {
+                overflow-x: hidden;
+            }
+            
+            .banner img {
+                width: 100%;
+                height: auto;
+            }
         }
         
         /* Section Styles */
@@ -1176,15 +1177,6 @@
                 width: 50%;
             }
             
-            .banner {
-                background-size: cover;
-                background-position: center;
-            }
-            
-            .banner h1 {
-                font-size: 32px;
-            }
-            
             .navbar-nav {
                 flex-direction: column;
                 display: none;
@@ -1252,17 +1244,6 @@
             .header_nav {
                 flex-direction: column;
                 gap: 15px;
-            }
-            
-            .banner {
-                padding: 50px 15px;
-                background-size: cover;
-                background-position: center;
-                min-height: 350px;
-            }
-            
-            .banner h1 {
-                font-size: 28px;
             }
             
             .section_padding {
@@ -1500,20 +1481,14 @@
     <main>
     <!-- Hero Banner -->
     <section class="banner" id="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="header_slide_text">
-                        <h1>Appliance Repairs in Bergen County, New Jersey</h1>
-                    </div>
-                    <div class="banner-text">
-                        <p>The best appliance repair and maintenance services in Bergen County, NJ at your doorstep. We repair all major residential and commercial appliances of all major brands. Same-day service available throughout Hackensack, Paramus, Fort Lee, Teaneck, and all Bergen County communities.</p>
-                        <button id="read-more-btn" class="btn-read-more">Read More</button>
-                    </div>
-                </div>
-            </div>
+        <img src="/images/hero.png" alt="Bergen County Appliance Repair - Professional Home & Commercial Appliance Repair Services in Bergen County, NJ">
+    </section>
+    
+    <!-- Read More Section -->
+    <section class="read-more-section">
+        <div class="container text-center">
+            <button id="read-more-btn" class="btn-read-more">Read More</button>
             
-            <!-- Read More Content -->
             <div id="read-more-content" class="read-more-content" style="display:none;">
                 <div class="row">
                     <div class="col-md-12">
