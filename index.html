@@ -1,1911 +1,1723 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bergen County Appliance Repair Service - Same Day Service NJ</title>
-    <meta name="description" content="Professional appliance repair in Bergen County NJ. Same-day service for washers, dryers, refrigerators, dishwashers, ovens, microwaves & more. Licensed & insured technicians.">
-    <meta name="keywords" content="appliance repair Bergen County, washer repair NJ, dryer repair, refrigerator repair, dishwasher repair, oven repair, microwave repair, same day appliance repair Bergen County">
-    <meta name="author" content="Bergen County Appliance Repair Service">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://yourdomain.com/">
-    <meta property="og:title" content="Bergen County Appliance Repair Service">
-    <meta property="og:description" content="Fast, reliable appliance repair in Bergen County NJ. Same-day repair for washers, dryers, ovens, refrigerators & more.">
-    <meta property="og:url" content="https://yourdomain.com/">
-    <meta property="og:type" content="website">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bergen County Appliance Repair Service | Same Day Service NJ</title>
+    <meta name="description" content="Professional appliance repair in Bergen County, New Jersey. Same day service for refrigerators, dishwashers, washers, dryers, ovens, and cooktops. Licensed technicians." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bergen County Appliance Repair Service | Same Day Service NJ" />
+    <meta property="og:description" content="Professional appliance repair in Bergen County, New Jersey. Same day service for all major appliance brands." />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:site_name" content="Bergen County Appliance Repair Service" />
     <style>
         :root {
-            --blue: #003087;
-            --red: #e41e26;
-            --gray: #f8f9fa;
+            --primary-color: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --danger-color: #dc3545;
+            --danger-dark: #bb2d3b;
+            --dark-bg: #212529;
+            --light-bg: #f8f9fa;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --border-color: #dee2e6;
+            --white: #ffffff;
+            --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+        * {
             margin: 0;
-            color: #333;
-            background: #fff;
-            line-height: 1.6;
+            padding: 0;
             box-sizing: border-box;
-            overscroll-behavior: none;
         }
-        h1,
-        h2,
-        h3 {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            font-weight: 700;
-            color: var(--blue);
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #e9ecef;
         }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.8rem; }
+        h3 { font-size: 1.4rem; }
+        h4 { font-size: 1.2rem; }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-            box-sizing: border-box;
+            padding: 0 15px;
         }
-        header {
-            background: var(--blue);
-            color: white;
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
+
+        .MainWidth {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        /* Top Promo Block */
+        .Top-Promo-Block {
+            background: var(--danger-color);
+            color: var(--white);
+            padding: 10px 15px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--white);
+            position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .logo-link {
-            font-size: 26px;
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-            display: inline-block;
+
+        .navbaTop {
+            border-bottom: 1px solid var(--border-color);
         }
-        .logo-link:hover {
-            color: #ddd;
+
+        .Top_AddressBlock {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            gap: 15px;
         }
-        .nav-wrapper {
+
+        .Top_AddressBlock .Details {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .Top_AddressBlock .Item a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+
+        .Top_AddressBlock .Item a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            padding: 15px 0;
         }
-        .nav-right {
+
+        .MainTopLogo {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .BlockMenu {
             display: flex;
-            gap: 20px;
             align-items: center;
-            flex-wrap: wrap;
+            gap: 5px;
         }
-        .services-menu {
+
+        .menu_item {
             position: relative;
         }
-        .services-btn {
-            color: white;
+
+        .ItemMenu {
+            padding: 12px 18px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .ItemMenu:hover {
+            background: var(--light-bg);
+        }
+
+        .Sub-Item-link {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .Popup-submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 1001;
+        }
+
+        .menu_item:hover .Popup-submenu {
+            display: block;
+        }
+
+        .Sub-Item {
+            display: block;
+            padding: 12px 20px;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.3s ease;
+        }
+
+        .Sub-Item:hover {
+            background: var(--light-bg);
+            color: var(--primary-color);
+        }
+
+        .Sub-Item.border-bottom-0 {
+            border-bottom: none;
+        }
+
+        .MainPhoneNumber {
+            background: var(--danger-color);
+            padding: 12px 20px;
+            border-radius: 5px;
+        }
+
+        .MainPhoneNumber a {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .MainPhoneNumber:hover {
+            background: var(--danger-dark);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            padding: 10px 15px;
+            background: var(--white);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .MobileMainTopLogo {
+            max-height: 45px;
+        }
+
+        .mobile-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mobile-btn {
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .mobile-btn.phone {
+            background: var(--danger-color);
+            color: var(--white);
+        }
+
+        .mobile-btn.book {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .navbar-toggler {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: var(--white);
+            border-top: 1px solid var(--border-color);
+            padding: 15px;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu .menu_item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-menu .ItemMenu {
+            padding: 15px 0;
+            justify-content: space-between;
+        }
+
+        .mobile-menu .Popup-submenu {
+            position: static;
+            display: none;
+            box-shadow: none;
+            background: var(--light-bg);
+            margin: 0 -15px;
+            padding: 0 15px;
+        }
+
+        .mobile-menu .Popup-submenu.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0a58ca 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-danger {
+            background: var(--danger-color);
+            color: var(--white);
+        }
+
+        .btn-danger:hover {
+            background: var(--danger-dark);
+            color: var(--white);
+        }
+
+        .btn-light {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-light:hover {
+            background: var(--light-bg);
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+
+        .content-main {
+            text-align: justify;
+        }
+
+        .content-main h1 {
+            color: var(--primary-color);
+            text-align: left;
+        }
+
+        .content-sidebar {
+            padding-top: 22px;
+        }
+
+        /* Service Rows */
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .service-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-row .image-col {
+            flex: 0 0 40%;
+        }
+
+        .service-row .text-col {
+            flex: 1;
+        }
+
+        .service-image {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Sidebar */
+        .sidebar-book {
+            display: block;
+            background: var(--danger-color);
+            color: var(--white);
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar-book:hover {
+            background: var(--danger-dark);
+            color: var(--white);
+        }
+
+        .sidebar-box {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-box h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .coupon-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px dashed var(--primary-color);
+            padding: 10px;
+            background: var(--white);
+        }
+
+        /* Sidebar Form */
+        .sidebar-form {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-form .red-block {
+            background: var(--danger-color);
+            color: var(--white);
+            padding: 15px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .sidebar-form button {
+            width: 100%;
+            padding: 14px;
+            background: var(--danger-color);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
             font-weight: 600;
             cursor: pointer;
-            padding: 12px 20px;
-            border-radius: 6px;
-            transition: all .3s;
-            background: rgba(255, 255, 255, 0.1);
-            white-space: nowrap;
-            box-sizing: border-box;
+            transition: background 0.3s ease;
         }
-        .services-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+
+        .sidebar-form button:hover {
+            background: var(--danger-dark);
         }
-        .nav-call-btn {
-            background: var(--red);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 6px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 17px;
-            transition: all .3s;
-            cursor: pointer;
-            box-sizing: border-box;
-            border: none;
+
+        /* Services Grid */
+        .services-section {
+            padding: 60px 0;
+            background: var(--light-bg);
         }
-        .nav-call-btn:hover {
-            background: #c41b20;
-            transform: translateY(-2px);
-        }
-        .services-dropdown {
-            display: none;
-            position: fixed;
-            top: 80px;
-            width: 420px;
-            min-width: 360px;
-            max-width: 95%;
-            min-height: 100px;
-            background: var(--blue);
-            border-radius: 12px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-            padding: 32px 0;
-            z-index: 1000;
-            max-height: 80vh;
-            overflow-y: auto;
-            box-sizing: border-box;
-            overflow-wrap: break-word;
-            white-space: nowrap;
-            overscroll-behavior: contain;
-        }
-        .services-menu.active .services-dropdown {
-            display: block;
-        }
-        @media (hover: hover) and (pointer: fine) {
-            .services-menu:hover .services-dropdown {
-                display: block;
-            }
-        }
-        #servicesMenu .services-dropdown {
-            right: 20px;
-        }
-        
-        .dropdown-close-btn {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(255, 255, 255, 0.15);
-            border: none;
-            color: white;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            transition: all .3s;
-            z-index: 10;
-        }
-        .dropdown-close-btn:hover {
-            background: var(--red);
-            transform: rotate(90deg);
-        }
-        
-        @media (max-width: 768px) {
-            .services-dropdown {
-                width: 95%;
-                max-width: 420px;
-                min-width: 320px;
-                right: auto;
-                left: 50%;
-                transform: translateX(-50%);
-                top: 80px;
-            }
-            .nav-wrapper {
-                flex-direction: column;
-                padding: 15px 0;
-            }
-            .logo-link {
-                margin-bottom: 10px;
-                font-size: 20px;
-                text-align: center;
-            }
-            .nav-right {
-                width: 100%;
-                justify-content: center;
-                gap: 15px;
-            }
-        }
-        @media (max-width: 480px) {
-            .services-dropdown {
-                width: 95%;
-                max-width: 380px;
-                min-width: 300px;
-            }
-        }
-        .services-dropdown li {
-            padding: 22px 36px;
-            margin: 14px 0;
-            color: #eee;
-            font-size: 18px;
-            line-height: 2.3;
-            transition: all .3s;
-            cursor: pointer;
-            box-sizing: border-box;
-            list-style: none;
-        }
-        .services-dropdown li:hover {
-            background: var(--red);
-            color: white;
-            padding-left: 46px;
-        }
-        .services-dropdown a {
-            color: #eee;
-            text-decoration: none;
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-        .services-dropdown li:hover a {
-            color: white;
-        }
-        .submenu-toggle {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 700;
-            background: rgba(255, 255, 255, 0.15);
-            margin: 14px 20px;
-            border-radius: 8px;
-            padding: 22px 24px;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-        .submenu-toggle:after {
-            content: "›";
-            transition: transform .3s;
-            font-size: 18px;
-        }
-        .submenu-toggle:hover:after {
-            transform: rotate(90deg);
-        }
-        .additional-submenu,
-        .service-areas-submenu {
-            max-height: 0;
-            overflow-y: auto;
-            transition: max-height 0.8s ease;
-            background: rgba(0, 0, 0, 0.2);
-            margin: 0 20px 14px;
-            border-radius: 8px;
-            box-sizing: border-box;
-            white-space: normal;
-            -webkit-overflow-scrolling: touch;
-        }
-        .additional-submenu li,
-        .service-areas-submenu li {
-            padding: 20px 44px;
-            color: #eee;
-            font-size: 17px;
-            line-height: 2.1;
-            margin: 12px 0;
-            transition: all .3s;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-        .additional-submenu li:hover,
-        .additional-submenu li:active,
-        .service-areas-submenu li:hover,
-        .service-areas-submenu li:active {
-            background: var(--red);
-            color: white;
-            padding-left: 54px;
-        }
-        .service-areas-submenu li a {
-            color: #eee;
-            text-decoration: none;
-            display: block;
-            width: 100%;
-            height: 100%;
-            transition: all .3s;
-            cursor: pointer;
-            pointer-events: auto;
-        }
-        .service-areas-submenu li:hover a,
-        .service-areas-submenu li:active a {
-            color: white;
-        }
-        .hero {
-            position: relative;
-            color: white;
+
+        .section-title {
             text-align: center;
-            padding: 160px 20px 120px;
-            margin-top: 80px;
-            background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), linear-gradient(135deg, var(--blue) 0%, #001a45 100%);
-            min-height: 70vh;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Brands Section */
+        .brands-section {
+            padding: 60px 0;
+        }
+
+        .brands-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .brand-item {
+            background: var(--light-bg);
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .brand-item:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 60px 0;
+            background: var(--light-bg);
+        }
+
+        .review-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .review-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .review-header {
             display: flex;
             align-items: center;
-            justify-content: center;
-            box-sizing: border-box;
+            gap: 10px;
+            margin-bottom: 10px;
         }
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 16px;
-            text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
-            line-height: 1.2;
-            color: white;
+
+        .reviewer-name {
+            font-weight: 600;
         }
-        .hero p {
-            font-size: 24px;
+
+        .review-date {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .star-block {
+            margin-bottom: 12px;
+        }
+
+        .star {
+            color: #ffc107;
+            font-size: 16px;
+        }
+
+        .review-content {
+            color: var(--text-dark);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 0;
+        }
+
+        .about-content {
             max-width: 900px;
-            margin: 0 auto 35px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+            margin: 0 auto;
         }
-        .btn {
-            background: var(--red);
-            color: white;
-            padding: 16px 40px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            transition: all .3s;
-            box-sizing: border-box;
-            border: none;
-            cursor: pointer;
+
+        .about-list {
+            margin: 20px 0;
         }
-        .btn:hover {
-            background: #c41b20;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(228, 30, 38, 0.5);
+
+        .about-list li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
         }
-        @media (max-width: 768px) {
-            .hero {
-                padding: 160px 15px 90px;
-                min-height: 55vh;
-            }
-            .hero h1 {
-                font-size: 32px;
-                line-height: 1.3;
-            }
-            .hero p {
-                font-size: 18px;
-                padding: 0 10px;
-            }
-            .btn {
-                padding: 14px 30px;
-                font-size: 18px;
-            }
+
+        .about-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
         }
-        @media (max-width: 480px) {
-            .hero {
-                padding: 150px 15px 60px;
-                min-height: 50vh;
-            }
-            .hero h1 {
-                font-size: 26px;
-                line-height: 1.3;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-            .btn {
-                padding: 12px 24px;
-                font-size: 16px;
-            }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 0;
+            background: var(--light-bg);
         }
-        section {
-            padding: 90px 0;
-            box-sizing: border-box;
-        }
-        .alt {
-            background: var(--gray);
-        }
-        .services-grid {
+
+        .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            align-items: start;
         }
-        .service {
-            background: white;
-            padding: 40px 35px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: all .4s ease;
-            position: relative;
-            cursor: pointer;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-        }
-        .service-types {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .service-types > div[id^="expandable-content-"] {
-            margin-top: auto;
-        }
-        .service:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        .service-icon {
-            font-size: 52px;
+
+        .contact-info h3 {
             margin-bottom: 20px;
-            color: var(--blue);
-            transition: color .3s;
         }
-        .service:hover .service-icon {
-            color: var(--red);
-        }
-        .learn-more-btn {
+
+        .contact-item {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--blue) 0%, #004494 100%);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            text-decoration: none;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            margin-bottom: 15px;
             font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 48, 135, 0.3);
-            width: 100%;
-            min-height: 70px;
-            box-sizing: border-box;
-            text-align: center;
         }
-        .learn-more-btn span {
-            font-weight: 400;
-            opacity: 0.85;
-            font-size: 12px;
-            margin-top: 4px;
-        }
-        .learn-more-btn:hover {
-            background: linear-gradient(135deg, #0056b3 0%, #003d7a 100%);
-            box-shadow: 0 5px 18px rgba(0, 48, 135, 0.4);
-            color: white;
-        }
-        .learn-more-btn::after {
-            display: none;
-        }
-        .service-types {
-            margin-top: 20px;
-            padding: 20px;
-            background: rgba(0, 48, 135, 0.05);
-            border-radius: 10px;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: max-height 0.5s ease, opacity 0.5s ease;
-            box-sizing: border-box;
-        }
-        .service.active .service-types {
-            max-height: 2000px;
-            overflow: visible;
-            opacity: 1;
-        }
-        .service-types h4 {
-            margin: 0 0 15px;
-            color: var(--blue);
-            font-size: 18px;
-            font-weight: 600;
-        }
-        .service-types ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .service-types li {
-            padding: 12px 20px;
-            margin: 6px 0;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
-            transition: background .3s, color .3s;
-            color: #333;
-            font-size: 15px;
-            box-sizing: border-box;
-        }
-        .service-types li:hover,
-        .service-types li:active {
-            background: var(--red);
-            color: white;
-        }
-        #sa-service-areas {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: transparent;
-            border: 2px solid #808080;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
-            margin: 0 auto 3rem;
-            padding: 20px;
-            position: relative;
-            box-sizing: border-box;
-        }
-        #sa-service-areas h2 {
-            font-size: 34px;
-            text-align: center;
-            color: inherit;
-            margin-bottom: 5px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-            transition: transform .3s, color .3s;
-        }
-        #sa-service-areas p {
-            font-size: 16px;
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-        }
-        .sa-dropdown-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .sa-dropdown-button {
-            padding: 14px 32px;
-            border: none;
-            background: linear-gradient(45deg, #003087, #0052cc);
-            color: #fff;
-            font-weight: 600;
-            font-size: 18px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all .3s;
-            box-shadow: 0 4px 15px rgba(0, 48, 135, .4);
-            box-sizing: border-box;
-        }
-        .sa-dropdown-button:hover {
-            background: linear-gradient(45deg, #002266, #003f99);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 48, 135, .6);
-        }
-        .sa-dropdown-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height .5s;
-            background: transparent;
-            box-sizing: border-box;
-        }
-        .sa-slide ul {
-            background: rgba(255, 255, 255, .95);
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
-            transition: transform .3s;
-            box-sizing: border-box;
-            list-style: none;
-            margin: 0;
-            column-gap: 30px;
-            columns: 3;
-        }
-        .sa-slide ul li {
-            padding: 12px 15px;
-            margin: 8px 0;
-            border-radius: 10px;
-            background: rgba(240, 244, 255, .9);
-            transition: all .3s;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
-            box-sizing: border-box;
-        }
-        .sa-slide ul li:hover {
-            background: #d4e4ff;
-            transform: scale(1.03);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-        }
-        .sa-slide ul li h3 {
-            margin: 0;
-            font-size: 17px;
-            color: #1e3c72;
-            font-weight: 600;
-        }
-        #cf-schedule-container {
-            background: transparent;
-            border: 2px solid #808080;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
-            padding: 20px;
-            margin: 3rem auto 0;
-            max-width: 1200px;
-            box-sizing: border-box;
-        }
-        .cf-schedule-text {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            font-size: 1.5rem;
-            color: #2A2A2A;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        .cf-book-button {
-            display: block;
-            padding: 12px 20px;
-            background: linear-gradient(45deg, #003087, #00205B);
-            color: #fff;
-            font-weight: 600;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            margin: 10px auto;
-            width: 100%;
-            max-width: 220px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all .3s;
-            box-sizing: border-box;
-        }
-        .cf-book-button:hover {
-            background: linear-gradient(45deg, #00205B, #001A45);
-            transform: translateY(-3px);
-        }
-        .form-call-now {
-            display: block;
-            padding: 12px 28px;
-            background: var(--red);
-            color: white;
-            font-weight: 700;
-            border-radius: 6px;
-            font-size: 17px;
-            cursor: pointer;
-            margin: 15px auto 0;
-            width: 100%;
-            max-width: 220px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all .3s;
-            box-sizing: border-box;
-            border: none;
-        }
-        .form-call-now:hover {
-            background: #c41b20;
-            transform: translateY(-3px);
-        }
-        .cf-contact-form-section {
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all .6s ease;
-            padding: 0;
-            background: linear-gradient(135deg, #003087 0%, #00205B 50%, #001A45 100%);
-            border-radius: 12px;
-            margin-top: 15px;
-            box-sizing: border-box;
-        }
-        .cf-contact-form-section.active {
-            max-height: 1600px;
-            opacity: 1;
-            padding: 20px;
-        }
-        .expect-text {
-            font-size: .95rem;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        .cf-contact-form {
-            background: rgba(255, 255, 255, .95);
-            border-radius: 12px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            box-sizing: border-box;
-        }
-        .cf-form-group {
-            display: flex;
-            flex-direction: column;
-        }
-        .cf-form-group label {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #000;
-            margin-bottom: 5px;
-        }
-        .cf-form-group input,
-        .cf-form-group textarea {
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background: #fff;
-            box-sizing: border-box;
-        }
-        .cf-form-group textarea {
+
+        .contact-form textarea {
+            min-height: 120px;
             resize: vertical;
-            min-height: 100px;
         }
-        .cf-form-button {
-            background: linear-gradient(45deg, #003087, #00205B);
-            color: #fff;
-            font-weight: 600;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 220px;
-            height: 60px;
-            margin: 20px auto 0;
+
+        /* Footer */
+        .footer {
+            background: var(--dark-bg);
+            color: #b0b0b0;
+            padding: 50px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #b0b0b0;
+            padding: 6px 0;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .footer-links a:before {
+            content: "▸ ";
+            color: var(--primary-color);
+        }
+
+        .footer-buttons {
             display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .footer-btn {
+            display: inline-flex;
             align-items: center;
+            gap: 8px;
+            background: var(--danger-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            width: fit-content;
+            transition: background 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background: var(--danger-dark);
+            color: var(--white);
+        }
+
+        .footer-brands {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            margin-top: 30px;
+        }
+
+        .footer-brands h4 {
+            margin-bottom: 15px;
+        }
+
+        .brands-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .brands-list span {
+            background: #333;
+            padding: 5px 12px;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .copyright {
+            border-top: 1px solid #333;
+            padding: 20px 0;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .copyright a {
+            color: #b0b0b0;
+            margin: 0 10px;
+        }
+
+        .copyright a:hover {
+            color: var(--white);
+        }
+
+        /* Service Areas */
+        .service-areas {
+            padding: 40px 0;
+            background: var(--white);
+        }
+
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             justify-content: center;
-            transition: all .3s;
-            box-sizing: border-box;
+            margin-top: 20px;
         }
-        .cf-form-button:hover {
-            background: linear-gradient(45deg, #00205B, #001A45);
-            transform: translateY(-3px);
+
+        .area-tag {
+            background: var(--light-bg);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-dark);
         }
-        .cf-success-modal {
+
+        /* Popup */
+        .popup-overlay {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0,0,0,0.6);
             z-index: 2000;
             align-items: center;
             justify-content: center;
-            box-sizing: border-box;
         }
-        .cf-success-modal.active {
+
+        .popup-overlay.active {
             display: flex;
         }
-        .cf-success-content {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
+
+        .popup-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 90%;
             text-align: center;
-            max-width: 90%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            box-sizing: border-box;
+            position: relative;
         }
-        .cf-success-content p {
-            font-size: 20px;
-            font-weight: 600;
-            color: #003087;
-            margin: 0 0 25px;
-            line-height: 1.6;
-        }
-        .cf-close-modal {
-            background: var(--red);
-            color: white;
-            border: none;
-            padding: 12px 32px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 700;
+
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
             cursor: pointer;
-            box-sizing: border-box;
+            color: var(--text-muted);
         }
-        .cf-modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1999;
+
+        .popup-close:hover {
+            color: var(--text-dark);
         }
-        .cf-modal-overlay.active {
-            display: block;
-        }
-        footer {
-            background: #1a1a1a;
-            color: #b0b0b0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        .footer-main {
-            background: #1a1a1a;
-            padding: 60px 0 40px;
-            border-bottom: 1px solid #333;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1.5fr;
-            gap: 50px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .footer-column h3 {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .footer-column p {
-            margin: 8px 0;
-            line-height: 1.8;
-            font-size: 14px;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .footer-column ul li {
-            margin: 12px 0;
-        }
-        
-        .footer-column ul li a {
-            color: #b0b0b0;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color .3s;
-            display: inline-block;
-        }
-        
-        .footer-column ul li a:hover {
-            color: var(--red);
-            padding-left: 5px;
-        }
-        
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .footer-brand h2 {
-            color: #fff;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        
-        .footer-hours {
-            background: rgba(0, 48, 135, 0.1);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            border-left: 4px solid var(--blue);
-        }
-        
-        .footer-hours p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        
-        .footer-hours strong {
-            color: #fff;
-        }
-        
-        .footer-bottom {
-            background: #0d0d0d;
-            padding: 25px 0;
-        }
-        
-        .footer-bottom-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .footer-bottom p {
-            margin: 8px 0;
-            font-size: 13px;
-            color: #888;
-            text-align: center;
-        }
-        
-        .footer-bottom-links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0 0 20px 0;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 20px 0;
-            border-bottom: 1px solid #222;
-        }
-        
-        .footer-bottom-links a {
-            color: #b0b0b0;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color .3s;
-            white-space: nowrap;
-        }
-        
-        .footer-bottom-links a:hover {
-            color: var(--blue);
-        }
-        
+
+        /* Responsive */
         @media (max-width: 992px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-            }
-            
-            .footer-bottom-links {
-                justify-content: center;
-                gap: 20px 30px;
-            }
-            
-            .sa-slide ul {
-                columns: 2;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .footer-grid {
+            .content-wrapper {
                 grid-template-columns: 1fr;
-                gap: 35px;
             }
-            
-            .footer-main {
-                padding: 40px 0 30px;
+
+            .content-sidebar {
+                order: -1;
             }
-            
-            .footer-column {
-                text-align: center;
+
+            .navbaTop,
+            .nav-main {
+                display: none;
             }
-            
-            .footer-brand {
-                align-items: center;
+
+            .mobile-nav {
+                display: block;
             }
-            
-            .footer-bottom-links {
-                gap: 15px 25px;
+
+            .hero-section h1 {
+                font-size: 2rem;
             }
-            
-            .sa-slide ul {
-                columns: 1;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .footer-bottom-links {
+
+            .service-row {
                 flex-direction: column;
-                gap: 12px;
-                padding: 15px 0;
             }
-            
-            .footer-bottom-links a {
-                font-size: 13px;
+
+            .service-row.reverse {
+                flex-direction: column;
+            }
+
+            .service-row .image-col {
+                flex: 0 0 100%;
             }
         }
 
-        [id^="expandable-text-"].expanded::-webkit-scrollbar { width: 6px; }
-        [id^="expandable-text-"].expanded::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
-        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
-        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb:hover { background: var(--red); }
-        [id^="expandable-text-"].expanded { scrollbar-width: thin; scrollbar-color: var(--blue) #f1f1f1; }
+        @media (max-width: 768px) {
+            .Top_AddressBlock {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-section {
+                padding: 40px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-buttons {
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .mobile-buttons {
+                flex-direction: column;
+            }
+
+            .mobile-btn {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .mt-4 { margin-top: 1.5rem; }
+        .py-3 { padding-top: 1rem; padding-bottom: 1rem; }
+        .w-100 { width: 100%; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container nav-wrapper">
-            <a href="#hero" class="logo-link" aria-label="Return to Bergen County Appliance Repair Service Homepage">Bergen County Appliance Repair</a>
-            <div class="nav-right">
-                <div class="services-menu" id="servicesMenu">
-                    <div class="services-btn" id="servicesToggle">Services</div>
-                    <ul class="services-dropdown" id="servicesDropdown">
-                        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">×</button>
-                        <li><a href="#washer-repair" aria-label="Washer Repair">Washer Repair</a></li>
-                        <li><a href="#dryer-repair" aria-label="Dryer Repair">Dryer Repair</a></li>
-                        <li><a href="#refrigerator-repair" aria-label="Refrigerator Repair">Refrigerator Repair</a></li>
-                        <li><a href="#dishwasher-repair" aria-label="Dishwasher Repair">Dishwasher Repair</a></li>
-                        <li><a href="#oven-repair" aria-label="Oven & Range Repair">Oven & Range Repair</a></li>
-                        <li><a href="#cooktop-repair" aria-label="Cooktop Repair">Cooktop Repair</a></li>
-                        <li><a href="#microwave-repair" aria-label="Microwave Repair">Microwave Repair</a></li>
-                        <li><a href="#freezer-repair" aria-label="Freezer Repair">Freezer Repair</a></li>
-                        <li><a href="#hood-vent-repair" aria-label="Hood Vent Repair">Hood Vent Repair</a></li>
-                                                                        
-                        <li class="submenu-toggle" id="additionalToggle">Additional Services</li>
-                        <div class="additional-submenu" id="additionalSubmenu">
-                            <li>Installation & Maintenance</li>
-                            <li>Refrigerator Compressor Service</li>
-                            <li>Appliance Performance Optimization</li>
-                            <li>Appliance Relocation & Setup</li>
-                            <li>Smart Appliance Support</li>
-                            <li>Professional Deep Cleaning</li>
-                            <li>Energy Efficiency Upgrades</li>
-                            <li>Noise & Vibration Reduction</li>
-                            <li>Commercial Appliance Services</li>
-                            <li>Safety Compliance</li>
-                            <li>EPA Section 608 Certification</li>
-                            <li>Extended Service Plans</li>
+    <div class="MainWidth">
+        <!-- Top Promo Block -->
+        <div class="Top-Promo-Block text-center">
+            GET $25 OFF FOR BOOKING ONLINE
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <!-- Desktop Nav -->
+            <div class="navbaTop">
+                <div class="container">
+                    <div class="Top_AddressBlock">
+                        <div class="Details">We fix all brands and models</div>
+                        <div class="Item">
+                            <a href="#contact">
+                                <span>📅</span>
+                                <span>Mon-Sun 7am-10pm</span>
+                            </a>
                         </div>
-                        <li id="serviceAreasToggle" style="cursor: pointer;"><a href="#service-areas" style="color: white; text-decoration: none; pointer-events: none;">Service Areas ▼</a></li>
-                        <div class="service-areas-submenu" id="serviceAreasSubmenu">
-                            <li><a href="#service-areas">Allendale</a></li>
-                            <li><a href="#service-areas">Alpine</a></li>
-                            <li><a href="#service-areas">Bergenfield</a></li>
-                            <li><a href="#service-areas">Bogota</a></li>
-                            <li><a href="#service-areas">Carlstadt</a></li>
-                            <li><a href="#service-areas">Cliffside Park</a></li>
-                            <li><a href="#service-areas">Closter</a></li>
-                            <li><a href="#service-areas">Cresskill</a></li>
-                            <li><a href="#service-areas">Demarest</a></li>
-                            <li><a href="#service-areas">Dumont</a></li>
-                            <li><a href="#service-areas">East Rutherford</a></li>
-                            <li><a href="#service-areas">Edgewater</a></li>
-                            <li><a href="#service-areas">Elmwood Park</a></li>
-                            <li><a href="#service-areas">Emerson</a></li>
-                            <li><a href="#service-areas">Englewood</a></li>
-                            <li><a href="#service-areas">Englewood Cliffs</a></li>
-                            <li><a href="#service-areas">Fair Lawn</a></li>
-                            <li><a href="#service-areas">Fairview</a></li>
-                            <li><a href="#service-areas">Fort Lee</a></li>
-                            <li><a href="#service-areas">Franklin Lakes</a></li>
-                            <li><a href="#service-areas">Garfield</a></li>
-                            <li><a href="#service-areas">Glen Rock</a></li>
-                            <li><a href="#service-areas">Hackensack</a></li>
-                            <li><a href="#service-areas">Harrington Park</a></li>
-                            <li><a href="#service-areas">Hasbrouck Heights</a></li>
-                            <li><a href="#service-areas">Haworth</a></li>
-                            <li><a href="#service-areas">Hillsdale</a></li>
-                            <li><a href="#service-areas">Ho-Ho-Kus</a></li>
-                            <li><a href="#service-areas">Leonia</a></li>
-                            <li><a href="#service-areas">Little Ferry</a></li>
-                            <li><a href="#service-areas">Lodi</a></li>
-                            <li><a href="#service-areas">Lyndhurst</a></li>
-                            <li><a href="#service-areas">Mahwah</a></li>
-                            <li><a href="#service-areas">Maywood</a></li>
-                            <li><a href="#service-areas">Midland Park</a></li>
-                            <li><a href="#service-areas">Montvale</a></li>
-                            <li><a href="#service-areas">Moonachie</a></li>
-                            <li><a href="#service-areas">New Milford</a></li>
-                            <li><a href="#service-areas">North Arlington</a></li>
-                            <li><a href="#service-areas">Northvale</a></li>
-                            <li><a href="#service-areas">Norwood</a></li>
-                            <li><a href="#service-areas">Oakland</a></li>
-                            <li><a href="#service-areas">Old Tappan</a></li>
-                            <li><a href="#service-areas">Oradell</a></li>
-                            <li><a href="#service-areas">Palisades Park</a></li>
-                            <li><a href="#service-areas">Paramus</a></li>
-                            <li><a href="#service-areas">Park Ridge</a></li>
-                            <li><a href="#service-areas">Ramsey</a></li>
-                            <li><a href="#service-areas">Ridgefield</a></li>
-                            <li><a href="#service-areas">Ridgefield Park</a></li>
-                            <li><a href="#service-areas">Ridgewood</a></li>
-                            <li><a href="#service-areas">River Edge</a></li>
-                            <li><a href="#service-areas">River Vale</a></li>
-                            <li><a href="#service-areas">Rochelle Park</a></li>
-                            <li><a href="#service-areas">Rockleigh</a></li>
-                            <li><a href="#service-areas">Rutherford</a></li>
-                            <li><a href="#service-areas">Saddle Brook</a></li>
-                            <li><a href="#service-areas">Saddle River</a></li>
-                            <li><a href="#service-areas">South Hackensack</a></li>
-                            <li><a href="#service-areas">Teaneck</a></li>
-                            <li><a href="#service-areas">Tenafly</a></li>
-                            <li><a href="#service-areas">Teterboro</a></li>
-                            <li><a href="#service-areas">Upper Saddle River</a></li>
-                            <li><a href="#service-areas">Waldwick</a></li>
-                            <li><a href="#service-areas">Wallington</a></li>
-                            <li><a href="#service-areas">Washington Township</a></li>
-                            <li><a href="#service-areas">Westwood</a></li>
-                            <li><a href="#service-areas">Woodcliff Lake</a></li>
-                            <li><a href="#service-areas">Wood-Ridge</a></li>
-                            <li><a href="#service-areas">Wyckoff</a></li>
+                        <div class="Item">
+                            <a href="tel:PHONE_PLACEHOLDER">
+                                <span>📞</span>
+                                <span>PHONE_PLACEHOLDER</span>
+                            </a>
                         </div>
+                        <div class="Item">
+                            <a href="#contact">
+                                <span>🔧</span>
+                                <span>Request Service</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container nav-main">
+                <a href="#hero" class="logo-link">
+                    <strong style="font-size: 24px; color: #0d6efd;">Bergen County Appliance Repair</strong>
+                </a>
+                <div class="BlockMenu">
+                    <div class="menu_item">
+                        <div class="ItemMenu">
+                            <a href="#hero" class="Sub-Item-link">Home</a>
+                        </div>
+                    </div>
+                    <div class="menu_item">
+                        <div class="ItemMenu">
+                            Appliance Service
+                            <span>▼</span>
+                        </div>
+                        <div class="Popup-submenu">
+                            <a href="#services" class="Sub-Item">Refrigerator Repair</a>
+                            <a href="#services" class="Sub-Item">Dishwasher Repair</a>
+                            <a href="#services" class="Sub-Item">Washer Repair</a>
+                            <a href="#services" class="Sub-Item">Dryer Repair</a>
+                            <a href="#services" class="Sub-Item">Oven Repair</a>
+                            <a href="#services" class="Sub-Item">Cooktop Repair</a>
+                            <a href="#services" class="Sub-Item border-bottom-0">Appliance Installation</a>
+                        </div>
+                    </div>
+                    <div class="menu_item">
+                        <div class="ItemMenu">
+                            <a href="#about" class="Sub-Item-link">About</a>
+                        </div>
+                    </div>
+                    <div class="menu_item">
+                        <div class="ItemMenu">
+                            Brands
+                            <span>▼</span>
+                        </div>
+                        <div class="Popup-submenu">
+                            <a href="#brands" class="Sub-Item">Samsung</a>
+                            <a href="#brands" class="Sub-Item">LG</a>
+                            <a href="#brands" class="Sub-Item">Whirlpool</a>
+                            <a href="#brands" class="Sub-Item">GE</a>
+                            <a href="#brands" class="Sub-Item">Bosch</a>
+                            <a href="#brands" class="Sub-Item">Sub-Zero</a>
+                            <a href="#brands" class="Sub-Item border-bottom-0">See All Brands</a>
+                        </div>
+                    </div>
+                    <div class="menu_item">
+                        <div class="MainPhoneNumber">
+                            <a href="tel:PHONE_PLACEHOLDER">PHONE_PLACEHOLDER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div class="mobile-nav">
+                <div class="mobile-nav-inner">
+                    <a href="#hero">
+                        <strong style="font-size: 16px; color: #0d6efd;">Bergen County Appliance</strong>
+                    </a>
+                    <div class="mobile-buttons">
+                        <a href="tel:PHONE_PLACEHOLDER" class="mobile-btn phone">
+                            <span>📞</span> Call
+                        </a>
+                        <a href="#contact" class="mobile-btn book">
+                            <span>🔧</span> Book
+                        </a>
+                        <button class="navbar-toggler" id="mobileMenuToggle" aria-label="Menu">
+                            ☰
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="menu_item">
+                    <div class="ItemMenu" onclick="toggleMobileSubmenu('mobSub1')">
+                        Appliance Service <span>▼</span>
+                    </div>
+                    <div class="Popup-submenu" id="mobSub1">
+                        <a href="#services" class="Sub-Item">Refrigerator Repair</a>
+                        <a href="#services" class="Sub-Item">Dishwasher Repair</a>
+                        <a href="#services" class="Sub-Item">Washer Repair</a>
+                        <a href="#services" class="Sub-Item">Dryer Repair</a>
+                        <a href="#services" class="Sub-Item">Oven Repair</a>
+                        <a href="#services" class="Sub-Item border-bottom-0">Cooktop Repair</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <div class="ItemMenu" onclick="toggleMobileSubmenu('mobSub2')">
+                        Brands <span>▼</span>
+                    </div>
+                    <div class="Popup-submenu" id="mobSub2">
+                        <a href="#brands" class="Sub-Item">Samsung</a>
+                        <a href="#brands" class="Sub-Item">LG</a>
+                        <a href="#brands" class="Sub-Item">Whirlpool</a>
+                        <a href="#brands" class="Sub-Item">GE</a>
+                        <a href="#brands" class="Sub-Item border-bottom-0">See All Brands</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <div class="ItemMenu">
+                        <a href="#about" class="Sub-Item-link">About</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <div class="ItemMenu">
+                        <a href="#contact" class="Sub-Item-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <h1>Professional Appliance Repair in Bergen County, NJ</h1>
+                <p>Fast, reliable, same-day appliance repair service throughout Bergen County, New Jersey. Our certified technicians fix all major brands and models with a satisfaction guarantee.</p>
+                <div class="hero-buttons">
+                    <a href="tel:PHONE_PLACEHOLDER" class="btn btn-danger">
+                        <span>📞</span> Call PHONE_PLACEHOLDER
+                    </a>
+                    <a href="#contact" class="btn btn-light">
+                        <span>🔧</span> Book Online & Save $25
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="content-main">
+                        <h1>Appliance Repair Services in Bergen County</h1>
+                        <p>When your home appliances break down, you need a reliable repair service that can get them running again quickly. Our team of experienced technicians provides professional appliance repair throughout Bergen County, New Jersey. We service all major brands and models, offering same-day appointments and transparent pricing.</p>
+
+                        <p>Whether you're dealing with a refrigerator that won't cool, a washing machine that won't drain, or an oven that won't heat, our skilled technicians have the expertise to diagnose and fix the problem efficiently. We stock common replacement parts in our service vehicles, allowing us to complete most repairs on the first visit.</p>
+
+                        <h2>Why Choose Our Appliance Repair Service?</h2>
+
+                        <div class="service-row">
+                            <div class="text-col">
+                                <h3>Expert Diagnosis & Quality Repairs</h3>
+                                <p>The foundation of any successful appliance repair is accurate diagnosis. Our technicians have years of experience and access to professional diagnostic tools, allowing us to identify the root cause of any malfunction quickly. We don't guess – we use our expertise to pinpoint exactly what's wrong and fix it right the first time.</p>
+                                <p>Our team stays up-to-date with the latest appliance technologies and repair techniques, ensuring we can service even the newest smart appliances and high-end models.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-row reverse">
+                            <div class="text-col">
+                                <h3>Same-Day Emergency Service</h3>
+                                <p>We understand that a broken appliance can disrupt your entire household. That's why we offer same-day emergency service throughout Bergen County. When you call us in the morning, we can often have a technician at your door that same afternoon.</p>
+                                <p>Our technicians arrive in fully-stocked service vehicles, ready to handle most repairs on the spot. We minimize your downtime and get your appliances back to working condition as quickly as possible.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-row">
+                            <div class="text-col">
+                                <h3>Preventive Maintenance Services</h3>
+                                <p>Want to avoid expensive breakdowns before they happen? Our preventive maintenance service helps extend the life of your appliances and catch potential problems early. We recommend maintenance at least twice a year for optimal appliance performance.</p>
+                                <p>Regular maintenance can help prevent costly repairs, improve energy efficiency, and keep your appliances running safely for years to come.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-row reverse">
+                            <div class="text-col">
+                                <h3>Professional Installation Services</h3>
+                                <p>Proper installation is critical for appliance longevity and performance. Incorrect installation can lead to premature wear, safety hazards, and voided warranties. Our certified technicians ensure your new appliances are installed correctly the first time.</p>
+                                <p>We handle everything from basic hookups to complex installations requiring electrical or plumbing modifications. Trust us to get your new appliance up and running safely and efficiently.</p>
+                            </div>
+                        </div>
+
+                        <h2>Our Appliance Repair Expertise</h2>
+
+                        <div class="service-row">
+                            <div class="text-col">
+                                <h3>Trained & Certified Technicians</h3>
+                                <p>Every member of our team has undergone extensive training and certification. Our technicians have over 10 years of combined experience and are familiar with products from more than 35 manufacturers. This expertise allows us to provide accurate diagnoses and efficient repairs for any appliance brand or model.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-row reverse">
+                            <div class="text-col">
+                                <h3>Customer-Focused Approach</h3>
+                                <p>Your satisfaction is our top priority. From the moment you contact us, we strive to provide a seamless, stress-free experience. Our team is polite, professional, and respectful of your home. We explain the problem clearly, provide upfront pricing, and never pressure you into unnecessary repairs.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-row">
+                            <div class="text-col">
+                                <h3>Affordable & Transparent Pricing</h3>
+                                <p>We believe in honest, upfront pricing with no hidden fees or surprise charges. Before we begin any repair, we'll provide you with a clear estimate. We understand that appliance breakdowns can happen at inconvenient times, so we work to match our customers' budgets without sacrificing quality.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-row reverse">
+                            <div class="text-col">
+                                <h3>100% Satisfaction Guarantee</h3>
+                                <p>We stand behind our work with a comprehensive warranty on all repairs. If the same issue occurs after our repair, simply call our service line and we'll schedule a free return visit to make it right. Your satisfaction is guaranteed.</p>
+                            </div>
+                        </div>
+
+                        <h2>Common Appliance Error Codes We Service</h2>
+
+                        <div class="service-row">
+                            <div class="text-col">
+                                <h3>Refrigerator Error Codes</h3>
+                                <ul class="about-list">
+                                    <li>E9 - Temperature controller malfunction</li>
+                                    <li>E4 - Defrost heater failure in freezer compartment</li>
+                                    <li>E13 - Ice maker system not working properly</li>
+                                    <li>Various codes indicating compressor, fan, or sensor issues</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-row reverse">
+                            <div class="text-col">
+                                <h3>Dishwasher Error Codes</h3>
+                                <ul class="about-list">
+                                    <li>E01 - Low water level detected</li>
+                                    <li>E02 - Drainage system needs service</li>
+                                    <li>E03 - Heating system failure</li>
+                                    <li>E05 - Temperature sensor malfunction</li>
+                                    <li>E07 - Door lock mechanism error</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-row">
+                            <div class="text-col">
+                                <h3>Washer Error Codes</h3>
+                                <ul class="about-list">
+                                    <li>01 - Water supply issue</li>
+                                    <li>02 - Drainage system requires service</li>
+                                    <li>03 - Water heating error</li>
+                                    <li>04 - Motor triac sensor short circuit</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p>If you see any error code on your appliance, contact us immediately. Our technicians can quickly diagnose the issue and provide an accurate estimate for repair.</p>
+
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="content-sidebar">
+                        <a href="#contact" class="sidebar-book">Book online and get $25 OFF</a>
+
+                        <div class="sidebar-form">
+                            <div class="red-block">GET $25 OFF<br/>ANY APPLIANCE REPAIR</div>
+                            <form id="sidebarForm">
+                                <input type="text" name="name" placeholder="What is Your Name?" required />
+                                <input type="tel" name="phone" placeholder="Phone Number*" required />
+                                <input type="email" name="email" placeholder="Your Email" />
+                                <button type="submit">Submit Request</button>
+                            </form>
+                        </div>
+
+                        <div class="sidebar-box">
+                            <h2>Same Day Repairs</h2>
+                            <p>We are available evenings, weekends and holidays, 365 days a year.</p>
+                        </div>
+
+                        <div class="sidebar-box">
+                            <div class="coupon-image" style="text-align: center; padding: 20px;">
+                                <strong style="color: #dc3545; font-size: 18px;">$25 OFF</strong><br/>
+                                <span>Your First Repair</span><br/>
+                                <small>Book online to redeem</small>
+                            </div>
+                            <div class="coupon-image" style="text-align: center; padding: 20px;">
+                                <strong style="color: #dc3545; font-size: 18px;">FREE</strong><br/>
+                                <span>Service Call with Repair</span><br/>
+                                <small>Call for details</small>
+                            </div>
+                            <div class="coupon-image" style="text-align: center; padding: 20px;">
+                                <strong style="color: #dc3545; font-size: 18px;">10% OFF</strong><br/>
+                                <span>Senior Citizen Discount</span><br/>
+                                <small>Must mention at booking</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Appliance Repair Services</h2>
+                    <p>We repair all major household appliances with same-day service available</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🧊</div>
+                        <h3>Refrigerator Repair</h3>
+                        <p>Not cooling? Making noise? Leaking water? We fix all refrigerator problems including compressor, thermostat, and ice maker issues.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🍽️</div>
+                        <h3>Dishwasher Repair</h3>
+                        <p>Won't drain? Not cleaning properly? We repair all dishwasher brands including pump, motor, and control board problems.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">👕</div>
+                        <h3>Washer Repair</h3>
+                        <p>Won't spin? Leaking? Making noise? Our technicians fix all washing machine issues from drum problems to electronic failures.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌡️</div>
+                        <h3>Dryer Repair</h3>
+                        <p>Not heating? Taking too long? We repair electric and gas dryers including heating elements, thermostats, and motors.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🍳</div>
+                        <h3>Oven & Range Repair</h3>
+                        <p>Won't heat? Uneven cooking? We service all oven types including gas, electric, convection, and self-cleaning models.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔥</div>
+                        <h3>Cooktop & Stove Repair</h3>
+                        <p>Burner won't light? Uneven flame? We repair gas, electric, and induction cooktops from all major manufacturers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="section-title">
+                        <h2>Why Choose Bergen County Appliance Repair?</h2>
+                    </div>
+                    <p>For years, we've been the trusted appliance repair service for Bergen County residents. Our commitment to quality workmanship, honest pricing, and exceptional customer service has made us the go-to choice for homeowners throughout the area.</p>
+                    
+                    <ul class="about-list">
+                        <li><strong>Same-Day Service:</strong> Most repairs completed on the same day you call</li>
+                        <li><strong>Certified Technicians:</strong> Factory-trained experts on all major brands</li>
+                        <li><strong>Upfront Pricing:</strong> No hidden fees or surprise charges</li>
+                        <li><strong>Parts Warranty:</strong> All repairs backed by our satisfaction guarantee</li>
+                        <li><strong>All Brands:</strong> We service over 35 appliance manufacturers</li>
+                        <li><strong>Licensed & Insured:</strong> Fully covered for your peace of mind</li>
+                        <li><strong>Local Business:</strong> Proudly serving Bergen County communities</li>
+                        <li><strong>Flexible Scheduling:</strong> Evening and weekend appointments available</li>
                     </ul>
                 </div>
-                <button class="nav-call-btn" id="navCallNow">Call Now</button>
             </div>
-        </div>
-    </header>
-    <main>
-    <section class="hero" id="hero">
-        <div class="container">
-            <h1>Professional Appliance Repair<br>Bergen County, New Jersey</h1>
-            <p>Same-Day Service • Certified Technicians • All Major Brands</p>
-            <button class="btn" id="heroCallNow">Request Service Today</button>
-        </div>
-    </section>
-    <section id="about" style="padding: 60px 0; background: #fff;" aria-labelledby="about-section-heading">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
-            <article>
-                <h2 id="about-section-heading" style="text-align:center; font-size:32px; margin-bottom:30px; color: var(--blue);">Expert Appliance Repair in Bergen County</h2>
-                <div id="expandable-content-1" style="position: relative;">
-                    <div id="expandable-text-1" style="max-height: 110px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444; font-size: 16px;">
-                        <p style="margin-bottom: 15px;">When your <strong>home appliance</strong> stops working, you deserve a repair service that delivers results. Our <strong>certified technicians</strong> specialize in all major appliance brands, bringing extensive expertise to every service call across <strong>Bergen County, New Jersey</strong>. We know how frustrating a broken washer, dryer, refrigerator, or dishwasher can be to your household.</p>
-                        <p style="margin-bottom: 15px;">Our technicians complete <strong>ongoing training programs</strong> to stay current with evolving technologies and advanced repair techniques. They also have access to <strong>comprehensive technical support</strong>, ensuring even the most challenging repairs are resolved quickly and correctly.</p>
-                        <h3 style="font-size: 20px; color: var(--blue); margin: 25px 0 15px;">The Bergen County Appliance Repair Advantage</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0;">
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Complete Bergen County Coverage:</strong> Our skilled technicians are strategically positioned throughout Bergen County, ready to address your repair needs with speed and precision.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Reliable & Prompt Service:</strong> With technicians dispatched from locations across Bergen County, we guarantee swift response times for every appointment.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Fully Equipped Service Vehicles:</strong> Each vehicle carries a comprehensive parts inventory, paired with intelligent dispatch software for maximum efficiency.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Same-Day Repair Solutions:</strong> We stock commonly needed parts to complete the majority of repairs during your first appointment.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Complete Repair Warranty:</strong> Every repair is backed by our comprehensive warranty. If any issues occur, we'll return to resolve them at no extra cost.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Diagnostic Fee Applied to Repair:</strong> Your diagnostic fee is credited toward the total repair cost, reducing your overall expense.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Certified Repair Specialists:</strong> Our technicians hold industry certifications and participate in continuous education to master the latest repair methods.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Upfront, Honest Pricing:</strong> No surprises or hidden charges—we provide clear pricing before any work begins.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>24/7 Emergency Repairs:</strong> Appliance emergencies don't follow a schedule—neither do we. Urgent service is available when you need it most.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Genuine OEM Parts:</strong> We use authentic, manufacturer-approved parts to ensure lasting repairs that meet factory specifications.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Dedicated Support Team:</strong> Our friendly customer service representatives are here to answer questions and schedule appointments at your convenience.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Weekend & Flexible Appointments:</strong> We accommodate your schedule with availability seven days a week, including evenings.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Best Price Guarantee:</strong> Found a lower quote? We'll match any competitor's price to deliver exceptional value.</span>
-                            </li>
-                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Money Back Guarantee:</strong> If we're unable to repair your appliance, you owe us nothing. It's that simple.</span>
-                            </li>
-                            <li style="padding: 12px 0; display: flex; align-items: flex-start;">
-                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
-                                <span><strong>Fully Insured Service:</strong> We carry comprehensive property damage insurance for your protection. For New Jersey residences, we provide certificates of insurance upon request.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="expandable-fade-1" style="position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: linear-gradient(transparent, #fff); pointer-events: none;" aria-hidden="true"></div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="brands-section" id="brands">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Brands We Service</h2>
+                    <p>Factory-trained technicians for all major appliance brands</p>
                 </div>
-                <button id="expandable-btn-1" onclick="toggleExpand('1')" aria-expanded="false" aria-controls="expandable-text-1" style="display: block; margin: 20px auto 0; background: none; border: none; color: var(--blue); font-size: 16px; font-weight: 600; cursor: pointer; padding: 10px 20px; transition: color 0.3s;">+ Show More</button>
-            </article>
-        </div>
-    </section>
-    <section class="alt" id="services">
-        <div class="container">
-            <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Our Appliance Repair Services</h2>
-            <div class="services-grid">
-                <div class="service" id="washer-repair">
-                    <a href="#expandable-content-washer" class="learn-more-btn" onclick="toggleService(this); return false;">Washer Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Front Load Washers</li>
-                            <li>Top Load Washers</li>
-                            <li>Commercial Washers</li>
-                            <li>Residential Washers</li>
-                            <li>Portable Washers</li>
-                            <li>Washer/Dryer Combos</li>
-                            <li>Stackable Washers</li>
-                            <li>Steam Washers</li>
-                            <li>High-Efficiency Models</li>
-                        </ul>
-                        <div id="expandable-content-washer" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-washer" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Professional washer repair</strong> services for all major brands including Samsung, LG, Whirlpool, Maytag, GE, Frigidaire, and more. Our certified technicians diagnose and repair all types of washing machine problems quickly and efficiently.</p>
-                                <p style="margin-bottom: 12px;">Common washer issues we repair include door boot seal leaks, bearing failures causing loud noises during spin cycles, drain pump failures, and control board malfunctions. We also fix lid switch failures, transmission problems, water inlet valve issues, and agitator problems.</p>
-                                <p style="margin-bottom: 12px;">Whether your washer won't drain, makes unusual noises, stops mid-cycle, or won't start at all, our experienced technicians can restore reliable operation. We carry common parts including lid switches, water inlet valves, and drain pumps for same-day repairs throughout Bergen County.</p>
-                            </div>
-                            <div id="expandable-fade-washer" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
-                        </div>
-                        <button id="expandable-btn-washer" onclick="toggleExpand('washer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
-                    </div>
+                <div class="brands-grid">
+                    <span class="brand-item">Admiral</span>
+                    <span class="brand-item">Amana</span>
+                    <span class="brand-item">Bosch</span>
+                    <span class="brand-item">Dacor</span>
+                    <span class="brand-item">Electrolux</span>
+                    <span class="brand-item">Fisher & Paykel</span>
+                    <span class="brand-item">Frigidaire</span>
+                    <span class="brand-item">GE</span>
+                    <span class="brand-item">Haier</span>
+                    <span class="brand-item">Hotpoint</span>
+                    <span class="brand-item">Jenn-Air</span>
+                    <span class="brand-item">Kenmore</span>
+                    <span class="brand-item">KitchenAid</span>
+                    <span class="brand-item">LG</span>
+                    <span class="brand-item">Maytag</span>
+                    <span class="brand-item">Miele</span>
+                    <span class="brand-item">Panasonic</span>
+                    <span class="brand-item">Samsung</span>
+                    <span class="brand-item">Sub-Zero</span>
+                    <span class="brand-item">Thermador</span>
+                    <span class="brand-item">Viking</span>
+                    <span class="brand-item">Whirlpool</span>
+                    <span class="brand-item">Wolf</span>
                 </div>
-                <div class="service" id="dryer-repair">
-                    <a href="#expandable-content-dryer" class="learn-more-btn" onclick="toggleService(this); return false;">Dryer Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Gas Dryers</li>
-                            <li>Electric Dryers</li>
-                            <li>Ventless Dryers</li>
-                            <li>Heat Pump Dryers</li>
-                            <li>Front Load Dryers</li>
-                            <li>Stackable Dryers</li>
-                            <li>Steam Dryers</li>
-                            <li>Commercial Dryers</li>
-                            <li>Sensor Dry Models</li>
-                        </ul>
-                        <div id="expandable-content-dryer" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-dryer" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Expert dryer repair</strong> for all major brands including Samsung, LG, Whirlpool, Maytag, GE, Frigidaire, Kenmore, and more. Our technicians are trained on both gas and electric dryer systems for comprehensive service.</p>
-                                <p style="margin-bottom: 12px;">We repair heating elements, thermal fuses, gas igniters, drum bearings, belts, and motor issues. Common problems we solve include dryers not heating, taking too long to dry, making unusual noises, or stopping mid-cycle.</p>
-                                <p style="margin-bottom: 12px;">For gas dryers, our technicians are trained in gas appliance safety, proper combustion testing, and gas leak detection. We ensure your dryer operates safely and efficiently, regardless of the fuel type.</p>
-                            </div>
-                            <div id="expandable-fade-dryer" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
-                        </div>
-                        <button id="expandable-btn-dryer" onclick="toggleExpand('dryer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
-                    </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What Our Customers Say</h2>
                 </div>
-                <div class="service" id="oven-repair">
-                    <a href="#expandable-content-oven" class="learn-more-btn" onclick="toggleService(this); return false;">Oven & Range Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Gas Ovens</li>
-                            <li>Electric Ovens</li>
-                            <li>Wall Ovens</li>
-                            <li>Convection Ovens</li>
-                            <li>Double Wall Ovens</li>
-                            <li>Slide-In Ranges</li>
-                            <li>Freestanding Ranges</li>
-                            <li>Self-Cleaning Ovens</li>
-                            <li>Commercial Ovens</li>
-                        </ul>
-                        <div id="expandable-content-oven" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-oven" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Professional oven and range repair</strong> for all major brands including Samsung, LG, Whirlpool, GE, Frigidaire, KitchenAid, and more. We service both gas and electric ovens throughout Bergen County.</p>
-                                <p style="margin-bottom: 12px;">We repair bake and broil elements, convection fans, igniters, gas valves, temperature sensors, control boards, and door components. Common issues include uneven heating, temperature inaccuracy, and self-cleaning problems.</p>
-                                <p style="margin-bottom: 12px;">Our technicians are trained in gas appliance safety and can diagnose complex issues affecting your oven's performance. We restore precise temperature control and reliable cooking performance.</p>
-                            </div>
-                            <div id="expandable-fade-oven" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                <div class="review-block">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer-name">Michael T.</span>
                         </div>
-                        <button id="expandable-btn-oven" onclick="toggleExpand('oven')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
+                        <div class="review-date">November 2024</div>
+                        <div class="star-block">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="review-content">Excellent service! The technician arrived on time, diagnosed the problem with my refrigerator quickly, and had it fixed within an hour. Very professional and reasonably priced. Highly recommend!</div>
                     </div>
-                </div>
-                <div class="service" id="refrigerator-repair">
-                    <a href="#expandable-content-fridge" class="learn-more-btn" onclick="toggleService(this); return false;">Refrigerator Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Top-Freezer</li>
-                            <li>Bottom-Freezer</li>
-                            <li>Side-by-Side</li>
-                            <li>French Door</li>
-                            <li>Built-In</li>
-                            <li>Counter Depth</li>
-                            <li>Smart Refrigerators</li>
-                            <li>Column Refrigerators</li>
-                            <li>Compact Refrigerators</li>
-                        </ul>
-                        <div id="expandable-content-fridge" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-fridge" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Expert refrigerator repair</strong> for all major brands including Samsung, LG, Whirlpool, GE, Frigidaire, Sub-Zero, Viking, and more. We understand that refrigerator failures require urgent attention to prevent food spoilage.</p>
-                                <p style="margin-bottom: 12px;">We repair compressors, evaporator fans, condensers, thermostats, ice makers, water dispensers, and defrost systems. Common problems include refrigerators not cooling, making noise, leaking water, or ice maker failures.</p>
-                                <p style="margin-bottom: 12px;">Our technicians carry common refrigerator parts for same-day repairs. We diagnose and fix temperature control issues, ice maker problems, and water dispenser malfunctions quickly and professionally.</p>
-                            </div>
-                            <div id="expandable-fade-fridge" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer-name">Sarah K.</span>
                         </div>
-                        <button id="expandable-btn-fridge" onclick="toggleExpand('fridge')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
+                        <div class="review-date">October 2024</div>
+                        <div class="star-block">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="review-content">My washer stopped working on a Saturday and they came out the same day! The repair was done quickly and the price was fair. Will definitely use them again for any appliance issues.</div>
                     </div>
-                </div>
-                <div class="service" id="dishwasher-repair">
-                    <a href="#expandable-content-dishwasher" class="learn-more-btn" onclick="toggleService(this); return false;">Dishwasher Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Built-In Dishwashers</li>
-                            <li>Integrated / Panel-Ready</li>
-                            <li>Portable Dishwashers</li>
-                            <li>Dishwasher Drawers</li>
-                            <li>Top Control</li>
-                            <li>Front Control</li>
-                            <li>Compact Dishwashers</li>
-                            <li>Commercial Dishwashers</li>
-                            <li>Smart Dishwashers</li>
-                        </ul>
-                        <div id="expandable-content-dishwasher" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-dishwasher" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Professional dishwasher repair</strong> for all major brands including Bosch, Samsung, LG, Whirlpool, KitchenAid, Miele, and more. We repair all types of dishwasher problems quickly and efficiently.</p>
-                                <p style="margin-bottom: 12px;">We repair drain pumps, circulation pumps, water inlet valves, spray arms, door latches, and control boards. Common issues include dishwashers not draining, not cleaning properly, leaking, or not starting.</p>
-                                <p style="margin-bottom: 12px;">Our technicians service all dishwasher configurations and restore quiet, efficient operation. We ensure your dishwasher cleans effectively and drains properly after every cycle.</p>
-                            </div>
-                            <div id="expandable-fade-dishwasher" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer-name">David L.</span>
                         </div>
-                        <button id="expandable-btn-dishwasher" onclick="toggleExpand('dishwasher')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
+                        <div class="review-date">October 2024</div>
+                        <div class="star-block">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="review-content">Great experience from start to finish. The customer service rep was helpful in scheduling, and the technician was knowledgeable and friendly. Fixed my dishwasher perfectly!</div>
                     </div>
-                </div>
-                <div class="service" id="cooktop-repair">
-                    <a href="#expandable-content-cooktop" class="learn-more-btn" onclick="toggleService(this); return false;">Cooktop Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Gas Cooktops</li>
-                            <li>Electric Cooktops</li>
-                            <li>Induction Cooktops</li>
-                            <li>Radiant Cooktops</li>
-                            <li>Smoothtop Electric</li>
-                            <li>Downdraft Cooktops</li>
-                            <li>Modular Cooktops</li>
-                            <li>Built-In Cooktops</li>
-                            <li>Commercial Cooktops</li>
-                        </ul>
-                        <div id="expandable-content-cooktop" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-cooktop" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Expert cooktop repair</strong> for all major brands including Samsung, LG, GE, Whirlpool, KitchenAid, Wolf, Viking, and more. We service gas, electric, and induction cooktops.</p>
-                                <p style="margin-bottom: 12px;">We repair burners, igniters, gas valves, heating elements, induction coils, and control panels. Common issues include burners not lighting, uneven heating, and control malfunctions.</p>
-                                <p style="margin-bottom: 12px;">For gas cooktops, our technicians ensure safe operation with proper combustion testing. For induction cooktops, we diagnose and repair sophisticated electronics and power modules.</p>
-                            </div>
-                            <div id="expandable-fade-cooktop" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer-name">Jennifer M.</span>
                         </div>
-                        <button id="expandable-btn-cooktop" onclick="toggleExpand('cooktop')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
-                    </div>
-                </div>
-                <div class="service" id="microwave-repair">
-                    <a href="#expandable-content-microwave" class="learn-more-btn" onclick="toggleService(this); return false;">Microwave Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Countertop Microwaves</li>
-                            <li>Over-the-Range</li>
-                            <li>Built-in Microwaves</li>
-                            <li>Microwave Drawers</li>
-                            <li>Convection Microwaves</li>
-                            <li>Commercial Microwaves</li>
-                            <li>Compact Microwaves</li>
-                            <li>Smart Microwaves</li>
-                            <li>Wall Oven Combos</li>
-                        </ul>
-                        <div id="expandable-content-microwave" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-microwave" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Professional microwave repair</strong> for all major brands including Samsung, LG, GE, Whirlpool, Panasonic, Sharp, and more. We safely service high-voltage microwave components.</p>
-                                <p style="margin-bottom: 12px;">We repair magnetrons, capacitors, diodes, door switches, turntable motors, and control panels. Common issues include microwaves not heating, sparking, turntable not spinning, or display problems.</p>
-                                <p style="margin-bottom: 12px;">Our technicians follow strict safety protocols when servicing microwave high-voltage components. We restore full cooking power and functionality to your microwave safely and efficiently.</p>
-                            </div>
-                            <div id="expandable-fade-microwave" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        <div class="review-date">September 2024</div>
+                        <div class="star-block">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
                         </div>
-                        <button id="expandable-btn-microwave" onclick="toggleExpand('microwave')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
-                    </div>
-                </div>
-                <div class="service" id="freezer-repair">
-                    <a href="#expandable-content-freezer" class="learn-more-btn" onclick="toggleService(this); return false;">Freezer Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Chest Freezers</li>
-                            <li>Upright Freezers</li>
-                            <li>Built-In Freezers</li>
-                            <li>Commercial Freezers</li>
-                            <li>Drawer Freezers</li>
-                            <li>Compact Freezers</li>
-                            <li>Walk-In Freezers</li>
-                            <li>Deep Freezers</li>
-                            <li>Convertible Units</li>
-                        </ul>
-                        <div id="expandable-content-freezer" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-freezer" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Expert freezer repair</strong> for all major brands including Samsung, LG, GE, Frigidaire, Whirlpool, Sub-Zero, and more. We understand that freezer failures require urgent attention to prevent food loss.</p>
-                                <p style="margin-bottom: 12px;">We repair compressors, evaporator fans, thermostats, defrost systems, and door seals. Common issues include freezers not cooling, frost buildup, running constantly, or making unusual noises.</p>
-                                <p style="margin-bottom: 12px;">Our technicians provide fast response for freezer emergencies and carry common parts for same-day repairs throughout Bergen County.</p>
-                            </div>
-                            <div id="expandable-fade-freezer" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
-                        </div>
-                        <button id="expandable-btn-freezer" onclick="toggleExpand('freezer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
-                    </div>
-                </div>
-                <div class="service" id="hood-vent-repair">
-                    <a href="#expandable-content-hood" class="learn-more-btn" onclick="toggleService(this); return false;">Hood Vent Repair <span>Learn More</span></a>
-                    <div class="service-types">
-                        <h3>We Service All Types:</h3>
-                        <ul>
-                            <li>Wall Mount Range Hoods</li>
-                            <li>Under Cabinet Hoods</li>
-                            <li>Island Range Hoods</li>
-                            <li>Downdraft Ventilation</li>
-                            <li>Ducted Range Hoods</li>
-                            <li>Ductless Range Hoods</li>
-                            <li>Convertible Hoods</li>
-                            <li>Commercial Ventilation</li>
-                            <li>Custom Hood Inserts</li>
-                        </ul>
-                        <div id="expandable-content-hood" style="position: relative; margin-top: 15px;">
-                            <div id="expandable-text-hood" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
-                                <p style="margin-bottom: 12px;"><strong>Professional range hood repair</strong> for all major brands including Broan, Zephyr, GE, KitchenAid, Vent-A-Hood, and more. We service all types of kitchen ventilation systems.</p>
-                                <p style="margin-bottom: 12px;">We repair blower motors, fans, lights, switches, filters, and ductwork connections. Common issues include weak airflow, excessive noise, lights not working, or complete fan failure.</p>
-                                <p style="margin-bottom: 12px;">Our technicians restore powerful, quiet ventilation to your kitchen. We ensure proper exhaust of cooking fumes, smoke, and odors for a comfortable cooking environment.</p>
-                            </div>
-                            <div id="expandable-fade-hood" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
-                        </div>
-                        <button id="expandable-btn-hood" onclick="toggleExpand('hood')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
+                        <div class="review-content">Very impressed with the service. They diagnosed and fixed my oven issue efficiently. The technician explained everything clearly and even gave tips on maintenance. Thank you!</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="alt" id="contact">
-        <div class="container">
-            <section id="service-areas">
-                <h2 style="text-align: center;">Service Areas – All of Bergen County, NJ</h2>
-                <p style="text-align: center;">We proudly serve <strong>every single town and municipality</strong> in Bergen County with fast, reliable, same-day appliance repair.</p>
-                <div class="sa-dropdown-container">
-                    <button class="sa-dropdown-button" id="saToggleBtn">View All Bergen County Service Areas</button>
-                    <div class="sa-dropdown-content" id="saDropdownContent">
-                        <div class="sa-slide">
-                            <h2>All Bergen County NJ Towns We Service</h2>
-                            <ul id="townsList">
-                                <li><h3>Allendale</h3></li>
-                                <li><h3>Alpine</h3></li>
-                                <li><h3>Bergenfield</h3></li>
-                                <li><h3>Bogota</h3></li>
-                                <li><h3>Carlstadt</h3></li>
-                                <li><h3>Cliffside Park</h3></li>
-                                <li><h3>Closter</h3></li>
-                                <li><h3>Cresskill</h3></li>
-                                <li><h3>Demarest</h3></li>
-                                <li><h3>Dumont</h3></li>
-                                <li><h3>East Rutherford</h3></li>
-                                <li><h3>Edgewater</h3></li>
-                                <li><h3>Elmwood Park</h3></li>
-                                <li><h3>Emerson</h3></li>
-                                <li><h3>Englewood</h3></li>
-                                <li><h3>Englewood Cliffs</h3></li>
-                                <li><h3>Fair Lawn</h3></li>
-                                <li><h3>Fairview</h3></li>
-                                <li><h3>Fort Lee</h3></li>
-                                <li><h3>Franklin Lakes</h3></li>
-                                <li><h3>Garfield</h3></li>
-                                <li><h3>Glen Rock</h3></li>
-                                <li><h3>Hackensack</h3></li>
-                                <li><h3>Harrington Park</h3></li>
-                                <li><h3>Hasbrouck Heights</h3></li>
-                                <li><h3>Haworth</h3></li>
-                                <li><h3>Hillsdale</h3></li>
-                                <li><h3>Ho-Ho-Kus</h3></li>
-                                <li><h3>Leonia</h3></li>
-                                <li><h3>Little Ferry</h3></li>
-                                <li><h3>Lodi</h3></li>
-                                <li><h3>Lyndhurst</h3></li>
-                                <li><h3>Mahwah</h3></li>
-                                <li><h3>Maywood</h3></li>
-                                <li><h3>Midland Park</h3></li>
-                                <li><h3>Montvale</h3></li>
-                                <li><h3>Moonachie</h3></li>
-                                <li><h3>New Milford</h3></li>
-                                <li><h3>North Arlington</h3></li>
-                                <li><h3>Northvale</h3></li>
-                                <li><h3>Norwood</h3></li>
-                                <li><h3>Oakland</h3></li>
-                                <li><h3>Old Tappan</h3></li>
-                                <li><h3>Oradell</h3></li>
-                                <li><h3>Palisades Park</h3></li>
-                                <li><h3>Paramus</h3></li>
-                                <li><h3>Park Ridge</h3></li>
-                                <li><h3>Ramsey</h3></li>
-                                <li><h3>Ridgefield</h3></li>
-                                <li><h3>Ridgefield Park</h3></li>
-                                <li><h3>Ridgewood</h3></li>
-                                <li><h3>River Edge</h3></li>
-                                <li><h3>River Vale</h3></li>
-                                <li><h3>Rochelle Park</h3></li>
-                                <li><h3>Rockleigh</h3></li>
-                                <li><h3>Rutherford</h3></li>
-                                <li><h3>Saddle Brook</h3></li>
-                                <li><h3>Saddle River</h3></li>
-                                <li><h3>South Hackensack</h3></li>
-                                <li><h3>Teaneck</h3></li>
-                                <li><h3>Tenafly</h3></li>
-                                <li><h3>Teterboro</h3></li>
-                                <li><h3>Upper Saddle River</h3></li>
-                                <li><h3>Waldwick</h3></li>
-                                <li><h3>Wallington</h3></li>
-                                <li><h3>Washington Township</h3></li>
-                                <li><h3>Westwood</h3></li>
-                                <li><h3>Woodcliff Lake</h3></li>
-                                <li><h3>Wood-Ridge</h3></li>
-                                <li><h3>Wyckoff</h3></li>
-                            </ul>
+        </section>
+
+        <!-- Service Areas -->
+        <section class="service-areas">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Areas We Serve in Bergen County</h2>
+                </div>
+                <div class="areas-list">
+                    <span class="area-tag">Hackensack</span>
+                    <span class="area-tag">Paramus</span>
+                    <span class="area-tag">Fort Lee</span>
+                    <span class="area-tag">Englewood</span>
+                    <span class="area-tag">Teaneck</span>
+                    <span class="area-tag">Ridgewood</span>
+                    <span class="area-tag">Fair Lawn</span>
+                    <span class="area-tag">Bergenfield</span>
+                    <span class="area-tag">Garfield</span>
+                    <span class="area-tag">Lodi</span>
+                    <span class="area-tag">Lyndhurst</span>
+                    <span class="area-tag">Rutherford</span>
+                    <span class="area-tag">Cliffside Park</span>
+                    <span class="area-tag">Dumont</span>
+                    <span class="area-tag">Glen Rock</span>
+                    <span class="area-tag">Mahwah</span>
+                    <span class="area-tag">Ramsey</span>
+                    <span class="area-tag">Wyckoff</span>
+                    <span class="area-tag">Waldwick</span>
+                    <span class="area-tag">Westwood</span>
+                    <span class="area-tag">Oradell</span>
+                    <span class="area-tag">River Edge</span>
+                    <span class="area-tag">New Milford</span>
+                    <span class="area-tag">All Bergen County</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Schedule your appliance repair service today</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <strong>Phone</strong><br/>
+                                <a href="tel:PHONE_PLACEHOLDER">PHONE_PLACEHOLDER</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <strong>Email</strong><br/>
+                                <a href="mailto:EMAIL_PLACEHOLDER">EMAIL_PLACEHOLDER</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Service Area</strong><br/>
+                                All of Bergen County, NJ
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <strong>Hours</strong><br/>
+                                Mon-Sun: 7am - 10pm
+                            </div>
                         </div>
                     </div>
+                    <div class="contact-form-wrapper">
+                        <h3>Request Service</h3>
+                        <form class="contact-form" id="contactForm">
+                            <input type="text" name="name" placeholder="Your Name *" required />
+                            <input type="tel" name="phone" placeholder="Phone Number *" required />
+                            <input type="email" name="email" placeholder="Email Address" />
+                            <textarea name="message" placeholder="Describe your appliance problem..."></textarea>
+                            <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                        </form>
+                    </div>
                 </div>
-            </section>
-            <section id="cf-schedule-container">
-                <div class="cf-schedule-text">Schedule Your Appliance Repair Online</div>
-                <button class="cf-book-button" id="cfBookButton">Book Online</button>
-                <button class="form-call-now" id="formCallNow">Call Now</button>
-                <div class="cf-contact-form-section" id="cfContactFormSection">
-                    <p class="expect-text">What to Expect: Once you submit your request, a representative will contact you within 30 minutes...</p>
-                    <form id="cfContactForm" class="cf-contact-form">
-                        <div class="cf-form-group"><label for="cfName">Name *</label><input type="text" id="cfName" name="from_name" placeholder="John Doe" required></div>
-                        <div class="cf-form-group"><label for="cfEmail">Email *</label><input type="email" id="cfEmail" name="user_email" placeholder="john@example.com" required></div>
-                        <div class="cf-form-group"><label for="cfPhone">Phone *</label><input type="tel" id="cfPhone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}"></div>
-                        <div class="cf-form-group"><label for="cfAddress">Address *</label><textarea id="cfAddress" name="address" placeholder="123 Main St, Ridgewood, NJ 07450" required></textarea></div>
-                        <div class="cf-form-group"><label for="cfMessage">Describe the Problem & Appliance Type *</label><textarea id="cfMessage" name="message" placeholder="Please describe the issue and specify the appliance type (e.g., Refrigerator, Washer, etc.)" required></textarea></div>
-                        <button type="submit" class="cf-form-button">Send Request</button>
-                    </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>Contact Information</h4>
+                        <p>📞 PHONE_PLACEHOLDER</p>
+                        <p>📧 EMAIL_PLACEHOLDER</p>
+                        <p>📍 Serving all Bergen County, NJ</p>
+                        <div class="footer-buttons">
+                            <a href="tel:PHONE_PLACEHOLDER" class="footer-btn">
+                                📞 PHONE_PLACEHOLDER
+                            </a>
+                            <a href="#contact" class="footer-btn">
+                                🔧 Book Service
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Appliance Repair Services</h4>
+                        <div class="footer-links">
+                            <a href="#services">Refrigerator Repair</a>
+                            <a href="#services">Dishwasher Repair</a>
+                            <a href="#services">Washer Repair</a>
+                            <a href="#services">Dryer Repair</a>
+                            <a href="#services">Oven Repair</a>
+                            <a href="#services">Cooktop Repair</a>
+                            <a href="#services">Appliance Installation</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <div class="footer-links">
+                            <a href="#hero">Home</a>
+                            <a href="#services">Services</a>
+                            <a href="#brands">Brands</a>
+                            <a href="#about">About Us</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Sunday</p>
+                        <p>7:00 AM - 10:00 PM</p>
+                        <p style="margin-top: 15px;">Same-day service available!</p>
+                        <p>Emergency repairs 365 days a year</p>
+                    </div>
                 </div>
-            </section>
-        </div>
-    </section>
-    <div class="cf-modal-overlay" id="cfModalOverlay"></div>
-    <div class="cf-success-modal" id="cfSuccessModal">
-        <div class="cf-success-content">
-            <p id="successMessage">Your request has been sent.<br>A technician will contact you within 30 minutes!</p>
-            <button class="cf-close-modal" id="cfCloseModal">Close</button>
+
+                <div class="footer-brands">
+                    <h4>Brands We Service</h4>
+                    <div class="brands-list">
+                        <span>Admiral</span>
+                        <span>Amana</span>
+                        <span>Bosch</span>
+                        <span>Dacor</span>
+                        <span>Electrolux</span>
+                        <span>Frigidaire</span>
+                        <span>GE</span>
+                        <span>Haier</span>
+                        <span>Hotpoint</span>
+                        <span>Jenn-Air</span>
+                        <span>Kenmore</span>
+                        <span>KitchenAid</span>
+                        <span>LG</span>
+                        <span>Maytag</span>
+                        <span>Miele</span>
+                        <span>Samsung</span>
+                        <span>Sub-Zero</span>
+                        <span>Thermador</span>
+                        <span>Viking</span>
+                        <span>Whirlpool</span>
+                        <span>Wolf</span>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>© 2024 Bergen County Appliance Repair Service. All Rights Reserved.</p>
+                    <p>
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms of Service</a> |
+                        <a href="#">Warranty</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <span class="popup-close" onclick="hidePopup()">×</span>
+            <h3>Thank You!</h3>
+            <p>We have received your request and will contact you shortly.</p>
+            <button class="btn btn-primary" onclick="hidePopup()">Close</button>
         </div>
     </div>
 
-    <section id="faq" style="padding: 80px 0; background: var(--gray);">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px; color: var(--blue);">Frequently Asked Questions</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; color: #666; font-size: 18px;">Get answers to common questions about appliance repair in Bergen County.</p>
-            
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 20px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: var(--blue);">
-                        <span>How quickly can you repair my appliance?</span>
-                        <span class="faq-icon" style="font-size: 24px; transition: transform 0.3s;">+</span>
-                    </div>
-                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444;">
-                        <div style="padding: 0 25px 25px;">
-                            We offer same-day service for most appliance repairs in Bergen County. When you call before noon, we can often schedule an appointment for later that same day. Our technicians arrive in fully-stocked service vehicles carrying hundreds of common parts, allowing us to complete approximately 90% of repairs during the first visit.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 20px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: var(--blue);">
-                        <span>What brands do you repair?</span>
-                        <span class="faq-icon" style="font-size: 24px; transition: transform 0.3s;">+</span>
-                    </div>
-                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444;">
-                        <div style="padding: 0 25px 25px;">
-                            We repair all major appliance brands including Samsung, LG, Whirlpool, Maytag, GE, Frigidaire, KitchenAid, Bosch, Miele, Sub-Zero, Viking, Wolf, Thermador, Kenmore, Amana, and many more. Our technicians are trained on both domestic and imported appliances.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 20px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: var(--blue);">
-                        <span>How much does appliance repair cost?</span>
-                        <span class="faq-icon" style="font-size: 24px; transition: transform 0.3s;">+</span>
-                    </div>
-                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444;">
-                        <div style="padding: 0 25px 25px;">
-                            Repair costs vary depending on the appliance type, specific problem, and parts required. We charge a diagnostic fee which is applied toward the repair cost if you proceed. After diagnosis, we provide a detailed written estimate before any work begins—no surprises or hidden fees.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 20px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: var(--blue);">
-                        <span>What areas in Bergen County do you serve?</span>
-                        <span class="faq-icon" style="font-size: 24px; transition: transform 0.3s;">+</span>
-                    </div>
-                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444;">
-                        <div style="padding: 0 25px 25px;">
-                            We provide appliance repair service to all 70 municipalities in Bergen County, New Jersey. Our coverage includes Hackensack, Paramus, Teaneck, Fort Lee, Englewood, Ridgewood, Fair Lawn, Bergenfield, Mahwah, and all surrounding communities. <a href="#service-areas" style="color: var(--blue); font-weight: 600;">View our complete service area list →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 20px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: var(--blue);">
-                        <span>Do you offer emergency or weekend service?</span>
-                        <span class="faq-icon" style="font-size: 24px; transition: transform 0.3s;">+</span>
-                    </div>
-                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444;">
-                        <div style="padding: 0 25px 25px;">
-                            Yes, we offer service 7 days a week including weekends and holidays. Our regular hours are 7:00 AM to 9:00 PM, Monday through Sunday. For true emergencies—such as gas leaks, refrigerator failures, or flooding from appliance malfunctions—we provide priority response.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 20px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: var(--blue);">
-                        <span>Do you offer any repair guarantees?</span>
-                        <span class="faq-icon" style="font-size: 24px; transition: transform 0.3s;">+</span>
-                    </div>
-                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444;">
-                        <div style="padding: 0 25px 25px;">
-                            Yes, all our repairs come with a comprehensive service warranty. Parts are covered by the manufacturer's warranty, and our labor is warranted for 90 days. If the same problem recurs within the warranty period, we'll return to fix it at no additional charge.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item" style="background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 20px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: var(--blue);">
-                        <span>Should I repair or replace my appliance?</span>
-                        <span class="faq-icon" style="font-size: 24px; transition: transform 0.3s;">+</span>
-                    </div>
-                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444;">
-                        <div style="padding: 0 25px 25px;">
-                            The repair-versus-replace decision depends on the appliance age, repair cost, and overall condition. A general rule: if repair costs exceed 50% of replacement cost for an appliance over 8 years old, replacement may be wiser. We'll provide honest recommendations based on your specific situation.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    </main>
-    <footer>
-        <div class="footer-main">
-            <div class="footer-grid">
-                <div class="footer-column footer-brand">
-                    <h2>Bergen County Appliance Repair</h2>
-                    <p><strong>Bergen County, New Jersey</strong></p>
-                    <p>[YOUR ADDRESS HERE]<br>[CITY], NJ [ZIP]</p>
-                    <p style="margin-top: 15px;">Professional appliance repair serving all of Bergen County. Same-day service available for washers, dryers, dishwashers, ovens, microwaves, cooktops, and refrigerators.</p>
-                    <div class="footer-hours">
-                        <p><strong>Business Hours</strong></p>
-                        <p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li><a href="#washer-repair">Washer Repair</a></li>
-                        <li><a href="#dryer-repair">Dryer Repair</a></li>
-                        <li><a href="#refrigerator-repair">Refrigerator Repair</a></li>
-                        <li><a href="#dishwasher-repair">Dishwasher Repair</a></li>
-                        <li><a href="#oven-repair">Oven Repair</a></li>
-                        <li><a href="#microwave-repair">Microwave Repair</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>More Services</h3>
-                    <ul>
-                        <li><a href="#cooktop-repair">Cooktop Repair</a></li>
-                        <li><a href="#freezer-repair">Freezer Repair</a></li>
-                        <li><a href="#hood-vent-repair">Vent Hood Repair</a></li>
-                        <li><a href="#services">All Appliances</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#service-areas">Service Areas</a></li>
-                        <li><a href="#contact">Schedule Service</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <div class="footer-bottom-links">
-                    <a href="#hero">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#service-areas">Service Areas</a>
-                    <a href="#contact">Schedule Service</a>
-                </div>
-                <p>© 2025 Bergen County Appliance Repair Service. All Rights Reserved.</p>
-                <p>Licensed & Insured • Certified Technicians • Same-Day Service Available</p>
-            </div>
-        </div>
-    </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const servicesMenu = document.getElementById('servicesMenu');
-            const servicesToggle = document.getElementById('servicesToggle');
-            const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
-            const additionalToggle = document.getElementById('additionalToggle');
-            const additionalSubmenu = document.getElementById('additionalSubmenu');
-            const serviceAreasToggle = document.getElementById('serviceAreasToggle');
-            const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
-            
-            function closeDropdown() {
-                if (servicesMenu) servicesMenu.classList.remove('active');
-                if (additionalSubmenu) additionalSubmenu.style.maxHeight = '0';
-                if (serviceAreasSubmenu) serviceAreasSubmenu.style.maxHeight = '0';
-            }
-            
-            if (servicesToggle) {
-                servicesToggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    servicesMenu.classList.toggle('active');
-                });
-            }
-            
-            if (dropdownCloseBtn) {
-                dropdownCloseBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    closeDropdown();
-                });
-            }
-            
-            if (additionalToggle && additionalSubmenu) {
-                additionalToggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    if (additionalSubmenu.style.maxHeight && additionalSubmenu.style.maxHeight !== '0px') {
-                        additionalSubmenu.style.maxHeight = '0';
-                    } else {
-                        additionalSubmenu.style.maxHeight = additionalSubmenu.scrollHeight + 'px';
-                    }
-                });
-            }
-            
-            if (serviceAreasToggle && serviceAreasSubmenu) {
-                serviceAreasToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    if (serviceAreasSubmenu.style.maxHeight && serviceAreasSubmenu.style.maxHeight !== '0px') {
-                        serviceAreasSubmenu.style.maxHeight = '0';
-                    } else {
-                        serviceAreasSubmenu.style.maxHeight = '400px';
-                    }
-                });
-            }
-            
-            if (additionalSubmenu) {
-                const additionalItems = additionalSubmenu.querySelectorAll('li');
-                additionalItems.forEach(function(item) {
-                    item.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                    });
-                });
-            }
-            
-            document.addEventListener('click', closeDropdown);
-            
-            const saToggle = document.getElementById('saToggleBtn');
-            const saContent = document.getElementById('saDropdownContent');
-            
-            if (saToggle && saContent) {
-                saToggle.addEventListener('click', function() {
-                    if (saContent.style.maxHeight && saContent.style.maxHeight !== '0px') {
-                        saContent.style.maxHeight = '0';
-                    } else {
-                        saContent.style.maxHeight = saContent.scrollHeight + 'px';
-                    }
-                });
-            }
-            
-            const services = document.querySelectorAll('.service');
-            services.forEach(function(service) {
-                service.addEventListener('click', function(e) {
-                    if (e.target.tagName === 'BUTTON' || 
-                        e.target.closest('button') || 
-                        e.target.tagName === 'A' || 
-                        e.target.closest('a') || 
-                        e.target.tagName === 'LI' || 
-                        e.target.closest('.service-types ul') || 
-                        e.target.closest('.learn-more-btn')) {
-                        return;
-                    }
-                    this.classList.toggle('active');
-                });
-            });
-            
-            const cfBookButton = document.getElementById('cfBookButton');
-            if (cfBookButton) {
-                cfBookButton.addEventListener('click', function() {
-                    document.getElementById('cfContactFormSection').classList.toggle('active');
-                });
-            }
-            
-            function setupCallButton(btn) {
-                if (btn) {
-                    btn.addEventListener('click', function() {
-                        if (this.dataset.revealed) return;
-                        // PLACEHOLDER: Replace with your actual phone number digits
-                        const digits = [5, 5, 5, 1, 2, 3, 4, 5, 6, 7];
-                        const num = digits.join('');
-                        const formatted = '+1 (' + num.slice(0,3) + ') ' + num.slice(3,6) + '-' + num.slice(6);
-                        this.innerHTML = formatted;
-                        this.dataset.revealed = 'true';
-                        this.onclick = function() {
-                            window.location.href = 'tel:+1' + num;
-                        };
-                    });
-                }
-            }
-            
-            setupCallButton(document.getElementById('navCallNow'));
-            setupCallButton(document.getElementById('formCallNow'));
-            setupCallButton(document.getElementById('heroCallNow'));
-            
-            const cfContactForm = document.getElementById('cfContactForm');
-            if (cfContactForm) {
-                cfContactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const email = document.getElementById('cfEmail').value.trim();
-                    // PLACEHOLDER: Add your form submission logic here
-                    cfContactForm.reset();
-                    document.getElementById('cfContactFormSection').classList.remove('active');
-                    document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
-                    document.getElementById('cfSuccessModal').classList.add('active');
-                    document.getElementById('cfModalOverlay').classList.add('active');
-                });
-            }
-            
-            const cfCloseModal = document.getElementById('cfCloseModal');
-            if (cfCloseModal) {
-                cfCloseModal.onclick = function() {
-                    document.getElementById('cfSuccessModal').classList.remove('active');
-                    document.getElementById('cfModalOverlay').classList.remove('active');
-                };
-            }
-            
-            const cfModalOverlay = document.getElementById('cfModalOverlay');
-            if (cfModalOverlay) {
-                cfModalOverlay.onclick = function() {
-                    if (cfCloseModal) cfCloseModal.click();
-                };
-            }
-        });
-        
-        function toggleService(btn) {
-            event.preventDefault();
-            event.stopPropagation();
-            
-            const serviceCard = btn.closest('.service');
-            const isActive = serviceCard.classList.contains('active');
-            
-            document.querySelectorAll('.service').forEach(function(card) {
-                card.classList.remove('active');
-                const cardBtn = card.querySelector('.learn-more-btn');
-                if (cardBtn) {
-                    const span = cardBtn.querySelector('span');
-                    if (span) span.textContent = 'Learn More';
-                }
-            });
-            
-            if (!isActive) {
-                serviceCard.classList.add('active');
-                const span = btn.querySelector('span');
-                if (span) span.textContent = 'Show Less';
-            }
-        }
-
-        function toggleExpand(id) {
-            event.stopPropagation();
-            var text = document.getElementById('expandable-text-' + id);
-            var btn = document.getElementById('expandable-btn-' + id);
-            var fade = document.getElementById('expandable-fade-' + id);
-            var isCollapsed = !text.classList.contains('expanded');
-            if (isCollapsed) {
-                if (id === '1') {
-                    text.style.maxHeight = text.scrollHeight + 'px';
-                    text.style.overflowY = 'visible';
-                } else {
-                    text.style.maxHeight = '200px';
-                    text.style.overflowY = 'auto';
-                    text.style.paddingRight = '10px';
-                }
-                text.classList.add('expanded');
-                btn.innerHTML = '− Show Less';
-                btn.setAttribute('aria-expanded', 'true');
-                if (fade) fade.style.display = 'none';
-            } else {
-                var originalHeight = text.getAttribute('data-collapsed-height') || '110px';
-                text.style.maxHeight = originalHeight;
-                text.style.overflowY = 'hidden';
-                text.style.paddingRight = '0';
-                text.classList.remove('expanded');
-                btn.innerHTML = '+ Show More';
-                btn.setAttribute('aria-expanded', 'false');
-                if (fade) fade.style.display = 'block';
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('[id^="expandable-text-"]').forEach(function(el) {
-                var height = el.style.maxHeight || '110px';
-                el.setAttribute('data-collapsed-height', height);
-            });
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+            var menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
         });
 
-        function toggleFaq(element) {
-            const faqItem = element.parentElement;
-            const answer = faqItem.querySelector('.faq-answer');
-            const icon = element.querySelector('.faq-icon');
-            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-            
-            document.querySelectorAll('.faq-item').forEach(function(item) {
-                const itemAnswer = item.querySelector('.faq-answer');
-                const itemIcon = item.querySelector('.faq-icon');
-                if (item !== faqItem) {
-                    itemAnswer.style.maxHeight = '0px';
-                    if (itemIcon) itemIcon.textContent = '+';
+        // Mobile Submenu Toggle
+        function toggleMobileSubmenu(id) {
+            var submenu = document.getElementById(id);
+            submenu.classList.toggle('active');
+        }
+
+        // Form Submissions
+        document.getElementById('sidebarForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showPopup();
+            this.reset();
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showPopup();
+            this.reset();
+        });
+
+        // Popup Functions
+        function showPopup() {
+            document.getElementById('popupOverlay').classList.add('active');
+        }
+
+        function hidePopup() {
+            document.getElementById('popupOverlay').classList.remove('active');
+        }
+
+        // Close popup on overlay click
+        document.getElementById('popupOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hidePopup();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.remove('active');
                 }
             });
-            
-            if (isOpen) {
-                answer.style.maxHeight = '0px';
-                icon.textContent = '+';
-            } else {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.textContent = '−';
-            }
-        }
+        });
     </script>
 </body>
 </html>
