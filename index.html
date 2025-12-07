@@ -120,9 +120,52 @@
         }
         
         .header-info .pnumber a {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 700;
-            color: #e74c3c;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .phone-reveal {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: #fff !important;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none !important;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .phone-reveal:hover {
+            background: linear-gradient(135deg, #a93226 0%, #c0392b 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+        }
+        
+        .phone-reveal:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(231, 76, 60, 0.4);
+        }
+        
+        .about_support .phone-reveal {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            color: #1a5276 !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about_support .phone-reveal:hover {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer_box .phone-reveal {
+            padding: 10px 20px;
+            font-size: 14px;
         }
         
         .proudly-american {
@@ -1145,7 +1188,7 @@
                     <div class="header-icon">📞</div>
                     <div class="header-info">
                         <span class="phone">Call Now For Appliance Repair</span>
-                        <span class="pnumber"><a href="tel:2012983499" class="phone-reveal" data-phone="&#40;&#50;&#48;&#49;&#41;&#32;&#50;&#57;&#56;&#45;&#51;&#52;&#57;&#57;">&#40;&#50;&#48;&#49;&#41;&#32;&#50;&#57;&#56;&#45;&#51;&#52;&#57;&#57;</a></span>
+                        <span class="pnumber"><a href="javascript:void(0)" class="phone-reveal" data-phone="2012983499">📞 Tap to Call - Same Day Repair</a></span>
                     </div>
                 </div>
             </div>
@@ -1357,7 +1400,7 @@
                 <div class="col-md-4">
                     <div class="about_support">
                         <p>Book Your Appointment</p>
-                        <span class="appointment"><a href="tel:2012983499" class="phone-reveal" data-phone="&#40;&#50;&#48;&#49;&#41;&#32;&#50;&#57;&#56;&#45;&#51;&#52;&#57;&#57;">&#40;&#50;&#48;&#49;&#41;&#32;&#50;&#57;&#56;&#45;&#51;&#52;&#57;&#57;</a></span>
+                        <span class="appointment"><a href="javascript:void(0)" class="phone-reveal" data-phone="2012983499">📞 Tap to Call - Same Day Repair</a></span>
                     </div>
                 </div>
             </div>
@@ -1756,7 +1799,7 @@
                     <div class="footer_box">
                         <h3>Contact Information</h3>
                         <span class="support_email"><i class="fa fa-envelope"></i> <a href="/cdn-cgi/l/email-protection#70191e161f3012150217151e131f051e04091100001c19111e1315030215001119025e131f1d">Email Us</a></span>
-                        <span class="support_num"><i class="fa fa-phone"></i> <a href="tel:2012983499" class="phone-reveal" data-phone="&#40;&#50;&#48;&#49;&#41;&#32;&#50;&#57;&#56;&#45;&#51;&#52;&#57;&#57;">&#40;&#50;&#48;&#49;&#41;&#32;&#50;&#57;&#56;&#45;&#51;&#52;&#57;&#57;</a></span>
+                        <span class="support_num"><a href="javascript:void(0)" class="phone-reveal" data-phone="2012983499">📞 Tap to Call - Same Day Repair</a></span>
                         <span class="support_num"><i class="fa fa-globe"></i> Bergen County, NJ</span>
                     </div>
                 </div>
@@ -1903,12 +1946,17 @@
 
         // Phone reveal on click
         document.querySelectorAll('.phone-reveal').forEach(function(el) {
-            el.addEventListener('click', function() {
-                var p = this.getAttribute('data-phone');
-                if (p) {
-                    var d = document.createElement('div');
-                    d.innerHTML = p;
-                    this.textContent = d.textContent;
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                var phone = this.getAttribute('data-phone');
+                if (phone && this.textContent.includes('Tap to Call')) {
+                    // Format phone number
+                    var formatted = '📞 (' + phone.substring(0,3) + ') ' + phone.substring(3,6) + '-' + phone.substring(6);
+                    this.textContent = formatted;
+                    this.href = 'tel:' + phone;
+                } else if (phone) {
+                    // Already revealed, make the call
+                    window.location.href = 'tel:' + phone;
                 }
             });
         });
