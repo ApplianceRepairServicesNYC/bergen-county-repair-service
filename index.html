@@ -773,6 +773,116 @@
             display: block;
         }
         
+        /* Reviews Modal */
+        .reviews-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2999;
+        }
+        .reviews-modal-overlay.active {
+            display: block;
+        }
+        .reviews-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 12px;
+            padding: 30px;
+            z-index: 3000;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        .reviews-modal.active {
+            display: block;
+        }
+        .close-reviews-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 32px;
+            cursor: pointer;
+            color: #666;
+            line-height: 1;
+        }
+        .close-reviews-modal:hover {
+            color: #c0392b;
+        }
+        .reviews-modal-content {
+            position: relative;
+        }
+        
+        /* Locations Button & Dropdown */
+        .locations-section {
+            padding: 50px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+        }
+        .btn-locations {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #fff;
+            color: #1a5276;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-locations:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .locations-dropdown {
+            display: none;
+            margin-top: 30px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .locations-dropdown.active {
+            display: block;
+        }
+        .locations-dropdown h4 {
+            color: #1a5276;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+        .location-item {
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            color: #333;
+            font-size: 14px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .location-item:hover {
+            background: #1a5276;
+            color: #fff;
+        }
+        
         /* Responsive Styles */
         @media (max-width: 992px) {
             .col-md-2, .col-md-3, .col-md-4, .col-md-6, .col-md-8 {
@@ -1385,6 +1495,100 @@
       </div>
     </section>
 
+    <!-- Reviews Modal (for nav link) -->
+    <div id="reviews-modal-overlay" class="reviews-modal-overlay"></div>
+    <div id="reviews-modal" class="reviews-modal">
+      <div class="reviews-modal-content">
+        <button id="close-reviews-modal" class="close-reviews-modal">&times;</button>
+        <h3 style="color:#1a5276; margin-bottom:20px; text-align:center;">Customer Reviews</h3>
+        <div id="reviews-modal-widget">
+          <div class="elfsight-app-2942fb52-4463-41bc-bc83-d831b9da6f0e" data-elfsight-app-lazy></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Locations Section -->
+    <section class="locations-section" id="locations">
+        <div class="container">
+            <button id="view-locations-btn" class="btn-locations">View All Locations</button>
+            <div id="locations-dropdown" class="locations-dropdown">
+                <h4>We Service All 70 Bergen County Municipalities</h4>
+                <div class="locations-grid">
+                    <div class="location-item">Allendale</div>
+                    <div class="location-item">Alpine</div>
+                    <div class="location-item">Bergenfield</div>
+                    <div class="location-item">Bogota</div>
+                    <div class="location-item">Carlstadt</div>
+                    <div class="location-item">Cliffside Park</div>
+                    <div class="location-item">Closter</div>
+                    <div class="location-item">Cresskill</div>
+                    <div class="location-item">Demarest</div>
+                    <div class="location-item">Dumont</div>
+                    <div class="location-item">East Rutherford</div>
+                    <div class="location-item">Edgewater</div>
+                    <div class="location-item">Elmwood Park</div>
+                    <div class="location-item">Emerson</div>
+                    <div class="location-item">Englewood</div>
+                    <div class="location-item">Englewood Cliffs</div>
+                    <div class="location-item">Fair Lawn</div>
+                    <div class="location-item">Fairview</div>
+                    <div class="location-item">Fort Lee</div>
+                    <div class="location-item">Franklin Lakes</div>
+                    <div class="location-item">Garfield</div>
+                    <div class="location-item">Glen Rock</div>
+                    <div class="location-item">Hackensack</div>
+                    <div class="location-item">Harrington Park</div>
+                    <div class="location-item">Hasbrouck Heights</div>
+                    <div class="location-item">Haworth</div>
+                    <div class="location-item">Hillsdale</div>
+                    <div class="location-item">Ho-Ho-Kus</div>
+                    <div class="location-item">Leonia</div>
+                    <div class="location-item">Little Ferry</div>
+                    <div class="location-item">Lodi</div>
+                    <div class="location-item">Lyndhurst</div>
+                    <div class="location-item">Mahwah</div>
+                    <div class="location-item">Maywood</div>
+                    <div class="location-item">Midland Park</div>
+                    <div class="location-item">Montvale</div>
+                    <div class="location-item">Moonachie</div>
+                    <div class="location-item">New Milford</div>
+                    <div class="location-item">North Arlington</div>
+                    <div class="location-item">Northvale</div>
+                    <div class="location-item">Norwood</div>
+                    <div class="location-item">Oakland</div>
+                    <div class="location-item">Old Tappan</div>
+                    <div class="location-item">Oradell</div>
+                    <div class="location-item">Palisades Park</div>
+                    <div class="location-item">Paramus</div>
+                    <div class="location-item">Park Ridge</div>
+                    <div class="location-item">Ramsey</div>
+                    <div class="location-item">Ridgefield</div>
+                    <div class="location-item">Ridgefield Park</div>
+                    <div class="location-item">Ridgewood</div>
+                    <div class="location-item">River Edge</div>
+                    <div class="location-item">River Vale</div>
+                    <div class="location-item">Rochelle Park</div>
+                    <div class="location-item">Rockleigh</div>
+                    <div class="location-item">Rutherford</div>
+                    <div class="location-item">Saddle Brook</div>
+                    <div class="location-item">Saddle River</div>
+                    <div class="location-item">South Hackensack</div>
+                    <div class="location-item">Teaneck</div>
+                    <div class="location-item">Tenafly</div>
+                    <div class="location-item">Teterboro</div>
+                    <div class="location-item">Upper Saddle River</div>
+                    <div class="location-item">Waldwick</div>
+                    <div class="location-item">Wallington</div>
+                    <div class="location-item">Washington Township</div>
+                    <div class="location-item">Westwood</div>
+                    <div class="location-item">Woodcliff Lake</div>
+                    <div class="location-item">Wood-Ridge</div>
+                    <div class="location-item">Wyckoff</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Brands Section -->
     <section class="brands_section text-center" id="brands">
         <div class="container">
@@ -1514,7 +1718,7 @@
                 <div class="col-md-3">
                     <div class="footer_box">
                         <h3>Contact Information</h3>
-                        <span class="support_email"><i class="fa fa-envelope"></i> <a href="mailto:info@bergencountyappliancesrepair.com">Email Us</a></span>
+                        <span class="support_email"><i class="fa fa-envelope"></i> <a href="/cdn-cgi/l/email-protection#70191e161f3012150217151e131f051e04091100001c19111e1315030215001119025e131f1d">Email Us</a></span>
                         <span class="support_num"><i class="fa fa-phone"></i> <a href="tel:2012983499" class="phone-reveal" data-phone="&#40;&#50;&#48;&#49;&#41;&#32;&#50;&#57;&#56;&#45;&#51;&#52;&#57;&#57;">&#40;&#50;&#48;&#49;&#41;&#32;&#50;&#57;&#56;&#45;&#51;&#52;&#57;&#57;</a></span>
                         <span class="support_num"><i class="fa fa-globe"></i> Bergen County, NJ</span>
                     </div>
@@ -1545,7 +1749,7 @@
     </div>
 
     <!-- EmailJS Library -->
-    <script>var emailjs=function(e){"use strict";class t{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Network Error";this.status=e,this.text=t}}const i={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:(()=>{if("undefined"!=typeof localStorage)return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,t)=>Promise.resolve(localStorage.setItem(e,t)),remove:e=>Promise.resolve(localStorage.removeItem(e))}})()},r=e=>e?"string"==typeof e?{publicKey:e}:"[object Object]"===e.toString()?e:{}:{},o=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"https://api.emailjs.com";if(!e)return;const o=r(e);i.publicKey=o.publicKey,i.blockHeadless=o.blockHeadless,i.storageProvider=o.storageProvider,i.blockList=o.blockList,i.limitRate=o.limitRate,i.origin=o.origin||t},a=async function(e,r){let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const a=await fetch(i.origin+e,{method:"POST",headers:o,body:r}),s=await a.text(),n=new t(a.status,s);if(a.ok)return n;throw n},s=(e,t,i)=>{if(!e||"string"!=typeof e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t||"string"!=typeof t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!i||"string"!=typeof i)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},n=e=>e.webdriver||!e.languages||0===e.languages.length,l=()=>new t(451,"Unavailable For Headless Browser"),c=(e,t)=>{if((e=>!e.list?.length||!e.watchVariable)(e))return!1;((e,t)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if("string"!=typeof t)throw"The BlockList watchVariable has to be a string"})(e.list,e.watchVariable);const i=(r=t,o=e.watchVariable,r instanceof FormData?r.get(o):r[o]);var r,o;return"string"==typeof i&&e.list.includes(i)},d=()=>new t(403,"Forbidden"),m=async(e,t,i)=>{if(!t.throttle||!i)return!1;((e,t)=>{if("number"!=typeof e||e<0)throw"The LimitRate throttle has to be a positive number";if(t&&"string"!=typeof t)throw"The LimitRate ID has to be a non-empty string"})(t.throttle,t.id);const r=t.id||e,o=await(async(e,t,i)=>{const r=Number(await i.get(e)||0);return t-Date.now()+r})(r,t.throttle,i);return o>0||(await i.set(r,Date.now().toString()),!1)},h=()=>new t(429,"Too Many Requests"),p=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=u.storageProvider||i.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());if(s(b,e,t),(e=>{if(e&&"[object Object]"!==e.toString())throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"})(o),o&&c(w,o))return Promise.reject(d());if(await m(location.pathname,y,f))return Promise.reject(h());const v={lib_version:"4.4.1",user_id:b,service_id:e,template_id:t,template_params:o};return a("/api/v1.0/email/send",JSON.stringify(v),{"Content-type":"application/json"})},u=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=i.storageProvider||u.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());const v=(e=>"string"==typeof e?document.querySelector(e):e)(o);s(b,e,t),(e=>{if(!e||"FORM"!==e.nodeName)throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"})(v);const j=new FormData(v);return c(w,j)?Promise.reject(d()):await m(location.pathname,y,f)?Promise.reject(h()):(j.append("lib_version","4.4.1"),j.append("service_id",e),j.append("template_id",t),j.append("user_id",b),a("/api/v1.0/email/send-form",j))};var b={init:o,send:p,sendForm:u,EmailJSResponseStatus:t};return e.EmailJSResponseStatus=t,e.default=b,e.init=o,e.send=p,e.sendForm=u,Object.defineProperty(e,"__esModule",{value:!0}),e}({});emailjs.init({publicKey:'zfCrLmZU8eK9CuZcs'});</script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>var emailjs=function(e){"use strict";class t{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Network Error";this.status=e,this.text=t}}const i={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:(()=>{if("undefined"!=typeof localStorage)return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,t)=>Promise.resolve(localStorage.setItem(e,t)),remove:e=>Promise.resolve(localStorage.removeItem(e))}})()},r=e=>e?"string"==typeof e?{publicKey:e}:"[object Object]"===e.toString()?e:{}:{},o=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"https://api.emailjs.com";if(!e)return;const o=r(e);i.publicKey=o.publicKey,i.blockHeadless=o.blockHeadless,i.storageProvider=o.storageProvider,i.blockList=o.blockList,i.limitRate=o.limitRate,i.origin=o.origin||t},a=async function(e,r){let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const a=await fetch(i.origin+e,{method:"POST",headers:o,body:r}),s=await a.text(),n=new t(a.status,s);if(a.ok)return n;throw n},s=(e,t,i)=>{if(!e||"string"!=typeof e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t||"string"!=typeof t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!i||"string"!=typeof i)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},n=e=>e.webdriver||!e.languages||0===e.languages.length,l=()=>new t(451,"Unavailable For Headless Browser"),c=(e,t)=>{if((e=>!e.list?.length||!e.watchVariable)(e))return!1;((e,t)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if("string"!=typeof t)throw"The BlockList watchVariable has to be a string"})(e.list,e.watchVariable);const i=(r=t,o=e.watchVariable,r instanceof FormData?r.get(o):r[o]);var r,o;return"string"==typeof i&&e.list.includes(i)},d=()=>new t(403,"Forbidden"),m=async(e,t,i)=>{if(!t.throttle||!i)return!1;((e,t)=>{if("number"!=typeof e||e<0)throw"The LimitRate throttle has to be a positive number";if(t&&"string"!=typeof t)throw"The LimitRate ID has to be a non-empty string"})(t.throttle,t.id);const r=t.id||e,o=await(async(e,t,i)=>{const r=Number(await i.get(e)||0);return t-Date.now()+r})(r,t.throttle,i);return o>0||(await i.set(r,Date.now().toString()),!1)},h=()=>new t(429,"Too Many Requests"),p=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=u.storageProvider||i.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());if(s(b,e,t),(e=>{if(e&&"[object Object]"!==e.toString())throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"})(o),o&&c(w,o))return Promise.reject(d());if(await m(location.pathname,y,f))return Promise.reject(h());const v={lib_version:"4.4.1",user_id:b,service_id:e,template_id:t,template_params:o};return a("/api/v1.0/email/send",JSON.stringify(v),{"Content-type":"application/json"})},u=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=i.storageProvider||u.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());const v=(e=>"string"==typeof e?document.querySelector(e):e)(o);s(b,e,t),(e=>{if(!e||"FORM"!==e.nodeName)throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"})(v);const j=new FormData(v);return c(w,j)?Promise.reject(d()):await m(location.pathname,y,f)?Promise.reject(h()):(j.append("lib_version","4.4.1"),j.append("service_id",e),j.append("template_id",t),j.append("user_id",b),a("/api/v1.0/email/send-form",j))};var b={init:o,send:p,sendForm:u,EmailJSResponseStatus:t};return e.EmailJSResponseStatus=t,e.default=b,e.init=o,e.send=p,e.sendForm=u,Object.defineProperty(e,"__esModule",{value:!0}),e}({});emailjs.init({publicKey:'zfCrLmZU8eK9CuZcs'});</script>
 
     <script>
         // Set current year
@@ -1721,11 +1925,49 @@ function toggleReviews() {
 // Reviews button click handler - TOGGLE behavior
 document.getElementById("read-reviews-btn").addEventListener("click", toggleReviews);
 
-// Reviews nav link - triggers toggle function (no scroll)
+// Reviews nav link - opens modal popup
 document.getElementById("reviews-nav-link").addEventListener("click", function(e) {
   e.preventDefault();
-  toggleReviews();
+  document.getElementById("reviews-modal").classList.add("active");
+  document.getElementById("reviews-modal-overlay").classList.add("active");
+  document.body.style.overflow = "hidden";
+  // Initialize Elfsight
+  if (typeof window.ELFSIGHT_APP_INITIALIZED === "undefined") {
+    window.ELFSIGHT_APP_INITIALIZED = true;
+    setTimeout(function() {
+      if (window.elfsight) {
+        window.elfsight.init();
+      }
+    }, 100);
+  }
   document.getElementById('mainNav').classList.remove('active');
+});
+
+// Close reviews modal
+document.getElementById("close-reviews-modal").addEventListener("click", function() {
+  document.getElementById("reviews-modal").classList.remove("active");
+  document.getElementById("reviews-modal-overlay").classList.remove("active");
+  document.body.style.overflow = "";
+});
+
+document.getElementById("reviews-modal-overlay").addEventListener("click", function() {
+  document.getElementById("reviews-modal").classList.remove("active");
+  document.getElementById("reviews-modal-overlay").classList.remove("active");
+  document.body.style.overflow = "";
+});
+
+// View All Locations toggle
+document.getElementById("view-locations-btn").addEventListener("click", function() {
+  var dropdown = document.getElementById("locations-dropdown");
+  var btn = document.getElementById("view-locations-btn");
+  
+  if (dropdown.classList.contains("active")) {
+    dropdown.classList.remove("active");
+    btn.textContent = "View All Locations";
+  } else {
+    dropdown.classList.add("active");
+    btn.textContent = "Hide Locations";
+  }
 });
 </script>
 </body>
