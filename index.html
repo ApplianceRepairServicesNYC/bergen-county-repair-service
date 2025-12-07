@@ -680,6 +680,17 @@
             background: #a93226;
         }
         
+        .form-notice {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d4edda 100%);
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
         .locationmap {
             border-radius: 0 0 8px 8px;
             overflow: hidden;
@@ -768,6 +779,16 @@
         .brands-grid-dropdown {
             margin-top: 30px;
             padding: 20px 0;
+        }
+        
+        .brands-more-text {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
         }
         
         /* Footer - HomeAdvisor Style */
@@ -1767,6 +1788,7 @@
                         </div>
                         
                         <div class="services_support mb_30">
+                            <p class="form-notice">📞 A representative will reach out within 20 minutes to schedule the repair and discuss associated fees before confirming the appointment.</p>
                             <form id="contactForm">
                                 <div class="form-group">
                                     <input class="form-control" name="from_name" placeholder="Name *" required type="text">
@@ -1775,7 +1797,10 @@
                                     <input class="form-control" name="phone" placeholder="Phone *" required type="tel">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="user_email" placeholder="Email *" required type="email">
+                                    <input class="form-control" name="user_email" placeholder="Email" type="email">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="address" placeholder="Address *" required type="text">
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="subject" required>
@@ -2019,6 +2044,7 @@
                         <div class="brand_img"><span>Bertazzoni</span></div>
                     </div>
                 </div>
+                <p class="brands-more-text">& Many More — Including all major and specialty appliance brands not listed above. If you don't see your brand, don't worry — we repair it!</p>
             </div>
         </div>
     </section>
@@ -2103,7 +2129,7 @@
     <div class="cf-modal-overlay" id="cfModalOverlay"></div>
     <div class="cf-success-modal" id="cfSuccessModal">
         <div class="cf-success-content">
-            <p id="successMessage">Your request has been sent.<br>A technician will contact you within 30 minutes!</p>
+            <p id="successMessage">Your request has been sent.<br>A representative will reach out within 20 minutes to schedule the repair and discuss associated fees before confirming the appointment.</p>
             <button class="cf-close-modal" id="cfCloseModal">Close</button>
         </div>
     </div>
@@ -2249,9 +2275,9 @@
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Get email value for success message
-                    const emailInput = this.querySelector('input[name="user_email"]');
-                    const email = emailInput ? emailInput.value.trim() : '';
+                    // Get phone value for success message
+                    const phoneInput = this.querySelector('input[name="phone"]');
+                    const phone = phoneInput ? phoneInput.value.trim() : '';
                     
                     // Send form using EmailJS
                     emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
@@ -2259,8 +2285,8 @@
                             // Reset form on success
                             contactForm.reset();
                             
-                            // Update success message with email
-                            document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
+                            // Update success message with phone
+                            document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been received.<br><br>A representative will reach out within <strong>20 minutes</strong> at<br><strong>' + phone + '</strong><br>to schedule the repair and discuss associated fees before confirming the appointment.';
                             
                             // Show success modal
                             document.getElementById('cfSuccessModal').classList.add('active');
