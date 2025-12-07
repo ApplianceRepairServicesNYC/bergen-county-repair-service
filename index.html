@@ -332,7 +332,7 @@
         .btn-readmore {
             display: inline-block;
             padding: 8px 20px;
-            background: #e74c3c;
+            background: #c0392b;
             color: #fff;
             border-radius: 4px;
             font-size: 14px;
@@ -340,7 +340,7 @@
         }
         
         .btn-readmore:hover {
-            background: #c0392b;
+            background: #a93226;
         }
         
         /* About Section */
@@ -529,7 +529,7 @@
         }
         
         .btn-red {
-            background: #e74c3c;
+            background: #c0392b;
             color: #fff;
             border: none;
             padding: 12px 30px;
@@ -540,7 +540,7 @@
         }
         
         .btn-red:hover {
-            background: #c0392b;
+            background: #a93226;
         }
         
         .locationmap {
@@ -563,34 +563,28 @@
             color: #666;
         }
         
-        /* Testimonials */
-        .testimonial_area {
+        /* Reviews Section */
+        #reviews {
             padding: 70px 0;
+            text-align: center;
+            background: #f8f9fa;
         }
         
-        .testimonial_details {
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        
-        .testimonial_details p {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial_details .rating {
-            color: #f1c40f;
-            margin-bottom: 10px;
-            display: block;
-        }
-        
-        .testimonial_details h3 {
-            color: #1a5276;
+        .btn-cta {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #c0392b;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
             font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .btn-cta:hover {
+            background: #a93226;
         }
         
         /* Brands Section */
@@ -737,7 +731,7 @@
             line-height: 1.6;
         }
         .cf-close-modal {
-            background: #e74c3c;
+            background: #c0392b;
             color: white;
             border: none;
             padding: 12px 32px;
@@ -746,6 +740,9 @@
             font-weight: 700;
             cursor: pointer;
             box-sizing: border-box;
+        }
+        .cf-close-modal:hover {
+            background: #a93226;
         }
         .cf-modal-overlay {
             display: none;
@@ -1039,6 +1036,7 @@
                     </ul>
                 </li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -1342,7 +1340,7 @@
                         </div>
                         
                         <div class="services_support locationmap mb_30">
-                            <iframe allowfullscreen="" loading="lazy" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Bergen%20County%20New%20Jersey&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"></iframe>
+                            <iframe allowfullscreen="" loading="lazy" title="Bergen County Map" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Bergen%20County%20New%20Jersey&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"></iframe>
                         </div>
                         
                         <div class="text-country">
@@ -1360,43 +1358,15 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonial_area section_padding gray_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="hero-section-title text-center">
-                        <h2>Praise From Our Happy Clients About Our Appliance Repair in Bergen County, NJ</h2>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial_details">
-                        <p>"I called Bergen County Appliance Repair at 11 AM and they were at my house by 2 PM the same day. The team was friendly, punctual, and courteous. They fixed our dishwasher quickly. We were so thankful to have the dishwasher fixed. Thanks again!"</p>
-                        <span class="rating">★★★★★</span>
-                        <h3>Sarah M. - Hackensack</h3>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial_details">
-                        <p>"Great service! The technician came during the time window, did what needed to be done quickly, and even gave me a small discount. It was a pleasure doing business with Bergen County Appliance Repair."</p>
-                        <span class="rating">★★★★★</span>
-                        <h3>Michael R. - Paramus</h3>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial_details">
-                        <p>"Very easy to schedule an appointment - they even had same-day appointments available. Their tech came within his 2-hour window and called to give me a heads up. He was knowledgeable and clearly explained the problem with my refrigerator."</p>
-                        <span class="rating">★★★★★</span>
-                        <h3>Jennifer L. - Fort Lee</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Reviews Section -->
+    <section id="reviews">
+      <button id="read-reviews-btn" class="btn-cta">Read Reviews</button>
+      <!-- Hidden container: must NOT load until button click -->
+      <div id="reviews-widget" style="display:none;">
+        <!-- DO NOT move or modify this script tag -->
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-2942fb52-4463-41bc-bc83-d831b9da6f0e" data-elfsight-app-lazy></div>
+      </div>
     </section>
 
     <!-- Brands Section -->
@@ -1657,5 +1627,22 @@
             }
         });
     </script>
+<script>
+document.getElementById("read-reviews-btn").addEventListener("click", function() {
+  // Reveal widget
+  document.getElementById("reviews-widget").style.display = "block";
+  // Optional: hide button once clicked
+  this.style.display = "none";
+  // FORCE Elfsight render ONLY after click
+  if (typeof window.ELFSIGHT_APP_INITIALIZED === "undefined") {
+    window.ELFSIGHT_APP_INITIALIZED = true;
+    setTimeout(function() {
+      if (window.elfsight) {
+        window.elfsight.init();
+      }
+    }, 100);
+  }
+});
+</script>
 </body>
 </html>
