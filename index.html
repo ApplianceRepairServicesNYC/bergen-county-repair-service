@@ -629,6 +629,12 @@
             transition: color 0.3s ease;
         }
         
+        /* Brands Grid Dropdown */
+        .brands-grid-dropdown {
+            margin-top: 30px;
+            padding: 20px 0;
+        }
+        
         /* Footer */
         .footer_section {
             background: #1a252f;
@@ -1625,81 +1631,84 @@
                     <div class="hero-section-title">
                         <h4 class="brands_slider">Appliance Brands We Repair in Bergen County, NJ</h4>
                     </div>
+                    <button id="view-brands-btn" class="btn-cta">View All Brands</button>
                 </div>
             </div>
             
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Whirlpool</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Samsung</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>LG</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>GE</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Maytag</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>KitchenAid</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Frigidaire</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Bosch</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Kenmore</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Electrolux</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Sub-Zero</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Viking</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Thermador</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Miele</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Wolf</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Dacor</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Amana</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Hotpoint</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Haier</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Fisher & Paykel</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Jenn-Air</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Speed Queen</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Gaggenau</span></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="brand_img"><span>Bertazzoni</span></div>
+            <div id="brands-dropdown" class="brands-grid-dropdown" style="display:none;">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Whirlpool</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Samsung</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>LG</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>GE</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Maytag</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>KitchenAid</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Frigidaire</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Bosch</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Kenmore</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Electrolux</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Sub-Zero</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Viking</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Thermador</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Miele</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Wolf</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Dacor</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Amana</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Hotpoint</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Haier</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Fisher & Paykel</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Jenn-Air</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Speed Queen</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Gaggenau</span></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="brand_img"><span>Bertazzoni</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2025,6 +2034,20 @@ document.getElementById("view-locations-btn").addEventListener("click", function
   } else {
     dropdown.classList.add("active");
     btn.textContent = "Hide Locations";
+  }
+});
+
+// View All Brands toggle
+document.getElementById("view-brands-btn").addEventListener("click", function() {
+  var dropdown = document.getElementById("brands-dropdown");
+  var btn = document.getElementById("view-brands-btn");
+  
+  if (dropdown.style.display === "none" || dropdown.style.display === "") {
+    dropdown.style.display = "block";
+    btn.textContent = "Hide Brands";
+  } else {
+    dropdown.style.display = "none";
+    btn.textContent = "View All Brands";
   }
 });
 </script>
