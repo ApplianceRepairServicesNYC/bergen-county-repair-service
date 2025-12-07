@@ -26,6 +26,19 @@
             box-sizing: border-box;
         }
         
+        /* Screen Reader Only - Visually Hidden */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
@@ -1470,7 +1483,7 @@
                     <div class="header-icon">📞</div>
                     <div class="header-info">
                         <span class="phone">Call Now For Appliance Repair</span>
-                        <span class="pnumber"><a href="javascript:void(0)" class="phone-reveal" data-phone="2012983499">📞 Tap to Call - Same Day Repair</a></span>
+                        <span class="pnumber"><a href="javascript:void(0)" class="phone-reveal">📞 Tap to Call - Same Day Repair</a></span>
                     </div>
                 </div>
             </div>
@@ -1722,7 +1735,7 @@
                 <div class="col-md-4">
                     <div class="about_support">
                         <p>Book Your Appointment</p>
-                        <span class="appointment"><a href="javascript:void(0)" class="phone-reveal" data-phone="2012983499">📞 Tap to Call - Same Day Repair</a></span>
+                        <span class="appointment"><a href="javascript:void(0)" class="phone-reveal">📞 Tap to Call - Same Day Repair</a></span>
                     </div>
                 </div>
             </div>
@@ -1856,7 +1869,8 @@
                                     <input class="form-control" name="address" placeholder="Address *" required type="text">
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-control" name="subject" required>
+                                    <label for="appliance-type" class="sr-only">Select Appliance Type</label>
+                                    <select class="form-control" name="subject" id="appliance-type" aria-label="Select Appliance Type" required>
                                         <option value="">Select Appliance Type *</option>
                                         <option value="Refrigerator">Refrigerator</option>
                                         <option value="Washing Machine">Washing Machine</option>
@@ -2149,7 +2163,7 @@
                             <div class="contact-icon">📞</div>
                             <div class="contact-details">
                                 <strong>Call Us</strong>
-                                <a href="javascript:void(0)" class="phone-reveal" data-phone="2012983499">📞 Tap to Call - Same Day Repair</a>
+                                <a href="javascript:void(0)" class="phone-reveal">📞 Tap to Call - Same Day Repair</a>
                             </div>
                         </div>
                         
@@ -2303,19 +2317,20 @@
             });
         }
 
-        // Phone reveal on click
+        // Phone reveal on click - obfuscated
         document.querySelectorAll('.phone-reveal').forEach(function(el) {
             el.addEventListener('click', function(e) {
                 e.preventDefault();
-                var phone = this.getAttribute('data-phone');
-                if (phone && this.textContent.includes('Tap to Call')) {
-                    // Format phone number
-                    var formatted = '📞 (' + phone.substring(0,3) + ') ' + phone.substring(3,6) + '-' + phone.substring(6);
+                if (this.textContent.includes('Tap to Call')) {
+                    // Reconstruct number from parts (obfuscated)
+                    var p1 = String.fromCharCode(50,48,49), p2 = String.fromCharCode(50,57,56), p3 = String.fromCharCode(51,52,57,57);
+                    var phone = p1 + p2 + p3;
+                    var formatted = '📞 (' + p1 + ') ' + p2 + '-' + p3;
                     this.textContent = formatted;
                     this.href = 'tel:' + phone;
-                } else if (phone) {
+                } else {
                     // Already revealed, make the call
-                    window.location.href = 'tel:' + phone;
+                    window.location.href = this.href;
                 }
             });
         });
