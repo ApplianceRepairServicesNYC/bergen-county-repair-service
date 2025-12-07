@@ -2275,18 +2275,14 @@
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Get phone value for success message
-                    const phoneInput = this.querySelector('input[name="phone"]');
-                    const phone = phoneInput ? phoneInput.value.trim() : '';
-                    
                     // Send form using EmailJS
                     emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
                         .then(function() {
                             // Reset form on success
                             contactForm.reset();
                             
-                            // Update success message with phone
-                            document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been received.<br><br>A representative will reach out within <strong>20 minutes</strong> at<br><strong>' + phone + '</strong><br>to schedule the repair and discuss associated fees before confirming the appointment.';
+                            // Update success message
+                            document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been received.<br><br>A representative will reach out within <strong>20 minutes</strong> to schedule the repair and discuss associated fees before confirming the appointment.';
                             
                             // Show success modal
                             document.getElementById('cfSuccessModal').classList.add('active');
