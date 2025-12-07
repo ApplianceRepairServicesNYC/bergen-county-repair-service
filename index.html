@@ -748,11 +748,11 @@
             padding: 20px 0;
         }
         
-        /* Footer */
+        /* Footer - HomeAdvisor Style */
         .footer_section {
-            background: #1a252f;
+            background: linear-gradient(180deg, #1a252f 0%, #0d1318 100%);
             color: #fff;
-            padding: 50px 0 0;
+            padding: 60px 0 0;
         }
         
         .footer_box {
@@ -764,37 +764,151 @@
             color: #fff;
             font-size: 18px;
             margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .footer_box h2::after,
+        .footer_box h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #e74c3c;
+            border-radius: 2px;
         }
         
         .footer_box p {
-            color: #aaa;
+            color: #9aa5b1;
             font-size: 14px;
+            line-height: 1.8;
         }
         
         .footer_box ul li {
-            padding: 5px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .footer_box ul li:last-child {
+            border-bottom: none;
         }
         
         .footer_box ul li a {
-            color: #aaa;
+            color: #9aa5b1;
             font-size: 14px;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            display: inline-block;
         }
         
         .footer_box ul li a:hover {
             color: #fff;
+            padding-left: 5px;
         }
         
         .footer-logo {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
             color: #fff;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: block;
         }
         
         .footer-logo span {
             color: #e74c3c;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details {
+            flex: 1;
+        }
+        
+        .contact-details strong {
+            display: block;
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        
+        .contact-details span,
+        .contact-details a {
+            color: #9aa5b1;
+            font-size: 13px;
+        }
+        
+        .contact-details a:hover {
+            color: #fff;
+        }
+        
+        .contact-details .phone-reveal {
+            display: inline;
+            padding: 0;
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+            color: #9aa5b1 !important;
+            font-size: 13px;
+            font-weight: normal;
+            white-space: normal;
+        }
+        
+        .contact-details .phone-reveal:hover {
+            background: none;
+            transform: none;
+            box-shadow: none;
+            color: #fff !important;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.05);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            color: #9aa5b1;
+        }
+        
+        .trust-badge span {
+            font-size: 16px;
         }
         
         .support_email,
@@ -1141,14 +1255,16 @@
         "description": "Professional home and commercial appliance repair services in Bergen County, NJ. We offer refrigerator repair, washing machine repair, dryer repair, oven repair and more.",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Hackensack",
+            "streetAddress": "100 Corporate Drive",
+            "addressLocality": "Mahwah",
             "addressRegion": "NJ",
+            "postalCode": "07430",
             "addressCountry": "US"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 40.8859,
-            "longitude": -74.0435
+            "latitude": 41.0887,
+            "longitude": -74.1436
         },
         "aggregateRating": {
             "@type": "AggregateRating",
@@ -1871,45 +1987,59 @@
     <footer class="footer_section">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="footer_box">
                         <span class="footer-logo">Bergen County <span>Appliance Repair</span></span>
                         <p>Bergen County Appliance Repair Service delivers professional appliance repair services throughout Bergen County, NJ. Our skilled professionals will keep your appliances running efficiently through years of experience.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <div class="footer_box service">
-                        <h2>Quick Links</h2>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul>
-                                    <li><a href="#services">Commercial Appliances Repair</a></li>
-                                    <li><a href="#services">Gas Stove Repair</a></li>
-                                    <li><a href="#services">Kitchen Appliances Repair</a></li>
-                                    <li><a href="#services">Oven Elements Replacement</a></li>
-                                    <li><a href="#services">Washing Machine Repair</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul>
-                                    <li><a href="#services">Dryer Installation</a></li>
-                                    <li><a href="#services">Microwave Installation</a></li>
-                                    <li><a href="#services">Refrigerator Installation</a></li>
-                                    <li><a href="#services">Stove Installation</a></li>
-                                    <li><a href="#services">Dishwasher Repair</a></li>
-                                </ul>
-                            </div>
+                        <div class="trust-badges">
+                            <div class="trust-badge"><span>✓</span> Licensed</div>
+                            <div class="trust-badge"><span>✓</span> Insured</div>
+                            <div class="trust-badge"><span>✓</span> Bonded</div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-3">
+                <div class="col-md-4">
+                    <div class="footer_box service">
+                        <h2>Our Services</h2>
+                        <ul>
+                            <li><a href="#services">Refrigerator Repair</a></li>
+                            <li><a href="#services">Washing Machine Repair</a></li>
+                            <li><a href="#services">Dryer Repair & Installation</a></li>
+                            <li><a href="#services">Oven & Stove Repair</a></li>
+                            <li><a href="#services">Dishwasher Repair</a></li>
+                            <li><a href="#services">Microwave Repair</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
                     <div class="footer_box">
-                        <h3>Contact Information</h3>
-                        <span class="support_email"><i class="fa fa-envelope"></i> <a href="/cdn-cgi/l/email-protection#70191e161f3012150217151e131f051e04091100001c19111e1315030215001119025e131f1d">Email Us</a></span>
-                        <span class="support_num"><a href="javascript:void(0)" class="phone-reveal" data-phone="2012983499">📞 Tap to Call - Same Day Repair</a></span>
-                        <span class="support_num"><i class="fa fa-globe"></i> Bergen County, NJ</span>
+                        <h3>Contact Us</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <strong>Our Location</strong>
+                                <span>100 Corporate Drive<br>Mahwah, NJ 07430</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <strong>Call Us</strong>
+                                <a href="javascript:void(0)" class="phone-reveal" data-phone="2012983499">Tap to Call - Same Day Repair</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div class="contact-details">
+                                <strong>Business Hours</strong>
+                                <span>Mon - Sun: 7AM - 10PM<br>Emergency: 24/7</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
