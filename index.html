@@ -348,10 +348,21 @@
         
         /* Hero Banner */
         .banner {
-            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(26, 82, 118, 0.85)),
-                        url('/images/hero-bergen.png') center center / cover no-repeat;
-            padding: 80px 0;
+            background-color: #1a5276;
+            background-image: linear-gradient(rgba(26, 82, 118, 0.7), rgba(26, 82, 118, 0.7)),
+                        url('/images/hero-bergen.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 100px 0;
             color: #fff;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .banner > .container {
+            width: 100%;
         }
         
         .banner h1 {
@@ -1165,6 +1176,11 @@
                 width: 50%;
             }
             
+            .banner {
+                background-size: cover;
+                background-position: center;
+            }
+            
             .banner h1 {
                 font-size: 32px;
             }
@@ -1239,7 +1255,10 @@
             }
             
             .banner {
-                padding: 50px 0;
+                padding: 50px 15px;
+                background-size: cover;
+                background-position: center;
+                min-height: 350px;
             }
             
             .banner h1 {
