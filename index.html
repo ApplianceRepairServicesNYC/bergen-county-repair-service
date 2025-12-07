@@ -153,6 +153,7 @@
             text-decoration: none !important;
             font-weight: 600;
             font-size: 16px;
+            font-family: inherit;
             box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
             transition: all 0.3s ease;
             border: none;
@@ -1483,7 +1484,7 @@
                     <div class="header-icon">📞</div>
                     <div class="header-info">
                         <span class="phone">Call Now For Appliance Repair</span>
-                        <span class="pnumber"><a href="javascript:void(0)" class="phone-reveal">Call Now</a></span>
+                        <span class="pnumber"><button type="button" class="phone-reveal">Call Now</button></span>
                     </div>
                 </div>
             </div>
@@ -1735,7 +1736,7 @@
                 <div class="col-md-4">
                     <div class="about_support">
                         <p>Book Your Appointment</p>
-                        <span class="appointment"><a href="javascript:void(0)" class="phone-reveal">Call Now</a></span>
+                        <span class="appointment"><button type="button" class="phone-reveal">Call Now</button></span>
                     </div>
                 </div>
             </div>
@@ -2163,7 +2164,7 @@
                             <div class="contact-icon">📞</div>
                             <div class="contact-details">
                                 <strong>Call Us</strong>
-                                <a href="javascript:void(0)" class="phone-reveal">Call Now</a>
+                                <button type="button" class="phone-reveal">Call Now</button>
                             </div>
                         </div>
                         
@@ -2327,10 +2328,10 @@
                     var phone = p1 + p2 + p3;
                     var formatted = '(' + p1 + ') ' + p2 + '-' + p3;
                     this.textContent = formatted;
-                    this.href = 'tel:' + phone;
+                    this.dataset.phone = phone;
                 } else {
                     // Already revealed, make the call
-                    window.location.href = this.href;
+                    window.location.href = 'tel:' + this.dataset.phone;
                 }
             });
         });
