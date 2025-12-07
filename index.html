@@ -896,19 +896,59 @@
             .navbar-nav {
                 flex-direction: column;
                 display: none;
+                width: 100%;
             }
             
             .navbar-nav.active {
                 display: flex;
             }
             
+            .navbar-nav > li {
+                width: 100%;
+            }
+            
+            .navbar-nav > li > a {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
             .nav-toggle {
                 display: block;
             }
             
-            .dropdown-menu {
-                position: static;
+            .dropdown-menu,
+            .brands-dropdown {
+                position: static !important;
                 box-shadow: none;
+                width: 100%;
+                min-width: 100%;
+                background: rgba(255,255,255,0.1);
+                padding: 0;
+                margin: 0;
+                border-radius: 0;
+                max-height: none;
+                display: none;
+            }
+            
+            .dropdown-menu.active,
+            .brands-dropdown.active {
+                display: block !important;
+            }
+            
+            .dropdown-menu li a,
+            .brands-dropdown li a.brand-link {
+                padding: 12px 40px !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+                color: #fff !important;
+                background: transparent !important;
+                border: none !important;
+                border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+            }
+            
+            .dropdown-menu li a:hover,
+            .brands-dropdown li a.brand-link:hover {
+                background: rgba(255,255,255,0.1) !important;
+                color: #fff !important;
             }
         }
         
@@ -1763,14 +1803,14 @@
         
         // Dropdown click handlers
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all nav links with dropdowns
-            var dropdownToggles = document.querySelectorAll('.navbar-nav > li > a');
+            // Get all nav items with dropdowns
+            var dropdownItems = document.querySelectorAll('.navbar-nav > li');
             
-            dropdownToggles.forEach(function(toggle) {
-                var parent = toggle.parentElement;
-                var dropdown = parent.querySelector('.dropdown-menu, .brands-dropdown');
+            dropdownItems.forEach(function(item) {
+                var toggle = item.querySelector('a');
+                var dropdown = item.querySelector('.dropdown-menu, .brands-dropdown');
                 
-                if (dropdown) {
+                if (dropdown && toggle) {
                     toggle.addEventListener('click', function(e) {
                         e.preventDefault();
                         e.stopPropagation();
@@ -1784,6 +1824,11 @@
                         
                         // Toggle this dropdown
                         dropdown.classList.toggle('active');
+                    });
+                    
+                    // Prevent clicks inside dropdown from closing it
+                    dropdown.addEventListener('click', function(e) {
+                        e.stopPropagation();
                     });
                 }
             });
