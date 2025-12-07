@@ -139,6 +139,7 @@
             box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
             transition: all 0.3s ease;
             border: none;
+            white-space: nowrap;
         }
         
         .phone-reveal:hover {
@@ -166,6 +167,75 @@
         .footer_box .phone-reveal {
             padding: 10px 20px;
             font-size: 14px;
+        }
+        
+        /* Read More Button & Content */
+        .btn-read-more {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-read-more:hover {
+            background: #fff;
+            color: #1a5276;
+        }
+        
+        .read-more-content {
+            margin-top: 40px;
+            padding: 40px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .read-more-text {
+            color: #333;
+        }
+        
+        .read-more-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        .read-more-text h3 {
+            color: #1a5276;
+            font-size: 24px;
+            margin: 30px 0 20px;
+            font-weight: 700;
+        }
+        
+        .advantage-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .advantage-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444;
+        }
+        
+        .advantage-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .advantage-list li strong {
+            color: #1a5276;
         }
         
         .proudly-american {
@@ -1034,6 +1104,11 @@
             .footer_box.service .row {
                 flex-direction: column;
             }
+            
+            .phone-reveal {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
         }
         
         /* Utility Classes */
@@ -1255,6 +1330,40 @@
                     </div>
                     <div class="banner-text">
                         <p>The best appliance repair and maintenance services in Bergen County, NJ at your doorstep. We repair all major residential and commercial appliances of all major brands. Same-day service available throughout Hackensack, Paramus, Fort Lee, Teaneck, and all Bergen County communities.</p>
+                        <button id="read-more-btn" class="btn-read-more">Read More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Read More Content -->
+            <div id="read-more-content" class="read-more-content" style="display:none;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="read-more-text">
+                            <p>When your appliance stops working, you deserve a repair service that delivers results. Our factory-certified technicians are <strong>trained on many brands</strong>, bringing specialized expertise to every service call across Bergen County, New Jersey. We know how frustrating a broken washer, dryer, refrigerator, or dishwasher can be to your household.</p>
+                            
+                            <p>Our technicians complete annual training programs to stay current with evolving technologies and advanced repair techniques. They also have access to round-the-clock technical support, ensuring even the most challenging repairs are resolved quickly and correctly.</p>
+                            
+                            <h3>The Appliance Repair Advantage</h3>
+                            
+                            <ul class="advantage-list">
+                                <li>✓ <strong>Complete Bergen County Coverage:</strong> Our skilled technicians are strategically positioned throughout Bergen County, ready to address your repair needs with speed and precision.</li>
+                                <li>✓ <strong>Reliable & Prompt Service:</strong> With technicians dispatched from locations across Bergen County, we guarantee swift response times for every appointment.</li>
+                                <li>✓ <strong>Fully Equipped Service Vehicles:</strong> Each vehicle carries a comprehensive parts inventory, paired with intelligent dispatch software for maximum efficiency.</li>
+                                <li>✓ <strong>Same-Day Repair Solutions:</strong> We stock commonly needed parts to complete the majority of repairs during your first appointment.</li>
+                                <li>✓ <strong>Complete Repair Warranty:</strong> Every repair is backed by our comprehensive warranty. If any issues occur, we'll return to resolve them at no extra cost.</li>
+                                <li>✓ <strong>Diagnostic Fee Applied to Repair:</strong> Your diagnostic fee is credited toward the total repair cost, reducing your overall expense.</li>
+                                <li>✓ <strong>Certified Repair Specialists:</strong> Our technicians hold industry certifications and participate in continuous education to master the latest repair methods.</li>
+                                <li>✓ <strong>Upfront, Honest Pricing:</strong> No surprises or hidden charges—we provide clear pricing before any work begins.</li>
+                                <li>✓ <strong>24/7 Emergency Repairs:</strong> Appliance emergencies don't follow a schedule—neither do we. Urgent service is available when you need it most.</li>
+                                <li>✓ <strong>Genuine OEM Parts Only:</strong> We exclusively use authentic, manufacturer-approved parts to ensure lasting repairs that meet factory specifications.</li>
+                                <li>✓ <strong>Dedicated Support Team:</strong> Our friendly customer service representatives are here to answer questions and schedule appointments at your convenience.</li>
+                                <li>✓ <strong>Weekend & Flexible Appointments:</strong> We accommodate your schedule with availability seven days a week, including evenings.</li>
+                                <li>✓ <strong>Best Price Guarantee:</strong> Found a lower quote? We'll match any competitor's price to deliver exceptional value.</li>
+                                <li>✓ <strong>Money Back Guarantee:</strong> If we're unable to repair your appliance, you owe us nothing. It's that simple.</li>
+                                <li>✓ <strong>Fully Insured Service:</strong> We carry comprehensive property damage insurance for your protection. For New Jersey residences, we provide certificates of insurance upon request to meet building requirements and ensure seamless access.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2096,6 +2205,20 @@ document.getElementById("view-brands-btn").addEventListener("click", function() 
   } else {
     dropdown.style.display = "none";
     btn.textContent = "View All Brands";
+  }
+});
+
+// Read More toggle
+document.getElementById("read-more-btn").addEventListener("click", function() {
+  var content = document.getElementById("read-more-content");
+  var btn = document.getElementById("read-more-btn");
+  
+  if (content.style.display === "none" || content.style.display === "") {
+    content.style.display = "block";
+    btn.textContent = "Read Less";
+  } else {
+    content.style.display = "none";
+    btn.textContent = "Read More";
   }
 });
 </script>
