@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +27,6 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            overflow-x: hidden;
         }
         
         a {
@@ -170,12 +170,7 @@
             font-size: 14px;
         }
         
-        /* Read More Section */
-        .read-more-section {
-            background: #1a5276;
-            padding: 30px 0;
-        }
-        
+        /* Read More Button & Content */
         .btn-read-more {
             display: inline-block;
             padding: 12px 30px;
@@ -186,6 +181,7 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 16px;
+            margin-top: 20px;
             transition: all 0.3s ease;
         }
         
@@ -353,21 +349,22 @@
         
         /* Hero Banner */
         .banner {
-            width: 100%;
-            max-width: 100vw;
-            overflow: hidden;
-            background-color: #1a5276;
-            display: block;
-            line-height: 0;
+            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(26, 82, 118, 0.85)),
+                        linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            padding: 80px 0;
+            color: #fff;
         }
         
-        .banner img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            object-fit: contain;
-            object-position: center;
+        .banner h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .banner-text p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
         }
         
         /* Section Styles */
@@ -1169,6 +1166,10 @@
                 width: 50%;
             }
             
+            .banner h1 {
+                font-size: 32px;
+            }
+            
             .navbar-nav {
                 flex-direction: column;
                 display: none;
@@ -1239,16 +1240,11 @@
             }
             
             .banner {
-                width: 100%;
-                display: block !important;
-                visibility: visible !important;
+                padding: 50px 0;
             }
             
-            .banner img {
-                width: 100%;
-                height: auto;
-                display: block !important;
-                visibility: visible !important;
+            .banner h1 {
+                font-size: 28px;
             }
             
             .section_padding {
@@ -1477,6 +1473,7 @@
                         <li><a href="#brands" class="brand-link">Amana</a></li>
                     </ul>
                 </li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#reviews" id="reviews-nav-link">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1486,14 +1483,20 @@
     <main>
     <!-- Hero Banner -->
     <section class="banner" id="hero">
-        <img src="images/hero.png" alt="Bergen County Appliance Repair - Professional Home & Commercial Appliance Repair Services in Bergen County, NJ">
-    </section>
-    
-    <!-- Read More Section -->
-    <section class="read-more-section">
-        <div class="container text-center">
-            <button id="read-more-btn" class="btn-read-more">Read More</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="header_slide_text">
+                        <h1>Appliance Repairs in Bergen County, New Jersey</h1>
+                    </div>
+                    <div class="banner-text">
+                        <p>The best appliance repair and maintenance services in Bergen County, NJ at your doorstep. We repair all major residential and commercial appliances of all major brands. Same-day service available throughout Hackensack, Paramus, Fort Lee, Teaneck, and all Bergen County communities.</p>
+                        <button id="read-more-btn" class="btn-read-more">Read More</button>
+                    </div>
+                </div>
+            </div>
             
+            <!-- Read More Content -->
             <div id="read-more-content" class="read-more-content" style="display:none;">
                 <div class="row">
                     <div class="col-md-12">
