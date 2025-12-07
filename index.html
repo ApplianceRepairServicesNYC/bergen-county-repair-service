@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1801,19 +1802,24 @@
             nav.classList.toggle('active');
         }
         
-        // Dropdown click handlers
+        // All navigation handlers in DOMContentLoaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all nav items with dropdowns
+            
+            // 1. Dropdown click handlers for Appliance Repair & Brands
             var dropdownItems = document.querySelectorAll('.navbar-nav > li');
             
             dropdownItems.forEach(function(item) {
-                var toggle = item.querySelector('a');
+                var toggle = item.querySelector(':scope > a');
                 var dropdown = item.querySelector('.dropdown-menu, .brands-dropdown');
                 
                 if (dropdown && toggle) {
+                    // Mark this link as having a dropdown
+                    toggle.setAttribute('data-has-dropdown', 'true');
+                    
                     toggle.addEventListener('click', function(e) {
                         e.preventDefault();
                         e.stopPropagation();
+                        e.stopImmediatePropagation();
                         
                         // Close all other dropdowns first
                         document.querySelectorAll('.dropdown-menu.active, .brands-dropdown.active').forEach(function(openDropdown) {
@@ -1824,7 +1830,7 @@
                         
                         // Toggle this dropdown
                         dropdown.classList.toggle('active');
-                    });
+                    }, true); // Use capture phase
                     
                     // Prevent clicks inside dropdown from closing it
                     dropdown.addEventListener('click', function(e) {
@@ -1833,7 +1839,7 @@
                 }
             });
             
-            // Close dropdowns when clicking outside
+            // 2. Close dropdowns when clicking outside
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.navbar-nav')) {
                     document.querySelectorAll('.dropdown-menu.active, .brands-dropdown.active').forEach(function(dropdown) {
@@ -1841,32 +1847,45 @@
                     });
                 }
             });
-        });
-        
-        // FIX 1: Navigation - ONLY #contact scrolls, all others do nothing
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                var href = this.getAttribute('href');
-                // Skip reviews link - handled separately
-                if (href === '#reviews') {
+            
+            // 3. Handle all other anchor clicks (not dropdowns)
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                // Skip if this is a dropdown toggle (already handled above)
+                if (anchor.getAttribute('data-has-dropdown') === 'true') {
                     return;
                 }
-                // Only allow scroll for #contact
-                if (href === '#contact') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+                
+                anchor.addEventListener('click', function(e) {
+                    var href = this.getAttribute('href');
+                    
+                    // Skip reviews nav link - handled separately
+                    if (this.id === 'reviews-nav-link') {
+                        return;
                     }
-                } else {
-                    // Prevent default for all other anchors (no scroll)
-                    e.preventDefault();
-                }
-                // Close mobile nav if open
-                document.getElementById('mainNav').classList.remove('active');
+                    
+                    // Only allow scroll for #contact
+                    if (href === '#contact') {
+                        e.preventDefault();
+                        var target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                        // Close mobile nav
+                        document.getElementById('mainNav').classList.remove('active');
+                        // Close any open dropdowns
+                        document.querySelectorAll('.dropdown-menu.active, .brands-dropdown.active').forEach(function(dropdown) {
+                            dropdown.classList.remove('active');
+                        });
+                    } else {
+                        // Prevent default for all other anchors (no scroll)
+                        e.preventDefault();
+                        // Close mobile nav if open
+                        document.getElementById('mainNav').classList.remove('active');
+                    }
+                });
             });
         });
         
