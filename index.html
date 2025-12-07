@@ -1853,19 +1853,26 @@
                     // Only allow scroll for #contact
                     if (href === '#contact') {
                         e.preventDefault();
-                        var target = document.querySelector(href);
-                        if (target) {
-                            target.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                        // Close mobile nav
+                        // Close mobile nav first
                         document.getElementById('mainNav').classList.remove('active');
                         // Close any open dropdowns
                         document.querySelectorAll('.dropdown-menu.active, .brands-dropdown.active').forEach(function(dropdown) {
                             dropdown.classList.remove('active');
                         });
+                        // Delay scroll slightly to let nav close
+                        setTimeout(function() {
+                            var target = document.querySelector('#contact');
+                            if (target) {
+                                var headerOffset = 20;
+                                var elementPosition = target.getBoundingClientRect().top;
+                                var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                
+                                window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }, 100);
                     } else {
                         // Prevent default for all other anchors (no scroll)
                         e.preventDefault();
