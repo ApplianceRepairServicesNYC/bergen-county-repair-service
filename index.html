@@ -354,9 +354,11 @@
         /* Hero Banner */
         .banner {
             width: 100%;
-            max-width: 100%;
+            max-width: 100vw;
             overflow: hidden;
             background-color: #1a5276;
+            display: block;
+            line-height: 0;
         }
         
         .banner img {
@@ -365,17 +367,7 @@
             height: auto;
             max-width: 100%;
             object-fit: contain;
-        }
-        
-        @media (max-width: 768px) {
-            .banner {
-                overflow-x: hidden;
-            }
-            
-            .banner img {
-                width: 100%;
-                height: auto;
-            }
+            object-position: center;
         }
         
         /* Section Styles */
@@ -1246,6 +1238,19 @@
                 gap: 15px;
             }
             
+            .banner {
+                width: 100%;
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            .banner img {
+                width: 100%;
+                height: auto;
+                display: block !important;
+                visibility: visible !important;
+            }
+            
             .section_padding {
                 padding: 50px 0;
             }
@@ -1481,7 +1486,7 @@
     <main>
     <!-- Hero Banner -->
     <section class="banner" id="hero">
-        <img src="/images/hero.png" alt="Bergen County Appliance Repair - Professional Home & Commercial Appliance Repair Services in Bergen County, NJ">
+        <img src="images/hero.png" alt="Bergen County Appliance Repair - Professional Home & Commercial Appliance Repair Services in Bergen County, NJ">
     </section>
     
     <!-- Read More Section -->
