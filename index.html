@@ -844,7 +844,7 @@
         }
         
         .footer_box p {
-            color: #9aa5b1;
+            color: #c8ced3;
             font-size: 14px;
             line-height: 1.8;
         }
@@ -859,7 +859,7 @@
         }
         
         .footer_box ul li a {
-            color: #9aa5b1;
+            color: #c8ced3;
             font-size: 14px;
             transition: all 0.3s;
             display: inline-block;
@@ -936,7 +936,7 @@
             background: none;
             box-shadow: none;
             border-radius: 0;
-            color: #9aa5b1 !important;
+            color: #c8ced3 !important;
             font-size: 13px;
             font-weight: normal;
             white-space: normal;
@@ -1483,7 +1483,7 @@
                     <div class="header-icon">📞</div>
                     <div class="header-info">
                         <span class="phone">Call Now For Appliance Repair</span>
-                        <span class="pnumber"><a href="javascript:void(0)" class="phone-reveal">📞 Tap to Call - Same Day Repair</a></span>
+                        <span class="pnumber"><a href="javascript:void(0)" class="phone-reveal">Call Now</a></span>
                     </div>
                 </div>
             </div>
@@ -1735,7 +1735,7 @@
                 <div class="col-md-4">
                     <div class="about_support">
                         <p>Book Your Appointment</p>
-                        <span class="appointment"><a href="javascript:void(0)" class="phone-reveal">📞 Tap to Call - Same Day Repair</a></span>
+                        <span class="appointment"><a href="javascript:void(0)" class="phone-reveal">Call Now</a></span>
                     </div>
                 </div>
             </div>
@@ -2163,7 +2163,7 @@
                             <div class="contact-icon">📞</div>
                             <div class="contact-details">
                                 <strong>Call Us</strong>
-                                <a href="javascript:void(0)" class="phone-reveal">📞 Tap to Call - Same Day Repair</a>
+                                <a href="javascript:void(0)" class="phone-reveal">Call Now</a>
                             </div>
                         </div>
                         
@@ -2321,11 +2321,11 @@
         document.querySelectorAll('.phone-reveal').forEach(function(el) {
             el.addEventListener('click', function(e) {
                 e.preventDefault();
-                if (this.textContent.includes('Tap to Call')) {
+                if (this.textContent === 'Call Now') {
                     // Reconstruct number from parts (obfuscated)
                     var p1 = String.fromCharCode(50,48,49), p2 = String.fromCharCode(50,57,56), p3 = String.fromCharCode(51,52,57,57);
                     var phone = p1 + p2 + p3;
-                    var formatted = '📞 (' + p1 + ') ' + p2 + '-' + p3;
+                    var formatted = '(' + p1 + ') ' + p2 + '-' + p3;
                     this.textContent = formatted;
                     this.href = 'tel:' + phone;
                 } else {
