@@ -1484,7 +1484,7 @@
                     <div class="header-icon">📞</div>
                     <div class="header-info">
                         <span class="phone">Call Now For Appliance Repair</span>
-                        <span class="pnumber"><button type="button" class="phone-reveal">Call Now</button></span>
+                        <span class="pnumber"><button type="button" class="phone-reveal">Schedule Service</button></span>
                     </div>
                 </div>
             </div>
@@ -1736,7 +1736,7 @@
                 <div class="col-md-4">
                     <div class="about_support">
                         <p>Book Your Appointment</p>
-                        <span class="appointment"><button type="button" class="phone-reveal">Call Now</button></span>
+                        <span class="appointment"><button type="button" class="phone-reveal">Schedule Service</button></span>
                     </div>
                 </div>
             </div>
@@ -2164,7 +2164,7 @@
                             <div class="contact-icon">📞</div>
                             <div class="contact-details">
                                 <strong>Call Us</strong>
-                                <button type="button" class="phone-reveal">Call Now</button>
+                                <button type="button" class="phone-reveal">Schedule Service</button>
                             </div>
                         </div>
                         
@@ -2322,7 +2322,7 @@
         document.querySelectorAll('.phone-reveal').forEach(function(el) {
             el.addEventListener('click', function(e) {
                 e.preventDefault();
-                if (this.textContent === 'Call Now') {
+                if (this.textContent === 'Schedule Service') {
                     // Reconstruct number from parts (obfuscated)
                     var p1 = String.fromCharCode(50,48,49), p2 = String.fromCharCode(50,57,56), p3 = String.fromCharCode(51,52,57,57);
                     var phone = p1 + p2 + p3;
