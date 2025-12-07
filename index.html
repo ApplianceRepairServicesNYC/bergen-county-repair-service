@@ -1,1723 +1,1350 @@
+```html
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bergen County Appliance Repair Service | Same Day Service NJ</title>
-    <meta name="description" content="Professional appliance repair in Bergen County, New Jersey. Same day service for refrigerators, dishwashers, washers, dryers, ovens, and cooktops. Licensed technicians." />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://yourdomain.com/" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Bergen County Appliance Repair Service | Same Day Service NJ" />
-    <meta property="og:description" content="Professional appliance repair in Bergen County, New Jersey. Same day service for all major appliance brands." />
-    <meta property="og:url" content="https://yourdomain.com/" />
-    <meta property="og:site_name" content="Bergen County Appliance Repair Service" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bergen County Appliance Repair Service - Commercial & Home Appliance Repair NJ</title>
+    <meta name="description" content="Professional home and commercial appliance repair services in Bergen County, NJ. We offer refrigerator repair, washing machine repair, dryer repair, oven repair and more. Call (201) 555-0123 today!">
+    <meta name="keywords" content="appliance repair Bergen County, NJ, home appliance repair, commercial appliance repair, refrigerator repair, washing machine repair">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style>
-        :root {
-            --primary-color: #0d6efd;
-            --primary-dark: #0b5ed7;
-            --danger-color: #dc3545;
-            --danger-dark: #bb2d3b;
-            --dark-bg: #212529;
-            --light-bg: #f8f9fa;
-            --text-dark: #212529;
-            --text-muted: #6c757d;
-            --border-color: #dee2e6;
-            --white: #ffffff;
-            --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #e9ecef;
+            color: #333;
         }
-
+        
         a {
-            color: var(--primary-color);
             text-decoration: none;
-            transition: color 0.3s ease;
+            color: inherit;
         }
-
-        a:hover {
-            color: var(--primary-dark);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
+        
         ul {
             list-style: none;
         }
-
-        h1, h2, h3, h4, h5, h6 {
-            margin-bottom: 1rem;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        h1 { font-size: 2.2rem; }
-        h2 { font-size: 1.8rem; }
-        h3 { font-size: 1.4rem; }
-        h4 { font-size: 1.2rem; }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
-
-        .MainWidth {
-            max-width: 1400px;
-            margin: 0 auto;
-            background: var(--white);
-            box-shadow: var(--shadow);
-        }
-
-        /* Top Promo Block */
-        .Top-Promo-Block {
-            background: var(--danger-color);
-            color: var(--white);
-            padding: 10px 15px;
-            font-weight: 600;
-            font-size: 15px;
-        }
-
-        /* Navigation */
-        .nav-bar {
-            background: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .navbaTop {
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .Top_AddressBlock {
+        
+        .row {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            gap: 15px;
+            margin: 0 -15px;
         }
-
-        .Top_AddressBlock .Details {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .Top_AddressBlock .Item a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-dark);
-            font-size: 14px;
-        }
-
-        .Top_AddressBlock .Item a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        
+        .col-md-2 { width: 16.666667%; padding: 0 15px; }
+        .col-md-3 { width: 25%; padding: 0 15px; }
+        .col-md-4 { width: 33.333333%; padding: 0 15px; }
+        .col-md-6 { width: 50%; padding: 0 15px; }
+        .col-md-8 { width: 66.666667%; padding: 0 15px; }
+        .col-md-12 { width: 100%; padding: 0 15px; }
+        
+        .text-center { text-align: center; }
+        
+        /* Header Styles */
+        .main_menu_area1 {
+            background: #fff;
             padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .MainTopLogo {
-            max-height: 60px;
-            width: auto;
-        }
-
-        .BlockMenu {
+        
+        .header_nav {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo img {
+            max-height: 60px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a5276;
+        }
+        
+        .logo-text span {
+            color: #e74c3c;
+        }
+        
+        .icons-header {
+            text-align: center;
+        }
+        
+        .icons-header span {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .rating-stars {
+            color: #f1c40f;
+            font-size: 18px;
+        }
+        
+        .header-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .header-icon {
+            font-size: 32px;
+            color: #1a5276;
+        }
+        
+        .header-info .phone {
+            display: block;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .header-info .pnumber a {
+            font-size: 20px;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+        
+        .proudly-american {
+            font-weight: 600;
+            color: #1a5276;
+        }
+        
+        /* Navigation */
+        .nav-color {
+            background: #1a5276;
+            padding: 0;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
             gap: 5px;
         }
-
-        .menu_item {
+        
+        .navbar-nav li {
             position: relative;
         }
-
-        .ItemMenu {
-            padding: 12px 18px;
-            cursor: pointer;
+        
+        .navbar-nav li a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
             font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: background 0.3s ease;
-            border-radius: 5px;
+            transition: background 0.3s;
         }
-
-        .ItemMenu:hover {
-            background: var(--light-bg);
+        
+        .navbar-nav li a:hover {
+            background: rgba(255,255,255,0.1);
         }
-
-        .Sub-Item-link {
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .Popup-submenu {
+        
+        .dropdown-menu {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
-            background: var(--white);
-            min-width: 220px;
-            box-shadow: var(--shadow);
-            border-radius: 8px;
-            overflow: hidden;
-            z-index: 1001;
+            background: #fff;
+            min-width: 250px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            z-index: 1000;
+            padding: 15px;
         }
-
-        .menu_item:hover .Popup-submenu {
+        
+        .navbar-nav li:hover .dropdown-menu {
             display: block;
         }
-
-        .Sub-Item {
-            display: block;
-            padding: 12px 20px;
-            color: var(--text-dark);
-            border-bottom: 1px solid var(--border-color);
-            transition: background 0.3s ease;
-        }
-
-        .Sub-Item:hover {
-            background: var(--light-bg);
-            color: var(--primary-color);
-        }
-
-        .Sub-Item.border-bottom-0 {
-            border-bottom: none;
-        }
-
-        .MainPhoneNumber {
-            background: var(--danger-color);
-            padding: 12px 20px;
-            border-radius: 5px;
-        }
-
-        .MainPhoneNumber a {
-            color: var(--white);
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .MainPhoneNumber:hover {
-            background: var(--danger-dark);
-        }
-
-        /* Mobile Navigation */
-        .mobile-nav {
-            display: none;
-            padding: 10px 15px;
-            background: var(--white);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .mobile-nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .MobileMainTopLogo {
-            max-height: 45px;
-        }
-
-        .mobile-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .mobile-btn {
+        
+        .dropdown-menu a {
+            color: #333;
             padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 14px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            display: block;
         }
-
-        .mobile-btn.phone {
-            background: var(--danger-color);
-            color: var(--white);
+        
+        .dropdown-menu a:hover {
+            background: #f5f5f5;
+            color: #1a5276;
         }
-
-        .mobile-btn.book {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .navbar-toggler {
-            background: none;
-            border: none;
-            font-size: 28px;
-            cursor: pointer;
-            padding: 5px 10px;
-        }
-
-        .mobile-menu {
+        
+        /* Mobile Nav Toggle */
+        .nav-toggle {
             display: none;
-            background: var(--white);
-            border-top: 1px solid var(--border-color);
-            padding: 15px;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-menu .menu_item {
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .mobile-menu .ItemMenu {
-            padding: 15px 0;
-            justify-content: space-between;
-        }
-
-        .mobile-menu .Popup-submenu {
-            position: static;
-            display: none;
-            box-shadow: none;
-            background: var(--light-bg);
-            margin: 0 -15px;
-            padding: 0 15px;
-        }
-
-        .mobile-menu .Popup-submenu.active {
-            display: block;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #0a58ca 100%);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .hero-section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-section p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            opacity: 0.95;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 28px;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
+            background: transparent;
             border: none;
-            transition: all 0.3s ease;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px 15px;
         }
-
-        .btn-danger {
-            background: var(--danger-color);
-            color: var(--white);
+        
+        /* Hero Banner */
+        .banner {
+            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(26, 82, 118, 0.85)),
+                        linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            padding: 80px 0;
+            color: #fff;
         }
-
-        .btn-danger:hover {
-            background: var(--danger-dark);
-            color: var(--white);
-        }
-
-        .btn-light {
-            background: var(--white);
-            color: var(--primary-color);
-        }
-
-        .btn-light:hover {
-            background: var(--light-bg);
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            color: var(--white);
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 40px 0;
-        }
-
-        .content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
-        }
-
-        .content-main {
-            text-align: justify;
-        }
-
-        .content-main h1 {
-            color: var(--primary-color);
-            text-align: left;
-        }
-
-        .content-sidebar {
-            padding-top: 22px;
-        }
-
-        /* Service Rows */
-        .service-row {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .service-row.reverse {
-            flex-direction: row-reverse;
-        }
-
-        .service-row .image-col {
-            flex: 0 0 40%;
-        }
-
-        .service-row .text-col {
-            flex: 1;
-        }
-
-        .service-image {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        /* Sidebar */
-        .sidebar-book {
-            display: block;
-            background: var(--danger-color);
-            color: var(--white);
-            padding: 15px 20px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            margin-bottom: 20px;
-            transition: background 0.3s ease;
-        }
-
-        .sidebar-book:hover {
-            background: var(--danger-dark);
-            color: var(--white);
-        }
-
-        .sidebar-box {
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .sidebar-box h2 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .coupon-image {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border: 2px dashed var(--primary-color);
-            padding: 10px;
-            background: var(--white);
-        }
-
-        /* Sidebar Form */
-        .sidebar-form {
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .sidebar-form .red-block {
-            background: var(--danger-color);
-            color: var(--white);
-            padding: 15px;
-            text-align: center;
+        
+        .banner h1 {
+            font-size: 42px;
             font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .banner-text p {
             font-size: 18px;
-            border-radius: 5px;
-            margin-bottom: 15px;
+            opacity: 0.9;
+            max-width: 600px;
         }
-
-        .sidebar-form input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-size: 14px;
+        
+        /* Section Styles */
+        .section_padding {
+            padding: 70px 0;
         }
-
-        .sidebar-form button {
-            width: 100%;
-            padding: 14px;
-            background: var(--danger-color);
-            color: var(--white);
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
+        
+        .gray_bg {
+            background: #f8f9fa;
         }
-
-        .sidebar-form button:hover {
-            background: var(--danger-dark);
-        }
-
-        /* Services Grid */
-        .services-section {
-            padding: 60px 0;
-            background: var(--light-bg);
-        }
-
-        .section-title {
-            text-align: center;
+        
+        .hero-section-title {
             margin-bottom: 40px;
         }
-
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--text-dark);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .service-icon {
-            font-size: 48px;
+        
+        .hero-section-title h2 {
+            font-size: 32px;
+            color: #1a5276;
             margin-bottom: 15px;
         }
-
-        .service-card h3 {
-            margin-bottom: 10px;
-            color: var(--primary-color);
+        
+        .hero-section-title .icon-snowflake {
+            display: block;
+            font-size: 40px;
+            color: #e74c3c;
+            margin-bottom: 15px;
         }
-
-        .service-card p {
-            color: var(--text-muted);
-            font-size: 14px;
+        
+        /* Service Boxes */
+        .slider_service_area {
+            padding: 70px 0;
         }
-
-        /* Brands Section */
-        .brands-section {
-            padding: 60px 0;
+        
+        .slider_service_box {
+            margin-bottom: 30px;
         }
-
-        .brands-grid {
+        
+        .slider_service_img {
+            height: 200px;
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            border-radius: 8px 8px 0 0;
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+            align-items: center;
             justify-content: center;
         }
-
-        .brand-item {
-            background: var(--light-bg);
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-weight: 500;
-            color: var(--text-dark);
-            transition: all 0.3s ease;
+        
+        .slider_service_img::before {
+            content: "🔧";
+            font-size: 60px;
         }
-
-        .brand-item:hover {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* Reviews Section */
-        .reviews-section {
-            padding: 60px 0;
-            background: var(--light-bg);
-        }
-
-        .review-block {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .review-item {
-            background: var(--white);
+        
+        .bg_10::before { content: "🧺"; }
+        .bg_11::before { content: "🏢"; }
+        .bg_2::before { content: "👕"; }
+        .bg_3::before { content: "🔥"; }
+        .bg_4::before { content: "❄️"; }
+        .bg_5::before { content: "🍳"; }
+        .bg_6::before { content: "📻"; }
+        .bg_8::before { content: "🥘"; }
+        .bg_9::before { content: "♨️"; }
+        
+        .slider_service_details {
+            background: #fff;
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
-
-        .review-header {
+        
+        .slider_service_details h2 {
+            font-size: 18px;
+            color: #1a5276;
+            margin-bottom: 15px;
+        }
+        
+        .slider_service_details p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .btn-readmore {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #e74c3c;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .btn-readmore:hover {
+            background: #c0392b;
+        }
+        
+        /* About Section */
+        .about_area {
+            padding: 70px 0;
+        }
+        
+        .about_details h2 {
+            font-size: 28px;
+            color: #1a5276;
+            margin-bottom: 20px;
+        }
+        
+        .about_details p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .about_details ul {
+            margin: 20px 0 20px 20px;
+        }
+        
+        .about_details ul li {
+            padding: 8px 0;
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 10px;
         }
-
-        .reviewer-name {
-            font-weight: 600;
+        
+        .about_details ul li i {
+            color: #27ae60;
         }
-
-        .review-date {
-            color: var(--text-muted);
-            font-size: 13px;
-            margin-bottom: 8px;
+        
+        .about_support {
+            background: #1a5276;
+            padding: 30px;
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            margin-top: 30px;
         }
-
-        .star-block {
-            margin-bottom: 12px;
+        
+        .about_support p {
+            margin: 0;
         }
-
-        .star {
-            color: #ffc107;
-            font-size: 16px;
+        
+        .about_support .appointment {
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 10px;
         }
-
-        .review-content {
-            color: var(--text-dark);
-            font-size: 14px;
-            line-height: 1.6;
+        
+        .about_support .appointment a {
+            color: #fff;
         }
-
-        /* About Section */
-        .about-section {
-            padding: 60px 0;
+        
+        /* Why Choose Us */
+        .why_choose_us_area {
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            padding: 70px 0;
         }
-
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
+        
+        .why_choose_us_area h2 {
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 40px;
         }
-
-        .about-list {
-            margin: 20px 0;
+        
+        .why_choose_us_details {
+            text-align: center;
+            padding: 20px;
+            color: #fff;
         }
-
-        .about-list li {
-            padding: 10px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .about-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 60px 0;
-            background: var(--light-bg);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .contact-info h3 {
-            margin-bottom: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        
+        .why_choose_us_details i {
+            font-size: 48px;
             margin-bottom: 15px;
+            display: block;
         }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            color: var(--white);
+        
+        .why_choose_us_details p {
+            font-weight: 500;
+        }
+        
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 28px;
         }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
+        
+        /* Content Section */
+        .service_single_area {
+            padding: 70px 0;
+        }
+        
+        .service_single_area h2 {
+            font-size: 24px;
+            color: #1a5276;
+            margin-bottom: 20px;
+        }
+        
+        .service_single_area h3 {
+            font-size: 20px;
+            color: #1a5276;
+            margin: 30px 0 15px;
+        }
+        
+        .service_single_area p {
             margin-bottom: 15px;
-            font-size: 15px;
+            color: #555;
         }
-
-        .contact-form textarea {
-            min-height: 120px;
+        
+        .service_single_area ul {
+            margin: 15px 0 15px 30px;
+        }
+        
+        .service_single_area ul li {
+            padding: 5px 0;
+        }
+        
+        .content-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        
+        /* Sidebar */
+        .service_single_right {
+            position: sticky;
+            top: 20px;
+        }
+        
+        .text-country {
+            background: #1a5276;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .text-country h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .services_support {
+            background: #fff;
+            padding: 25px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #1a5276;
+        }
+        
+        textarea.form-control {
             resize: vertical;
+            min-height: 100px;
         }
-
-        /* Footer */
-        .footer {
-            background: var(--dark-bg);
-            color: #b0b0b0;
-            padding: 50px 0 0;
+        
+        .btn-red {
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
         }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+        
+        .btn-red:hover {
+            background: #c0392b;
+        }
+        
+        .locationmap {
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+        }
+        
+        .locationmap iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+        
+        .city-info {
+            padding: 15px;
+        }
+        
+        .city-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Testimonials */
+        .testimonial_area {
+            padding: 70px 0;
+        }
+        
+        .testimonial_details {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial_details p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial_details .rating {
+            color: #f1c40f;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .testimonial_details h3 {
+            color: #1a5276;
+            font-size: 18px;
+        }
+        
+        /* Brands Section */
+        .brands_section {
+            padding: 70px 0;
+        }
+        
+        .brands_slider h4 {
+            font-size: 24px;
+            color: #1a5276;
             margin-bottom: 40px;
         }
-
-        .footer h4 {
-            color: var(--white);
+        
+        .brand_img {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
             margin-bottom: 20px;
-            font-size: 1.1rem;
+            transition: box-shadow 0.3s;
         }
-
-        .footer p {
+        
+        .brand_img:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .brand_img span {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        .footer_section {
+            background: #1a252f;
+            color: #fff;
+            padding: 50px 0 0;
+        }
+        
+        .footer_box {
+            margin-bottom: 30px;
+        }
+        
+        .footer_box h2,
+        .footer_box h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer_box p {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .footer_box ul li {
+            padding: 5px 0;
+        }
+        
+        .footer_box ul li a {
+            color: #aaa;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .footer_box ul li a:hover {
+            color: #fff;
+        }
+        
+        .footer-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .footer-logo span {
+            color: #e74c3c;
+        }
+        
+        .support_email,
+        .support_num {
+            display: block;
+            color: #aaa;
             margin-bottom: 10px;
             font-size: 14px;
         }
-
-        .footer-links a {
-            display: block;
-            color: #b0b0b0;
-            padding: 6px 0;
-            font-size: 14px;
-            transition: color 0.3s ease;
+        
+        .support_email i,
+        .support_num i {
+            margin-right: 10px;
+            color: #e74c3c;
         }
-
-        .footer-links a:hover {
-            color: var(--white);
-            padding-left: 5px;
-        }
-
-        .footer-links a:before {
-            content: "▸ ";
-            color: var(--primary-color);
-        }
-
-        .footer-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .footer-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--danger-color);
-            color: var(--white);
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 14px;
-            width: fit-content;
-            transition: background 0.3s ease;
-        }
-
-        .footer-btn:hover {
-            background: var(--danger-dark);
-            color: var(--white);
-        }
-
-        .footer-brands {
-            border-top: 1px solid #333;
-            padding-top: 30px;
-            margin-top: 30px;
-        }
-
-        .footer-brands h4 {
-            margin-bottom: 15px;
-        }
-
-        .brands-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .brands-list span {
-            background: #333;
-            padding: 5px 12px;
-            border-radius: 3px;
-            font-size: 12px;
-            color: #ccc;
-        }
-
-        .copyright {
-            border-top: 1px solid #333;
+        
+        .footer_bg {
+            background: #151c23;
             padding: 20px 0;
             margin-top: 30px;
+        }
+        
+        .copyright {
             text-align: center;
-            font-size: 13px;
-        }
-
-        .copyright a {
-            color: #b0b0b0;
-            margin: 0 10px;
-        }
-
-        .copyright a:hover {
-            color: var(--white);
-        }
-
-        /* Service Areas */
-        .service-areas {
-            padding: 40px 0;
-            background: var(--white);
-        }
-
-        .areas-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .area-tag {
-            background: var(--light-bg);
-            padding: 8px 16px;
-            border-radius: 20px;
+            color: #aaa;
             font-size: 14px;
-            color: var(--text-dark);
         }
-
-        /* Popup */
-        .popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
+        
+        .copyright a {
+            color: #e74c3c;
         }
-
-        .popup-overlay.active {
-            display: flex;
-        }
-
-        .popup-content {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-        }
-
-        .popup-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--text-muted);
-        }
-
-        .popup-close:hover {
-            color: var(--text-dark);
-        }
-
-        /* Responsive */
+        
+        /* Responsive Styles */
         @media (max-width: 992px) {
-            .content-wrapper {
-                grid-template-columns: 1fr;
+            .col-md-2, .col-md-3, .col-md-4, .col-md-6, .col-md-8 {
+                width: 50%;
             }
-
-            .content-sidebar {
-                order: -1;
+            
+            .banner h1 {
+                font-size: 32px;
             }
-
-            .navbaTop,
-            .nav-main {
+            
+            .navbar-nav {
+                flex-direction: column;
                 display: none;
             }
-
-            .mobile-nav {
+            
+            .navbar-nav.active {
+                display: flex;
+            }
+            
+            .nav-toggle {
                 display: block;
             }
-
-            .hero-section h1 {
-                font-size: 2rem;
-            }
-
-            .service-row {
-                flex-direction: column;
-            }
-
-            .service-row.reverse {
-                flex-direction: column;
-            }
-
-            .service-row .image-col {
-                flex: 0 0 100%;
+            
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
             }
         }
-
+        
         @media (max-width: 768px) {
-            .Top_AddressBlock {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-section {
-                padding: 40px 0;
-            }
-
-            .hero-section h1 {
-                font-size: 1.7rem;
-            }
-
-            .hero-section p {
-                font-size: 1rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-buttons {
-                align-items: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
+            .col-md-2, .col-md-3, .col-md-4, .col-md-6, .col-md-8, .col-md-12 {
                 width: 100%;
-                justify-content: center;
             }
-
-            .mobile-buttons {
+            
+            .header_nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .banner {
+                padding: 50px 0;
+            }
+            
+            .banner h1 {
+                font-size: 28px;
+            }
+            
+            .section_padding {
+                padding: 50px 0;
+            }
+            
+            .hero-section-title h2 {
+                font-size: 24px;
+            }
+            
+            .why_choose_us_details {
+                padding: 15px 10px;
+            }
+            
+            .footer_box.service .row {
                 flex-direction: column;
             }
-
-            .mobile-btn {
-                font-size: 12px;
-                padding: 6px 10px;
-            }
         }
-
+        
         /* Utility Classes */
-        .text-center { text-align: center; }
-        .mb-4 { margin-bottom: 1.5rem; }
-        .mt-4 { margin-top: 1.5rem; }
-        .py-3 { padding-top: 1rem; padding-bottom: 1rem; }
-        .w-100 { width: 100%; }
+        .fa { font-style: normal; }
+        .fa-check::before { content: "✓"; color: #27ae60; }
+        .fa-star::before { content: "★"; }
+        .fa-star-half-o::before { content: "☆"; }
+        .fa-phone::before { content: "📞"; }
+        .fa-envelope::before { content: "✉"; }
+        .fa-globe::before { content: "🌐"; }
+        
+        .mb_30 { margin-bottom: 30px; }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
-    <div class="MainWidth">
-        <!-- Top Promo Block -->
-        <div class="Top-Promo-Block text-center">
-            GET $25 OFF FOR BOOKING ONLINE
+
+    <!-- Header Section -->
+    <div class="main_menu_area1">
+        <div class="container">
+            <div class="header_nav">
+                <div class="logo-section">
+                    <a href="#hero" class="logo-text">Bergen County <span>Appliance Repair</span></a>
+                </div>
+                
+                <div class="icons-header">
+                    <div class="rating-stars">★★★★★</div>
+                    <span>Based on 487 User Ratings</span>
+                </div>
+                
+                <div class="header-text">
+                    <div class="header-icon">🇺🇸</div>
+                    <div class="header-info">
+                        <span class="proudly-american">Proudly American</span>
+                    </div>
+                </div>
+                
+                <div class="header-text">
+                    <div class="header-icon">📞</div>
+                    <div class="header-info">
+                        <span class="phone">Call Now For Appliance Repair</span>
+                        <span class="pnumber"><a href="tel:(201) 555-0123">(201) 555-0123</a></span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="nav-color">
+        <div class="container">
+            <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+            <ul class="navbar-nav" id="mainNav">
+                <li><a href="#hero">Home</a></li>
+                <li>
+                    <a href="#services">Appliance Repair & Installation</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#services">Refrigerator Repair</a></li>
+                        <li><a href="#services">Washing Machine Repair</a></li>
+                        <li><a href="#services">Dryer Repair</a></li>
+                        <li><a href="#services">Oven Repair</a></li>
+                        <li><a href="#services">Dishwasher Repair</a></li>
+                        <li><a href="#services">Stove Repair</a></li>
+                        <li><a href="#services">Microwave Repair</a></li>
+                        <li><a href="#services">Freezer Repair</a></li>
+                    </ul>
+                </li>
+                <li><a href="#brands">Brands</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
-        <!-- Navigation -->
-        <nav class="nav-bar">
-            <!-- Desktop Nav -->
-            <div class="navbaTop">
-                <div class="container">
-                    <div class="Top_AddressBlock">
-                        <div class="Details">We fix all brands and models</div>
-                        <div class="Item">
-                            <a href="#contact">
-                                <span>📅</span>
-                                <span>Mon-Sun 7am-10pm</span>
-                            </a>
+    <!-- Hero Banner -->
+    <section class="banner" id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="header_slide_text">
+                        <h1>Appliance Repairs in Bergen County, New Jersey</h1>
+                    </div>
+                    <div class="banner-text">
+                        <p>The best appliance repair and maintenance services in Bergen County, NJ at your doorstep. We repair all major residential and commercial appliances of all major brands. Same-day service available throughout Hackensack, Paramus, Fort Lee, Teaneck, and all Bergen County communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="slider_service_area section_padding text-center" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hero-section-title">
+                        <span class="icon-snowflake">🔧</span>
+                        <h2>Bergen County, New Jersey Appliance Repair You Can Trust!</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_10"></div>
+                        <div class="slider_service_details">
+                            <h2>Washing Machine Repair in Bergen County, NJ</h2>
+                            <p>Whether you're looking for washing machine maintenance, washer repair, or need expert diagnosis, our Bergen County team can help get your laundry running again.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
                         </div>
-                        <div class="Item">
-                            <a href="tel:PHONE_PLACEHOLDER">
-                                <span>📞</span>
-                                <span>PHONE_PLACEHOLDER</span>
-                            </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_11"></div>
+                        <div class="slider_service_details">
+                            <h2>Commercial Appliances Repair in Bergen County, NJ</h2>
+                            <p>When problems arise with your commercial appliances, it can be costly. Commercial appliance repair is simple when you work with our Bergen County professionals.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
                         </div>
-                        <div class="Item">
-                            <a href="#contact">
-                                <span>🔧</span>
-                                <span>Request Service</span>
-                            </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_2"></div>
+                        <div class="slider_service_details">
+                            <h2>Dryer Installation in Bergen County, NJ</h2>
+                            <p>Our professional installers handle washer and dryer installation throughout Bergen County. We set up both gas dryers and electric dryers safely and efficiently.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_3"></div>
+                        <div class="slider_service_details">
+                            <h2>Gas Stove Repair in Bergen County, NJ</h2>
+                            <p>Our experts show you how to troubleshoot gas stove ignition burners and ovens. If the burners on your stove don't light or the oven isn't heating, we can help.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_4"></div>
+                        <div class="slider_service_details">
+                            <h2>Refrigerator Repair in Bergen County, NJ</h2>
+                            <p>We provide expert refrigerator installation and repair services throughout Bergen County, NJ. Keep your food fresh with our professional service.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_5"></div>
+                        <div class="slider_service_details">
+                            <h2>Kitchen Appliances Repair in Bergen County, NJ</h2>
+                            <p>When your kitchen appliance can't keep up with the work, whether due to inefficient performance or part damage, it's time to call our Bergen County team.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_6"></div>
+                        <div class="slider_service_details">
+                            <h2>Microwave Installation in Bergen County, NJ</h2>
+                            <p>Mounted microwaves give you back counter space, but installation can be a headache. Call us today for professional microwave installation service.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_8"></div>
+                        <div class="slider_service_details">
+                            <h2>Oven Repair in Bergen County, NJ</h2>
+                            <p>Your oven is a big part of your kitchen appliance collection. We provide complete oven repair and parts replacement services throughout Bergen County.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="slider_service_box">
+                        <div class="slider_service_img bg_9"></div>
+                        <div class="slider_service_details">
+                            <h2>Stove Installation in Bergen County, NJ</h2>
+                            <p>Installation of stoves requires professional expertise. Hire our trained and certified technicians to install stoves safely in Bergen County.</p>
+                            <a class="btn-readmore" href="#contact">Get Service</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container nav-main">
-                <a href="#hero" class="logo-link">
-                    <strong style="font-size: 24px; color: #0d6efd;">Bergen County Appliance Repair</strong>
-                </a>
-                <div class="BlockMenu">
-                    <div class="menu_item">
-                        <div class="ItemMenu">
-                            <a href="#hero" class="Sub-Item-link">Home</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about_area gray_bg" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="about_details">
+                        <div class="hero-section-title">
+                            <h2>Same Day Appliance Repair in Bergen County, NJ</h2>
                         </div>
+                        
+                        <p>Our skilled team at Bergen County Appliance Repair Service provides quality, cost-effective appliance repairs for major household appliances throughout Northern New Jersey. When you call for assistance, our professional staff is ready to assist you and fix your commercial and home appliances. We know when you're in need, the last thing you want to do is wait for days to get help.</p>
+                        
+                        <ul>
+                            <li><i class="fa fa-check"></i> <strong>Refrigerator Repair in Bergen County, NJ</strong></li>
+                            <li><i class="fa fa-check"></i> <strong>Dryer Repair in Bergen County, NJ</strong></li>
+                            <li><i class="fa fa-check"></i> <strong>Oven Repair in Bergen County, NJ</strong></li>
+                            <li><i class="fa fa-check"></i> <strong>Stove Repair in Bergen County, NJ</strong></li>
+                        </ul>
                     </div>
-                    <div class="menu_item">
-                        <div class="ItemMenu">
-                            Appliance Service
-                            <span>▼</span>
-                        </div>
-                        <div class="Popup-submenu">
-                            <a href="#services" class="Sub-Item">Refrigerator Repair</a>
-                            <a href="#services" class="Sub-Item">Dishwasher Repair</a>
-                            <a href="#services" class="Sub-Item">Washer Repair</a>
-                            <a href="#services" class="Sub-Item">Dryer Repair</a>
-                            <a href="#services" class="Sub-Item">Oven Repair</a>
-                            <a href="#services" class="Sub-Item">Cooktop Repair</a>
-                            <a href="#services" class="Sub-Item border-bottom-0">Appliance Installation</a>
-                        </div>
-                    </div>
-                    <div class="menu_item">
-                        <div class="ItemMenu">
-                            <a href="#about" class="Sub-Item-link">About</a>
-                        </div>
-                    </div>
-                    <div class="menu_item">
-                        <div class="ItemMenu">
-                            Brands
-                            <span>▼</span>
-                        </div>
-                        <div class="Popup-submenu">
-                            <a href="#brands" class="Sub-Item">Samsung</a>
-                            <a href="#brands" class="Sub-Item">LG</a>
-                            <a href="#brands" class="Sub-Item">Whirlpool</a>
-                            <a href="#brands" class="Sub-Item">GE</a>
-                            <a href="#brands" class="Sub-Item">Bosch</a>
-                            <a href="#brands" class="Sub-Item">Sub-Zero</a>
-                            <a href="#brands" class="Sub-Item border-bottom-0">See All Brands</a>
-                        </div>
-                    </div>
-                    <div class="menu_item">
-                        <div class="MainPhoneNumber">
-                            <a href="tel:PHONE_PLACEHOLDER">PHONE_PLACEHOLDER</a>
-                        </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="about_support">
+                        <p>Book Your Appointment</p>
+                        <span class="appointment"><a href="tel:(201) 555-0123">(201) 555-0123</a></span>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Mobile Nav -->
-            <div class="mobile-nav">
-                <div class="mobile-nav-inner">
-                    <a href="#hero">
-                        <strong style="font-size: 16px; color: #0d6efd;">Bergen County Appliance</strong>
-                    </a>
-                    <div class="mobile-buttons">
-                        <a href="tel:PHONE_PLACEHOLDER" class="mobile-btn phone">
-                            <span>📞</span> Call
-                        </a>
-                        <a href="#contact" class="mobile-btn book">
-                            <span>🔧</span> Book
-                        </a>
-                        <button class="navbar-toggler" id="mobileMenuToggle" aria-label="Menu">
-                            ☰
-                        </button>
+    <!-- Why Choose Us -->
+    <section class="why_choose_us_area section_padding text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hero-section-title">
+                        <h2 style="color:#fff;">Why Choose Bergen County Appliance Repair To Fix Your Commercial And Home Appliances?</h2>
                     </div>
                 </div>
             </div>
-
-            <!-- Mobile Menu -->
-            <div class="mobile-menu" id="mobileMenu">
-                <div class="menu_item">
-                    <div class="ItemMenu" onclick="toggleMobileSubmenu('mobSub1')">
-                        Appliance Service <span>▼</span>
-                    </div>
-                    <div class="Popup-submenu" id="mobSub1">
-                        <a href="#services" class="Sub-Item">Refrigerator Repair</a>
-                        <a href="#services" class="Sub-Item">Dishwasher Repair</a>
-                        <a href="#services" class="Sub-Item">Washer Repair</a>
-                        <a href="#services" class="Sub-Item">Dryer Repair</a>
-                        <a href="#services" class="Sub-Item">Oven Repair</a>
-                        <a href="#services" class="Sub-Item border-bottom-0">Cooktop Repair</a>
+            
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="why_choose_us_details">
+                        <div class="icon-box">🏆</div>
+                        <p>Qualified Experts</p>
                     </div>
                 </div>
-                <div class="menu_item">
-                    <div class="ItemMenu" onclick="toggleMobileSubmenu('mobSub2')">
-                        Brands <span>▼</span>
-                    </div>
-                    <div class="Popup-submenu" id="mobSub2">
-                        <a href="#brands" class="Sub-Item">Samsung</a>
-                        <a href="#brands" class="Sub-Item">LG</a>
-                        <a href="#brands" class="Sub-Item">Whirlpool</a>
-                        <a href="#brands" class="Sub-Item">GE</a>
-                        <a href="#brands" class="Sub-Item border-bottom-0">See All Brands</a>
+                
+                <div class="col-md-2">
+                    <div class="why_choose_us_details">
+                        <div class="icon-box">📅</div>
+                        <p>Service on Schedule</p>
                     </div>
                 </div>
-                <div class="menu_item">
-                    <div class="ItemMenu">
-                        <a href="#about" class="Sub-Item-link">About</a>
+                
+                <div class="col-md-2">
+                    <div class="why_choose_us_details">
+                        <div class="icon-box">🛡️</div>
+                        <p>Parts Warranty</p>
                     </div>
                 </div>
-                <div class="menu_item">
-                    <div class="ItemMenu">
-                        <a href="#contact" class="Sub-Item-link">Contact</a>
+                
+                <div class="col-md-2">
+                    <div class="why_choose_us_details">
+                        <div class="icon-box">💰</div>
+                        <p>Affordable Prices</p>
                     </div>
                 </div>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section class="hero-section" id="hero">
-            <div class="container">
-                <h1>Professional Appliance Repair in Bergen County, NJ</h1>
-                <p>Fast, reliable, same-day appliance repair service throughout Bergen County, New Jersey. Our certified technicians fix all major brands and models with a satisfaction guarantee.</p>
-                <div class="hero-buttons">
-                    <a href="tel:PHONE_PLACEHOLDER" class="btn btn-danger">
-                        <span>📞</span> Call PHONE_PLACEHOLDER
-                    </a>
-                    <a href="#contact" class="btn btn-light">
-                        <span>🔧</span> Book Online & Save $25
-                    </a>
+                
+                <div class="col-md-2">
+                    <div class="why_choose_us_details">
+                        <div class="icon-box">👔</div>
+                        <p>Uniformed Professionals</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-2">
+                    <div class="why_choose_us_details">
+                        <div class="icon-box">🎁</div>
+                        <p>Special Offers</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <div class="container">
-                <div class="content-wrapper">
-                    <div class="content-main">
-                        <h1>Appliance Repair Services in Bergen County</h1>
-                        <p>When your home appliances break down, you need a reliable repair service that can get them running again quickly. Our team of experienced technicians provides professional appliance repair throughout Bergen County, New Jersey. We service all major brands and models, offering same-day appointments and transparent pricing.</p>
-
-                        <p>Whether you're dealing with a refrigerator that won't cool, a washing machine that won't drain, or an oven that won't heat, our skilled technicians have the expertise to diagnose and fix the problem efficiently. We stock common replacement parts in our service vehicles, allowing us to complete most repairs on the first visit.</p>
-
-                        <h2>Why Choose Our Appliance Repair Service?</h2>
-
-                        <div class="service-row">
-                            <div class="text-col">
-                                <h3>Expert Diagnosis & Quality Repairs</h3>
-                                <p>The foundation of any successful appliance repair is accurate diagnosis. Our technicians have years of experience and access to professional diagnostic tools, allowing us to identify the root cause of any malfunction quickly. We don't guess – we use our expertise to pinpoint exactly what's wrong and fix it right the first time.</p>
-                                <p>Our team stays up-to-date with the latest appliance technologies and repair techniques, ensuring we can service even the newest smart appliances and high-end models.</p>
-                            </div>
+    <!-- Main Content Section -->
+    <section class="service_single_area section_padding" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Hire Appliance Repair Experts To Keep Your Appliances Running Efficiently. We Repair All Types of Home Appliances And Commercial Appliances Including Refrigerator Repair, Washing Machine Repair, Dryer Repair, And Stove Repair.</h2>
+                    
+                    <p>If you have been inconvenienced by an appliance breakdown and need service today, give us a call. At Bergen County Appliance Repair Service we provide same-day appliance repair and installation service, any day of the year including evenings, weekends, and holidays across Bergen County, NJ. We are experts in Responsible Appliance Repair and installation. Don't risk injury or damage to your home trying to fix your old appliances yourself.</p>
+                    
+                    <div class="content-image">🏠</div>
+                    
+                    <h3>Bergen County, NJ Home Appliances Repair</h3>
+                    
+                    <p>Household appliances play a major role in your overall comfort, quickly handling a variety of tedious tasks. It can be easy to forget how much work our appliances do for us, but it becomes clear very quickly when they break down. From piles of dirty dishes to a freezer full of melting ice, appliance problems can bring an onslaught of issues. When it comes to finding an Appliance Repair Company you can trust, Bergen County Appliance Repair Service meets all the qualifications.</p>
+                    
+                    <h3>Washing Machine Repair in Bergen County, NJ</h3>
+                    
+                    <p>Having a washing machine in your household is a wonderful convenience that can often be taken for granted — that is until it breaks down and leaves you with loads of laundry to sort out on your own. As soon as you notice problems with your washing machine, call the professionals at Bergen County Appliance Repair Service. Whether your washing machine won't drain, won't spin, or simply won't turn on, we can provide regular service or emergency repair to address the problem.</p>
+                    
+                    <div class="content-image">🧺</div>
+                    
+                    <h2>Our Home Appliances Repair & Installation in Bergen County, NJ</h2>
+                    
+                    <p>At Bergen County Appliance Repair Service we offer the following home appliance repair and installation services:</p>
+                    
+                    <ul>
+                        <li><strong>Bergen County Washer And Dryer Repair & Installation</strong></li>
+                        <li><strong>Home Appliances Installation in Bergen County, NJ</strong></li>
+                        <li><strong>Bergen County Dishwasher Repair</strong></li>
+                    </ul>
+                    
+                    <p>Appliances play a key role in making your life convenient and comfortable. In Bergen County when you hire our dedicated home appliance repair and installation team, you can count on getting more than just your ordinary repair technician team. Our team is bonded, insured, and licensed.</p>
+                    
+                    <h3>Bergen County Washer And Dryer Repair & Installation</h3>
+                    
+                    <p>For maximum and efficient performance of your new washing machine, call upon our Experienced Washing Machine Specialists. Our experience and skills enable us to connect your appliance securely to waste and water pipes before making sure that your washing machine runs as it should after installation. We also perform washer and dryer repair services to make your life comfortable.</p>
+                    
+                    <div class="content-image">👕</div>
+                    
+                    <h3>Home Appliances Installation in Bergen County, NJ</h3>
+                    
+                    <p>We can install all major residential and commercial appliances. Operating throughout Bergen County, our friendly team will ensure that your appliance is installed promptly and safely. We provide a full range of Appliance Installation Services that are safe, effective, and cost-efficient. Our expert technicians can install a wide range of appliance brands and a broad selection of models.</p>
+                    
+                    <h3>Bergen County Dishwasher Repair</h3>
+                    
+                    <p>When your dishwasher leaves your dishes dirty, it is a sign to repair your dishwasher. In Bergen County, if you are in need of dishwasher repair service, Bergen County Appliance Repair Service is here to address your needs. We offer quick, easy and affordable dishwasher repair throughout Bergen County, New Jersey.</p>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service_single_right">
+                        <div class="text-country">
+                            <h4>Quote For Appliance Repair in Bergen County, NJ</h4>
                         </div>
-
-                        <div class="service-row reverse">
-                            <div class="text-col">
-                                <h3>Same-Day Emergency Service</h3>
-                                <p>We understand that a broken appliance can disrupt your entire household. That's why we offer same-day emergency service throughout Bergen County. When you call us in the morning, we can often have a technician at your door that same afternoon.</p>
-                                <p>Our technicians arrive in fully-stocked service vehicles, ready to handle most repairs on the spot. We minimize your downtime and get your appliances back to working condition as quickly as possible.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-row">
-                            <div class="text-col">
-                                <h3>Preventive Maintenance Services</h3>
-                                <p>Want to avoid expensive breakdowns before they happen? Our preventive maintenance service helps extend the life of your appliances and catch potential problems early. We recommend maintenance at least twice a year for optimal appliance performance.</p>
-                                <p>Regular maintenance can help prevent costly repairs, improve energy efficiency, and keep your appliances running safely for years to come.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-row reverse">
-                            <div class="text-col">
-                                <h3>Professional Installation Services</h3>
-                                <p>Proper installation is critical for appliance longevity and performance. Incorrect installation can lead to premature wear, safety hazards, and voided warranties. Our certified technicians ensure your new appliances are installed correctly the first time.</p>
-                                <p>We handle everything from basic hookups to complex installations requiring electrical or plumbing modifications. Trust us to get your new appliance up and running safely and efficiently.</p>
-                            </div>
-                        </div>
-
-                        <h2>Our Appliance Repair Expertise</h2>
-
-                        <div class="service-row">
-                            <div class="text-col">
-                                <h3>Trained & Certified Technicians</h3>
-                                <p>Every member of our team has undergone extensive training and certification. Our technicians have over 10 years of combined experience and are familiar with products from more than 35 manufacturers. This expertise allows us to provide accurate diagnoses and efficient repairs for any appliance brand or model.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-row reverse">
-                            <div class="text-col">
-                                <h3>Customer-Focused Approach</h3>
-                                <p>Your satisfaction is our top priority. From the moment you contact us, we strive to provide a seamless, stress-free experience. Our team is polite, professional, and respectful of your home. We explain the problem clearly, provide upfront pricing, and never pressure you into unnecessary repairs.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-row">
-                            <div class="text-col">
-                                <h3>Affordable & Transparent Pricing</h3>
-                                <p>We believe in honest, upfront pricing with no hidden fees or surprise charges. Before we begin any repair, we'll provide you with a clear estimate. We understand that appliance breakdowns can happen at inconvenient times, so we work to match our customers' budgets without sacrificing quality.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-row reverse">
-                            <div class="text-col">
-                                <h3>100% Satisfaction Guarantee</h3>
-                                <p>We stand behind our work with a comprehensive warranty on all repairs. If the same issue occurs after our repair, simply call our service line and we'll schedule a free return visit to make it right. Your satisfaction is guaranteed.</p>
-                            </div>
-                        </div>
-
-                        <h2>Common Appliance Error Codes We Service</h2>
-
-                        <div class="service-row">
-                            <div class="text-col">
-                                <h3>Refrigerator Error Codes</h3>
-                                <ul class="about-list">
-                                    <li>E9 - Temperature controller malfunction</li>
-                                    <li>E4 - Defrost heater failure in freezer compartment</li>
-                                    <li>E13 - Ice maker system not working properly</li>
-                                    <li>Various codes indicating compressor, fan, or sensor issues</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="service-row reverse">
-                            <div class="text-col">
-                                <h3>Dishwasher Error Codes</h3>
-                                <ul class="about-list">
-                                    <li>E01 - Low water level detected</li>
-                                    <li>E02 - Drainage system needs service</li>
-                                    <li>E03 - Heating system failure</li>
-                                    <li>E05 - Temperature sensor malfunction</li>
-                                    <li>E07 - Door lock mechanism error</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="service-row">
-                            <div class="text-col">
-                                <h3>Washer Error Codes</h3>
-                                <ul class="about-list">
-                                    <li>01 - Water supply issue</li>
-                                    <li>02 - Drainage system requires service</li>
-                                    <li>03 - Water heating error</li>
-                                    <li>04 - Motor triac sensor short circuit</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <p>If you see any error code on your appliance, contact us immediately. Our technicians can quickly diagnose the issue and provide an accurate estimate for repair.</p>
-
-                    </div>
-
-                    <!-- Sidebar -->
-                    <div class="content-sidebar">
-                        <a href="#contact" class="sidebar-book">Book online and get $25 OFF</a>
-
-                        <div class="sidebar-form">
-                            <div class="red-block">GET $25 OFF<br/>ANY APPLIANCE REPAIR</div>
-                            <form id="sidebarForm">
-                                <input type="text" name="name" placeholder="What is Your Name?" required />
-                                <input type="tel" name="phone" placeholder="Phone Number*" required />
-                                <input type="email" name="email" placeholder="Your Email" />
-                                <button type="submit">Submit Request</button>
+                        
+                        <div class="services_support mb_30">
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <input class="form-control" name="name" placeholder="Name *" required type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="phone" placeholder="Phone *" required type="tel">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="email" placeholder="Email *" required type="email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" placeholder="Message" rows="4"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn-red" type="submit">Submit Now</button>
+                                </div>
                             </form>
                         </div>
-
-                        <div class="sidebar-box">
-                            <h2>Same Day Repairs</h2>
-                            <p>We are available evenings, weekends and holidays, 365 days a year.</p>
+                        
+                        <div class="text-country">
+                            <h4>Bergen County Location</h4>
                         </div>
-
-                        <div class="sidebar-box">
-                            <div class="coupon-image" style="text-align: center; padding: 20px;">
-                                <strong style="color: #dc3545; font-size: 18px;">$25 OFF</strong><br/>
-                                <span>Your First Repair</span><br/>
-                                <small>Book online to redeem</small>
-                            </div>
-                            <div class="coupon-image" style="text-align: center; padding: 20px;">
-                                <strong style="color: #dc3545; font-size: 18px;">FREE</strong><br/>
-                                <span>Service Call with Repair</span><br/>
-                                <small>Call for details</small>
-                            </div>
-                            <div class="coupon-image" style="text-align: center; padding: 20px;">
-                                <strong style="color: #dc3545; font-size: 18px;">10% OFF</strong><br/>
-                                <span>Senior Citizen Discount</span><br/>
-                                <small>Must mention at booking</small>
+                        
+                        <div class="services_support locationmap mb_30">
+                            <iframe allowfullscreen="" loading="lazy" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Bergen%20County%20New%20Jersey&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"></iframe>
+                        </div>
+                        
+                        <div class="text-country">
+                            <h4>Bergen County Information</h4>
+                        </div>
+                        
+                        <div class="services_support mb_30">
+                            <div class="city-info">
+                                <p>Bergen County is the most populous county in New Jersey, located in the northeastern corner of the state. Home to towns like Hackensack, Paramus, Fort Lee, Teaneck, and Englewood, Bergen County offers diverse communities with excellent access to New York City. Our appliance repair service covers all 70 municipalities in Bergen County.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Services Section -->
-        <section class="services-section" id="services">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our Appliance Repair Services</h2>
-                    <p>We repair all major household appliances with same-day service available</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🧊</div>
-                        <h3>Refrigerator Repair</h3>
-                        <p>Not cooling? Making noise? Leaking water? We fix all refrigerator problems including compressor, thermostat, and ice maker issues.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🍽️</div>
-                        <h3>Dishwasher Repair</h3>
-                        <p>Won't drain? Not cleaning properly? We repair all dishwasher brands including pump, motor, and control board problems.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">👕</div>
-                        <h3>Washer Repair</h3>
-                        <p>Won't spin? Leaking? Making noise? Our technicians fix all washing machine issues from drum problems to electronic failures.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🌡️</div>
-                        <h3>Dryer Repair</h3>
-                        <p>Not heating? Taking too long? We repair electric and gas dryers including heating elements, thermostats, and motors.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🍳</div>
-                        <h3>Oven & Range Repair</h3>
-                        <p>Won't heat? Uneven cooking? We service all oven types including gas, electric, convection, and self-cleaning models.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🔥</div>
-                        <h3>Cooktop & Stove Repair</h3>
-                        <p>Burner won't light? Uneven flame? We repair gas, electric, and induction cooktops from all major manufacturers.</p>
+    <!-- Testimonials -->
+    <section class="testimonial_area section_padding gray_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hero-section-title text-center">
+                        <h2>Praise From Our Happy Clients About Our Appliance Repair in Bergen County, NJ</h2>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section" id="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="section-title">
-                        <h2>Why Choose Bergen County Appliance Repair?</h2>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial_details">
+                        <p>"I called Bergen County Appliance Repair at 11 AM and they were at my house by 2 PM the same day. The team was friendly, punctual, and courteous. They fixed our dishwasher quickly. We were so thankful to have the dishwasher fixed. Thanks again!"</p>
+                        <span class="rating">★★★★★</span>
+                        <h3>Sarah M. - Hackensack</h3>
                     </div>
-                    <p>For years, we've been the trusted appliance repair service for Bergen County residents. Our commitment to quality workmanship, honest pricing, and exceptional customer service has made us the go-to choice for homeowners throughout the area.</p>
-                    
-                    <ul class="about-list">
-                        <li><strong>Same-Day Service:</strong> Most repairs completed on the same day you call</li>
-                        <li><strong>Certified Technicians:</strong> Factory-trained experts on all major brands</li>
-                        <li><strong>Upfront Pricing:</strong> No hidden fees or surprise charges</li>
-                        <li><strong>Parts Warranty:</strong> All repairs backed by our satisfaction guarantee</li>
-                        <li><strong>All Brands:</strong> We service over 35 appliance manufacturers</li>
-                        <li><strong>Licensed & Insured:</strong> Fully covered for your peace of mind</li>
-                        <li><strong>Local Business:</strong> Proudly serving Bergen County communities</li>
-                        <li><strong>Flexible Scheduling:</strong> Evening and weekend appointments available</li>
-                    </ul>
                 </div>
-            </div>
-        </section>
-
-        <!-- Brands Section -->
-        <section class="brands-section" id="brands">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Brands We Service</h2>
-                    <p>Factory-trained technicians for all major appliance brands</p>
-                </div>
-                <div class="brands-grid">
-                    <span class="brand-item">Admiral</span>
-                    <span class="brand-item">Amana</span>
-                    <span class="brand-item">Bosch</span>
-                    <span class="brand-item">Dacor</span>
-                    <span class="brand-item">Electrolux</span>
-                    <span class="brand-item">Fisher & Paykel</span>
-                    <span class="brand-item">Frigidaire</span>
-                    <span class="brand-item">GE</span>
-                    <span class="brand-item">Haier</span>
-                    <span class="brand-item">Hotpoint</span>
-                    <span class="brand-item">Jenn-Air</span>
-                    <span class="brand-item">Kenmore</span>
-                    <span class="brand-item">KitchenAid</span>
-                    <span class="brand-item">LG</span>
-                    <span class="brand-item">Maytag</span>
-                    <span class="brand-item">Miele</span>
-                    <span class="brand-item">Panasonic</span>
-                    <span class="brand-item">Samsung</span>
-                    <span class="brand-item">Sub-Zero</span>
-                    <span class="brand-item">Thermador</span>
-                    <span class="brand-item">Viking</span>
-                    <span class="brand-item">Whirlpool</span>
-                    <span class="brand-item">Wolf</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews Section -->
-        <section class="reviews-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>What Our Customers Say</h2>
-                </div>
-                <div class="review-block">
-                    <div class="review-item">
-                        <div class="review-header">
-                            <span class="reviewer-name">Michael T.</span>
-                        </div>
-                        <div class="review-date">November 2024</div>
-                        <div class="star-block">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <div class="review-content">Excellent service! The technician arrived on time, diagnosed the problem with my refrigerator quickly, and had it fixed within an hour. Very professional and reasonably priced. Highly recommend!</div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial_details">
+                        <p>"Great service! The technician came during the time window, did what needed to be done quickly, and even gave me a small discount. It was a pleasure doing business with Bergen County Appliance Repair."</p>
+                        <span class="rating">★★★★★</span>
+                        <h3>Michael R. - Paramus</h3>
                     </div>
-                    <div class="review-item">
-                        <div class="review-header">
-                            <span class="reviewer-name">Sarah K.</span>
-                        </div>
-                        <div class="review-date">October 2024</div>
-                        <div class="star-block">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <div class="review-content">My washer stopped working on a Saturday and they came out the same day! The repair was done quickly and the price was fair. Will definitely use them again for any appliance issues.</div>
-                    </div>
-                    <div class="review-item">
-                        <div class="review-header">
-                            <span class="reviewer-name">David L.</span>
-                        </div>
-                        <div class="review-date">October 2024</div>
-                        <div class="star-block">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <div class="review-content">Great experience from start to finish. The customer service rep was helpful in scheduling, and the technician was knowledgeable and friendly. Fixed my dishwasher perfectly!</div>
-                    </div>
-                    <div class="review-item">
-                        <div class="review-header">
-                            <span class="reviewer-name">Jennifer M.</span>
-                        </div>
-                        <div class="review-date">September 2024</div>
-                        <div class="star-block">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <div class="review-content">Very impressed with the service. They diagnosed and fixed my oven issue efficiently. The technician explained everything clearly and even gave tips on maintenance. Thank you!</div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial_details">
+                        <p>"Very easy to schedule an appointment - they even had same-day appointments available. Their tech came within his 2-hour window and called to give me a heads up. He was knowledgeable and clearly explained the problem with my refrigerator."</p>
+                        <span class="rating">★★★★★</span>
+                        <h3>Jennifer L. - Fort Lee</h3>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Service Areas -->
-        <section class="service-areas">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Areas We Serve in Bergen County</h2>
-                </div>
-                <div class="areas-list">
-                    <span class="area-tag">Hackensack</span>
-                    <span class="area-tag">Paramus</span>
-                    <span class="area-tag">Fort Lee</span>
-                    <span class="area-tag">Englewood</span>
-                    <span class="area-tag">Teaneck</span>
-                    <span class="area-tag">Ridgewood</span>
-                    <span class="area-tag">Fair Lawn</span>
-                    <span class="area-tag">Bergenfield</span>
-                    <span class="area-tag">Garfield</span>
-                    <span class="area-tag">Lodi</span>
-                    <span class="area-tag">Lyndhurst</span>
-                    <span class="area-tag">Rutherford</span>
-                    <span class="area-tag">Cliffside Park</span>
-                    <span class="area-tag">Dumont</span>
-                    <span class="area-tag">Glen Rock</span>
-                    <span class="area-tag">Mahwah</span>
-                    <span class="area-tag">Ramsey</span>
-                    <span class="area-tag">Wyckoff</span>
-                    <span class="area-tag">Waldwick</span>
-                    <span class="area-tag">Westwood</span>
-                    <span class="area-tag">Oradell</span>
-                    <span class="area-tag">River Edge</span>
-                    <span class="area-tag">New Milford</span>
-                    <span class="area-tag">All Bergen County</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Contact Us</h2>
-                    <p>Schedule your appliance repair service today</p>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Get In Touch</h3>
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <strong>Phone</strong><br/>
-                                <a href="tel:PHONE_PLACEHOLDER">PHONE_PLACEHOLDER</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div>
-                                <strong>Email</strong><br/>
-                                <a href="mailto:EMAIL_PLACEHOLDER">EMAIL_PLACEHOLDER</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <strong>Service Area</strong><br/>
-                                All of Bergen County, NJ
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🕐</div>
-                            <div>
-                                <strong>Hours</strong><br/>
-                                Mon-Sun: 7am - 10pm
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form-wrapper">
-                        <h3>Request Service</h3>
-                        <form class="contact-form" id="contactForm">
-                            <input type="text" name="name" placeholder="Your Name *" required />
-                            <input type="tel" name="phone" placeholder="Phone Number *" required />
-                            <input type="email" name="email" placeholder="Email Address" />
-                            <textarea name="message" placeholder="Describe your appliance problem..."></textarea>
-                            <button type="submit" class="btn btn-primary w-100">Submit Request</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col">
-                        <h4>Contact Information</h4>
-                        <p>📞 PHONE_PLACEHOLDER</p>
-                        <p>📧 EMAIL_PLACEHOLDER</p>
-                        <p>📍 Serving all Bergen County, NJ</p>
-                        <div class="footer-buttons">
-                            <a href="tel:PHONE_PLACEHOLDER" class="footer-btn">
-                                📞 PHONE_PLACEHOLDER
-                            </a>
-                            <a href="#contact" class="footer-btn">
-                                🔧 Book Service
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Appliance Repair Services</h4>
-                        <div class="footer-links">
-                            <a href="#services">Refrigerator Repair</a>
-                            <a href="#services">Dishwasher Repair</a>
-                            <a href="#services">Washer Repair</a>
-                            <a href="#services">Dryer Repair</a>
-                            <a href="#services">Oven Repair</a>
-                            <a href="#services">Cooktop Repair</a>
-                            <a href="#services">Appliance Installation</a>
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Quick Links</h4>
-                        <div class="footer-links">
-                            <a href="#hero">Home</a>
-                            <a href="#services">Services</a>
-                            <a href="#brands">Brands</a>
-                            <a href="#about">About Us</a>
-                            <a href="#contact">Contact</a>
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Business Hours</h4>
-                        <p>Monday - Sunday</p>
-                        <p>7:00 AM - 10:00 PM</p>
-                        <p style="margin-top: 15px;">Same-day service available!</p>
-                        <p>Emergency repairs 365 days a year</p>
-                    </div>
-                </div>
-
-                <div class="footer-brands">
-                    <h4>Brands We Service</h4>
-                    <div class="brands-list">
-                        <span>Admiral</span>
-                        <span>Amana</span>
-                        <span>Bosch</span>
-                        <span>Dacor</span>
-                        <span>Electrolux</span>
-                        <span>Frigidaire</span>
-                        <span>GE</span>
-                        <span>Haier</span>
-                        <span>Hotpoint</span>
-                        <span>Jenn-Air</span>
-                        <span>Kenmore</span>
-                        <span>KitchenAid</span>
-                        <span>LG</span>
-                        <span>Maytag</span>
-                        <span>Miele</span>
-                        <span>Samsung</span>
-                        <span>Sub-Zero</span>
-                        <span>Thermador</span>
-                        <span>Viking</span>
-                        <span>Whirlpool</span>
-                        <span>Wolf</span>
-                    </div>
-                </div>
-
-                <div class="copyright">
-                    <p>© 2024 Bergen County Appliance Repair Service. All Rights Reserved.</p>
-                    <p>
-                        <a href="#">Privacy Policy</a> |
-                        <a href="#">Terms of Service</a> |
-                        <a href="#">Warranty</a>
-                    </p>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Popup -->
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-content">
-            <span class="popup-close" onclick="hidePopup()">×</span>
-            <h3>Thank You!</h3>
-            <p>We have received your request and will contact you shortly.</p>
-            <button class="btn btn-primary" onclick="hidePopup()">Close</button>
         </div>
-    </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands_section text-center" id="brands">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hero-section-title">
+                        <h4 class="brands_slider">Appliance Brands We Repair in Bergen County, NJ</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Whirlpool</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Samsung</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>LG</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>GE</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Maytag</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>KitchenAid</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Frigidaire</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Bosch</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Kenmore</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Electrolux</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Sub-Zero</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Viking</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Thermador</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Miele</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Wolf</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Dacor</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Amana</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Hotpoint</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Haier</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Fisher & Paykel</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Jenn-Air</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Speed Queen</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Gaggenau</span></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="brand_img"><span>Bertazzoni</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer_box">
+                        <span class="footer-logo">Bergen County <span>Appliance Repair</span></span>
+                        <p>Bergen County Appliance Repair Service delivers professional appliance repair services throughout Bergen County, NJ. Our skilled professionals will keep your appliances running efficiently through years of experience.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="footer_box service">
+                        <h2>Quick Links</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><a href="#services">Commercial Appliances Repair</a></li>
+                                    <li><a href="#services">Gas Stove Repair</a></li>
+                                    <li><a href="#services">Kitchen Appliances Repair</a></li>
+                                    <li><a href="#services">Oven Elements Replacement</a></li>
+                                    <li><a href="#services">Washing Machine Repair</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><a href="#services">Dryer Installation</a></li>
+                                    <li><a href="#services">Microwave Installation</a></li>
+                                    <li><a href="#services">Refrigerator Installation</a></li>
+                                    <li><a href="#services">Stove Installation</a></li>
+                                    <li><a href="#services">Dishwasher Repair</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="footer_box">
+                        <h3>Contact Information</h3>
+                        <span class="support_email"><i class="fa fa-envelope"></i> <a href="mailto:info@bergencountyappliance.com">Email Us</a></span>
+                        <span class="support_num"><i class="fa fa-phone"></i> <a href="tel:(201) 555-0123">(201) 555-0123</a></span>
+                        <span class="support_num"><i class="fa fa-globe"></i> Bergen County, NJ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright">
+                            <p>Copyright © <span id="year"></span> All Rights Reserved by <a href="#hero"><strong>Bergen County Appliance Repair Service</strong></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuToggle').addEventListener('click', function() {
-            var menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-        });
-
-        // Mobile Submenu Toggle
-        function toggleMobileSubmenu(id) {
-            var submenu = document.getElementById(id);
-            submenu.classList.toggle('active');
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile navigation toggle
+        function toggleNav() {
+            var nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
         }
-
-        // Form Submissions
-        document.getElementById('sidebarForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            showPopup();
-            this.reset();
-        });
-
+        
+        // Form submission handler
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            showPopup();
+            alert('Thank you for your inquiry! We will contact you shortly.');
             this.reset();
         });
-
-        // Popup Functions
-        function showPopup() {
-            document.getElementById('popupOverlay').classList.add('active');
-        }
-
-        function hidePopup() {
-            document.getElementById('popupOverlay').classList.remove('active');
-        }
-
-        // Close popup on overlay click
-        document.getElementById('popupOverlay').addEventListener('click', function(e) {
-            if (e.target === this) {
-                hidePopup();
-            }
-        });
-
+        
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                var target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
-                    document.getElementById('mobileMenu').classList.remove('active');
                 }
+                // Close mobile nav if open
+                document.getElementById('mainNav').classList.remove('active');
             });
+        });
+        
+        // Phone number formatting
+        document.querySelector('input[name="phone"]').addEventListener('input', function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
         });
     </script>
 </body>
 </html>
+```
