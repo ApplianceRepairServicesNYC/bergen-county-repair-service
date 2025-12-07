@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1284,6 +1283,50 @@
         html {
             scroll-behavior: smooth;
         }
+        
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #1a5276;
+            box-sizing: border-box;
+        }
+        
+        .hero img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                width: 100vw;
+                margin-left: calc(-50vw + 50%);
+                margin-right: calc(-50vw + 50%);
+                overflow-x: hidden;
+            }
+            
+            .hero img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero img {
+                width: 100%;
+                min-width: 100%;
+                height: auto;
+            }
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -1479,6 +1522,11 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Hero Image Section -->
+    <section class="hero">
+        <img src="https://bergencountyappliancesrepair.com/images/hero-bergen.png" alt="Bergen County Appliance Repair Service - Professional Home and Commercial Appliance Repair">
+    </section>
 
     <main>
     <!-- Hero Banner -->
